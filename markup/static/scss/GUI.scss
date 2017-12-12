@@ -41,3 +41,161 @@ $global-flexbox: true;
 // @include foundation-visibility-classes;
 // @include foundation-float-classes;
 @include foundation-flex-classes;
+
+
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'frontier' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-drift {
+  &:before {
+    content: $icon-drift;
+  }
+}
+.icon-arr {
+  &:before {
+    content: $icon-arr;
+  }
+}
+.icon-enlarge {
+  &:before {
+    content: $icon-enlarge;
+  }
+}
+.icon-reduce {
+  &:before {
+    content: $icon-reduce;
+  }
+}
+.icon-lower-cost {
+  &:before {
+    content: $icon-lower-cost;
+  }
+}
+.icon-7 {
+  &:before {
+    content: $icon-7;
+  }
+}
+.icon-short-response {
+  &:before {
+    content: $icon-short-response;
+  }
+}
+.icon-cube {
+  &:before {
+    content: $icon-cube;
+  }
+}
+.icon-speed {
+  &:before {
+    content: $icon-speed;
+  }
+}
+.icon-money-box {
+  &:before {
+    content: $icon-money-box;
+  }
+}
+.icon-standart {
+  &:before {
+    content: $icon-standart;
+  }
+}
+.icon-analitics {
+  &:before {
+    content: $icon-analitics;
+  }
+}
+.icon-man-net {
+  &:before {
+    content: $icon-man-net;
+  }
+}
+.icon-wealth {
+  &:before {
+    content: $icon-wealth;
+  }
+}
+.icon-baloon {
+  &:before {
+    content: $icon-baloon;
+  }
+}
+.icon-box {
+  &:before {
+    content: $icon-box;
+  }
+}
+.icon-hands {
+  &:before {
+    content: $icon-hands;
+  }
+}
+.icon-pen {
+  &:before {
+    content: $icon-pen;
+  }
+}
+.icon-prosjektledelse {
+  &:before {
+    content: $icon-prosjektledelse;
+  }
+}
+.icon-overvakning {
+  &:before {
+    content: $icon-overvakning;
+  }
+}
+.icon-tilleggstjenester {
+  &:before {
+    content: $icon-tilleggstjenester;
+  }
+}
+.icon-consulring {
+  &:before {
+    content: $icon-consulring;
+  }
+}
+.icon-underline {
+  &:before {
+    content: $icon-underline;
+  }
+}
+.icon-scroll-Down {
+  &:before {
+    content: $icon-scroll-Down;
+  }
+}
+.icon-LinkedIn {
+  &:before {
+    content: $icon-LinkedIn;
+  }
+}
+.icon-Twitter {
+  &:before {
+    content: $icon-Twitter;
+  }
+}
+.icon-facebook {
+  &:before {
+    content: $icon-facebook;
+  }
+}
+
+
+h1, h2, h3, h4 {
+  line-height: 1.28;
+}

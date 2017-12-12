@@ -1,18 +1,23 @@
 <!doctype html>
-<html class="no-js" lang="ru">
+<html class="no-js" lang="no">
 
     <head>
         {{> head/head head.defaults}}
     </head>
 
-    <body class="page">
+    <body class="page home-page">
         %=symbols=%
+        <div class="home-top">
+          <header class="header">
+            {{> header/header header.no }}
+          </header>
+          {{> home-top/home-top homeTop.no }}
+        </div>
+        <main class="page__wrapper">
 
-        <section class="page__wrapper">
+        </main>
 
-        </section>
-
-        <footer class="">
+        <footer class="footer">
             {{> footer/footer}}
         </footer>
 

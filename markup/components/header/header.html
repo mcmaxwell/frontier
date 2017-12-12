@@ -1,0 +1,10 @@
+<a href="/" class="logo"><img src="%=static=%img/general/frontier-logo.svg" alt="frontier"></a>
+<nav class="main-nav">
+  <a href="#" class="toggle-menu"><span></span></a>
+  <ul class="menu">
+    {{#each mainNav}}
+      <li><a href="{{this.link}}">{{this.tetx}}</a></li>
+    {{/each}}
+  </ul>
+</nav>
+<a href="{{langUrl}}" class="header__lang">{{langText}}</a>

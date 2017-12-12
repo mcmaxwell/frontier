@@ -8,7 +8,7 @@
     src: url('../fonts/Custom-Font.eot?#iefix') format('embedded-opentype'),
          url('../fonts/Custom-Font.woff') format('woff'),
          url('../fonts/Custom-Font.svg#custom_font') format('svg');
-    font-weight: 400;       // For normal width. It could has another value   
+    font-weight: 400;       // For normal width. It could has another value
     font-style: normal;     // Also could has another value
     }
 
@@ -18,31 +18,40 @@ $CustomFont: 'CustomFont', Helvetica, Arial, sans-serif;
 */
 
 @mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff ttf svg) {
-	$src: null;
+  $src: null;
 
-	$extmods: (
-		eot: "?",
-		svg: "#" + str-replace($name, " ", "_")
-	);
+  $extmods: (
+    eot: "?",
+    svg: "#" + str-replace($name, " ", "_")
+  );
 
-	$formats: (
-		otf: "opentype",
-		ttf: "truetype"
-	);
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype"
+  );
 
-	@each $ext in $exts {
-		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
-		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
-		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
-	}
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
 
-	@font-face {
-		font-family: quote($name);
-		font-style: $style;
-		font-weight: $weight;
-		src: $src;
-	}
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
 }
 
 
 //@include font-face(ralewaylight, "../fonts/Raleway-Light");
+
+@include font-face(frontier, "../fonts/frontier");
+
+@include font-face(proxima_nova_altblack, "../fonts/Mark Simonson - Proxima Nova Alt Black-webfont");
+@include font-face(proxima_nova_altbold, "../fonts/Mark Simonson - Proxima Nova Alt Bold-webfont");
+@include font-face('Proxima Nova', "../fonts/Mark Simonson - Proxima Nova Alt Regular-webfont");
+@include font-face(proxima_nova_scosfthin, "../fonts/Mark Simonson - Proxima Nova ScOsf Thin-webfont");
+@include font-face(proxima_nova_ltsemibold, "../fonts/Mark Simonson - Proxima Nova Semibold-webfont");
+@include font-face(proxima_nova_ltthin, "../fonts/Mark Simonson - Proxima Nova Thin-webfont");

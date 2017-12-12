@@ -1,0 +1,17 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $margin-4 $margin-8;
+
+  .menu {
+    a {
+      font-family: $ProximaBold;
+    }
+  }
+
+  &__lang {
+    font-family: $ProximaBold;
+  }
+}

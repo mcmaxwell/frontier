@@ -1,3 +1,3 @@
 import 'script!jquery'
 import 'script!what-input'
-import 'script!foundation-sites'
+import 'script!foundation-sites/dist/js/foundation.min.js'

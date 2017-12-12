@@ -4,14 +4,16 @@ html, body {
     height: 100%;
 }
 
-.page {
-    
-}
-
 .page__wrapper {
     min-height: 100%;
 }
 
 * html .page__wrapper {
     height: 100%;
+}
+
+body {
+  font-family: $Proxima;
+  font-size: rem-calc(20);
+  line-height: 1.4;
 }

@@ -1,0 +1,47 @@
+.home-top {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+}
+
+.home-top__contain {
+  height: calc(100% - #{$header-height} - #{$header-height});
+  width: cacl(100% - #{$margin-8} - #{$margin-8});
+  margin: 0 $margin-8 $margin-4;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  padding: 100px;
+
+  h1 {
+    max-width: 970px;
+  }
+
+  span {
+    font-size: rem-calc(36);
+    display: block;
+    max-width: 630px;
+    margin-top: $margin-4;
+    line-height: 1.1;
+  }
+}
+
+.scroll-down {
+  color: rgba($black, .5);
+  font-size: rem-calc(16);
+  text-align: center;
+
+  span {
+    display: block;
+  }
+
+  .icon {
+    font-size: rem-calc(36);
+    margin-bottom: $margin-1;;
+  }
+}

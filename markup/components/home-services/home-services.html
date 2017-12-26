@@ -1,0 +1,18 @@
+<section class="home-services">
+  <h2 class="decor-title icon-underline">{{title}}</h2>
+  <p class="section-description">{{description}}</p>
+  <div class="row align-center">
+    <div class="columns small-12">
+      <div class="home-services__grid">
+        {{#each homeServiceGrid }}
+          <div class="home-services__grid-item">
+            <div class="home-services__grid-item-img" style="background-image: url({{this.image}})"></div>
+            <i class="icon {{this.icon}}"></i>
+            <h3>{{this.title}}</h3>
+            <p>{{this.description}}</p>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,65 @@
+.home-services {
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+     &-item {
+       width: 100%;
+       height: 400px;
+       position: relative;
+       margin-bottom: 15px;
+       overflow: hidden;
+       padding: $margin-2;
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-end;
+       color: #fff;
+
+       @include breakpoint(large) {
+         width: 57.032%;
+         margin-bottom: $margin-4;
+         padding: $margin-4;
+       }
+
+       &:hover {
+         .home-services__grid-item-img {
+           transform: scale(1.1);
+         }
+       }
+
+       &:nth-child(2),
+       &:nth-child(3) {
+         @include breakpoint(large) {
+           width: 39.844%;
+         }
+       }
+
+       &-img {
+         transition: all $default-time;
+         position: absolute;
+         left: 0;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         background-position: center center;
+         background-size: cover;
+         z-index: -1;
+       }
+
+       .icon {
+         font-size: rem-calc(61);
+       }
+
+       p {
+         margin: 0;
+         line-height: 1.4;
+       }
+
+       h3 {
+         font-size: rem-calc(24);
+         font-family: $ProximaBold;
+       }
+     }
+  }
+}

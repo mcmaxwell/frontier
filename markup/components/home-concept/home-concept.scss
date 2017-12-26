@@ -1,0 +1,124 @@
+.home-concept {
+  margin-top: $margin-6;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @include breakpoint(large) {
+      flex-direction: row;
+    }
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 2px solid $line-color;
+      padding: $margin-2;
+      transition: all $default-time;
+      height: 290px;
+      padding-top: $margin-4;
+      text-align: center;
+      position: relative;
+      @include breakpoint(large) {
+        width: calc(25% - 30px);
+      }
+      &::after {
+        position: absolute;
+        top: -64px;
+        left: 50%;
+        transform: translate(-50%);
+        width: 44px;
+        height: 44px;
+        border: 1px solid $line-color;
+        border-radius: 50%;
+        color: $line-color;
+        font-size: rem-calc(24);
+        line-height: 44px;
+        display: inline-block;
+        transition: all $default-time;
+      }
+
+      &:nth-child(1)::after {
+        content: '1';
+      }
+
+      &:nth-child(2)::after {
+        content: '2';
+      }
+
+      &:nth-child(3)::after {
+        content: '3';
+      }
+
+      &:nth-child(4)::after {
+        content: '4';
+      }
+
+      .icon {
+        font-size: rem-calc(56);
+        vertical-align: middle;
+
+        &.icon-box {
+          font-size: 73px;
+          margin-top: -23px;
+        }
+      }
+
+      h3 {
+          margin-top: $margin-2;
+      }
+
+      &:hover {
+        background-color: $brand-secondary-color;
+        color: #fff;
+        border-color: $brand-secondary-color;
+
+        &::after {
+          background: $brand-secondary-color;
+          border-color: $brand-secondary-color;
+          color: #fff;
+        }
+
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+  }
+}
+
+.scheme {
+  margin-bottom: $margin-8;
+
+  &__img {
+    margin: $margin-8 0;
+    width: 100%;
+  }
+
+  &__title {
+    font-family: $ProximaBold;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    @include breakpoint(large) {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    max-width: 510px;
+    min-height: 440px;
+    width: 100%;
+    margin: 0 $margin-2 $margin-2;
+    padding: $margin-3 $margin-4;
+    border: 1px solid $line-color;
+  }
+
+  &__icon {
+    font-size: rem-calc(70);
+  }
+}

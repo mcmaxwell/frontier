@@ -3,11 +3,12 @@
   flex-direction: column;
   height: 100%;
   align-items: center;
+  margin-bottom: $margin-8;
 }
 
 .home-top__contain {
   height: calc(100% - #{$header-height} - #{$header-height});
-  width: cacl(100% - #{$margin-8} - #{$margin-8});
+  width: calc(100% - #{$margin-8} - #{$margin-8});
   margin: 0 $margin-8 $margin-4;
   background-position: center center;
   background-repeat: no-repeat;

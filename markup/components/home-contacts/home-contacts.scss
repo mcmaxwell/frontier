@@ -1,0 +1,58 @@
+.home-contacts {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    @include breakpoint(large) {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 48%;
+    margin-bottom: $margin-4;
+    line-height: 1.4;
+    text-align: center;
+    @include breakpoint(medium) {
+      flex-direction: row;
+      text-align: left;
+    }
+
+    &-name {
+      font-size: rem-calc(22);
+      font-family: $ProximaBold;
+      @include breakpoint(medium) {
+        font-size: rem-calc(24);
+      }
+    }
+
+    &-position {
+      margin-bottom: $margin-2;
+    }
+
+    a {
+      color: $black;
+      display: block;
+    }
+
+    &-email,
+    .linkidin {
+      border-bottom: 1px solid;
+      display: inline-block;
+    }
+
+    img {
+      margin-bottom: $margin-2;
+      @include breakpoint(medium) {
+        margin-right: $margin-3;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

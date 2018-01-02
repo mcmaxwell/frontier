@@ -1,0 +1,43 @@
+.footer {
+  background-color: $brand-color;
+  padding: $margin-6 0;
+  color: #fff;
+  margin-top: $margin-6;
+
+  a:not(.logo) {
+    color: #fff;
+    display: inline-block;
+    border-bottom: 1px solid;
+  }
+
+  p {
+    margin: 0 0 5px;
+  }
+
+  .logo {
+    margin-bottom: $margin-4;
+    display: inline-block;
+    @include breakpoint(medium) {
+      float: left;
+    }
+  }
+
+  &__contacts {
+    margin-bottom: $margin-4;
+    @include breakpoint(medium) {
+      float: right;
+      padding-top: 25px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__copyright {
+    @include breakpoint(medium) {
+      float: left;
+      width: 50%;
+    }
+    @include breakpoint(large) {
+      width: 70%;
+    }
+  }
+}

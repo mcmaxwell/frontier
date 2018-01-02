@@ -1,7 +1,8 @@
 //variables colors
-$brand-color: $primary-color;
+$brand-color: #192A67;
 $brand-secondary-color: #E63331;
 $line-color: rgba(#000, .2);
+$footer-bg: $brand-color;
 
 //variables margin
 $margin-1: 10px;
@@ -51,6 +52,9 @@ $icon-Twitter: "\e91a";
 $icon-facebook: "\e91b";
 
 $header-height: 160px;
+$header-height-medium: 140px;
+$header-height-small: 100px;
+
 
 $default-time: .3s;
 

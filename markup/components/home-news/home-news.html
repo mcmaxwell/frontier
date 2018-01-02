@@ -1,19 +1,19 @@
-<div class="home-news">
+<section class="home-news" id="news">
   <div class="row align-center">
     <div class="columns small-12">
       <h2 class="decor-title icon-underline">{{title}}</h2>
-      <div class="news-grid">
+      <div class="news-grid js-news-grid">
         {{#each newsList}}
           <div class="news-item {{#if this.img}} news-item__img-contain {{/if}}">
-              {{#if this.img }}
-              <div class="news-item__img" style="background-image:url({{this.img}})"></div>
-              {{/if}}
-              <div class="news-item__content">
-                <span class="news-item__date">{{this.date}}</span>
-                <p class="news-item__title">{{this.title}}</p>
-                <p class="news-item__description">{{this.desc}}</p>
-                <a href="{{this.link}}" class="news-item__read-more">Read more</a>
-              </div>
+            {{#if this.img }}
+            <div class="news-item__img" style="background-image:url({{this.img}})"></div>
+            {{/if}}
+            <div class="news-item__content">
+              <span class="news-item__date">{{this.date}}</span>
+              <p class="news-item__title">{{this.title}}</p>
+              <p class="news-item__description">{{this.desc}}</p>
+              <a href="{{this.link}}" class="news-item__read-more">Read more</a>
+            </div>
           </div>
         {{/each}}
           <a href="news.html" class="news-item all-news">
@@ -22,4 +22,4 @@
       </div>
     </div>
   </div>
-</div>
+</section>

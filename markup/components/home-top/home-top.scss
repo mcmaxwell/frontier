@@ -7,9 +7,9 @@
 }
 
 .home-top__contain {
-  height: calc(100% - #{$header-height} - #{$header-height});
-  width: calc(100% - #{$margin-8} - #{$margin-8});
-  margin: 0 $margin-8 $margin-4;
+  height: calc(100% - #{$header-height-small} - #{$header-height-small});
+  width: calc(100% - #{$margin-2} - #{$margin-2});
+  margin: 0 $margin-2 $margin-2;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,7 +17,20 @@
   flex-direction: column;
   justify-content: center;
   color: #fff;
-  padding: 100px;
+  padding: $margin-2;
+
+  @include breakpoint(medium) {
+    height: calc(100% - #{$header-height-medium} - #{$header-height-medium});
+    width: calc(100% - #{$margin-4} - #{$margin-4});
+    padding: $margin-4;
+  }
+
+  @include breakpoint(large) {
+    height: calc(100% - #{$header-height} - #{$header-height});
+    width: calc(100% - #{$margin-8} - #{$margin-8});
+    margin: 0 $margin-8 $margin-4;
+    padding: 100px;
+  }
 
   h1 {
     max-width: 970px;

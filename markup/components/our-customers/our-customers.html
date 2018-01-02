@@ -1,0 +1,13 @@
+<section class="our-customers" style="background-image: url(%=static=%img/assets/our-customers/our-customers.jpg)">
+  <div class="row align-center">
+    <div class="columns small-12">
+      <h2 class="decor-title icon-underline">{{title}}</h2>
+      <p class="section-description">{{description}}</p>
+      <ul class="our-customers__list">
+        {{#each ourCustomersList}}
+          <li><i class="icon {{this.icon}}" style="font-size: {{this.fontIcon}}"></i> {{this.text}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</section>

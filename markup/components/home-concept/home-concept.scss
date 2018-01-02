@@ -1,13 +1,15 @@
 .home-concept {
   margin-top: $margin-6;
 
+  &__list-contain {
+    overflow: auto;
+    padding-top: 80px;
+  }
+
   &__list {
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
-    @include breakpoint(large) {
-      flex-direction: row;
-    }
+
     &-item {
       display: flex;
       flex-direction: column;
@@ -19,9 +21,33 @@
       padding-top: $margin-4;
       text-align: center;
       position: relative;
+      background-color: #fff;
+      min-width: 270px;
+      margin-right: $margin-2;
+
+      @include breakpoint(medium) {
+        min-width: 290px;
+        margin-right: $margin-4;
+      }
+
       @include breakpoint(large) {
         width: calc(25% - 30px);
+        min-width: calc(25% - 30px);
+        margin-right: 0;
       }
+
+      &:not(:last-child)::before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        left: 100%;
+        top: 50%;
+        transform: translate(-50%);
+        height: 1px;
+        background-color: $line-color;
+        z-index: -1;
+      }
+
       &::after {
         position: absolute;
         top: -64px;
@@ -77,6 +103,10 @@
           background: $brand-secondary-color;
           border-color: $brand-secondary-color;
           color: #fff;
+        }
+
+        &:before {
+          background: $brand-secondary-color;
         }
 
         svg {

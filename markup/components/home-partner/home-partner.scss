@@ -1,0 +1,21 @@
+.home-partner {
+  margin-bottom: $margin-6;
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    a {
+      margin: $margin-2 $margin-6 0;
+      display: block;
+      filter: grayscale(100%);
+      transition: all $default-time;
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+  }
+}

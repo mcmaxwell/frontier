@@ -2,24 +2,24 @@ header: {
   no: {
     mainNav: [
       {
-        link: '#',
+        link: '#news',
         tetx: 'Nyheter'
       },
       {
-        link: '#',
+        link: '#services',
         tetx: 'Tjenester'
       },
       {
-        link: '#',
+        link: '#concept',
         tetx: 'Forretningskonsept'
       },
       {
-        link: '#',
+        link: '#referanser',
         tetx: 'Referanser'
       },
       {
-        link: '#',
-        tetx: 'Referanser'
+        link: '#contact',
+        tetx: 'Kontakter'
       }
     ],
     langUrl: '/en/',
@@ -28,27 +28,27 @@ header: {
   en: {
     mainNav: [
       {
-        link: '#',
+        link: '#news',
         tetx: 'Nyheter'
       },
       {
-        link: '#',
+        link: '#services',
         tetx: 'Tjenester'
       },
       {
-        link: '#',
+        link: '#concept',
         tetx: 'Forretningskonsept'
       },
       {
-        link: '#',
+        link: '#referanser',
         tetx: 'Referanser'
       },
       {
-        link: '#',
-        tetx: 'Referanser'
+        link: '#contact',
+        tetx: 'Kontakter'
       }
     ],
-    langUrl: '/en/',
-    langText: 'Switch to English'
+    langUrl: '/',
+    langText: 'Switch to Norway'
   }
 }

@@ -3,15 +3,139 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: $margin-4 $margin-8;
+  padding: $margin-2;
+  z-index: 100;
+
+  &.active {
+    position: fixed;
+  }
+
+  @include breakpoint(medium) {
+    padding: $margin-4;
+  }
+
+  @include breakpoint(large) {
+    padding: $margin-4 $margin-8;
+  }
+
+  .logo {
+    position: relative;
+    z-index: 400;
+    width: 202px;
+
+    @include breakpoint(large) {
+      width: 268px;
+    }
+  }
 
   .menu {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    flex-direction: column;
+    z-index: 300;
+    transition: all $default-time;
+    background-color: #fff;
+    padding: calc(#{$header-height-medium} + 68px) 98px 98px;
+
+    @include breakpoint(large) {
+      display: flex;
+      position: static;
+      flex-direction: row;
+      padding: 0;
+    }
+
     a {
       font-family: $ProximaBold;
     }
   }
 
+  .main-nav {
+    display: flex;
+    align-items: center;
+
+    &.active {
+      .menu {
+        display: flex;
+      }
+
+      &::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($black, .5);
+        z-index: -1;
+      }
+    }
+  }
+
+  .toggle-menu {
+    display: flex;
+    width: 30px;
+    height: 12px;
+    padding: $margin-2;
+    box-sizing: content-box;
+    position: relative;
+    z-index: 400;
+
+    @include breakpoint(large) {
+      display: none;
+    }
+
+    &.active {
+      span {
+        &::after {
+          transform: rotate(45deg);
+          top: 4.5px;
+        }
+
+        &::before {
+          transform: rotate(-45deg);
+          bottom: 4.5px;
+        }
+      }
+    }
+
+    span {
+      position: relative;
+      height: 12px;
+      display: block;
+
+      &::after,
+      &::before {
+        content: "";
+        width: 30px;
+        height: 3px;
+        background-color: $brand-color;
+        position: absolute;
+        top: 0;
+        border-radius: 4px;
+        transition: transform $default-time;
+      }
+
+      &::before {
+        bottom: 0;
+        top: auto;
+      }
+    }
+  }
+
   &__lang {
     font-family: $ProximaBold;
+    white-space: nowrap;
+
+    @include breakpoint(medium) {
+      margin-right: $margin-1;
+    }
+
+    @include breakpoint(large) {
+      margin-left: $margin-4;
+      margin-right: 0;
+    }
   }
 }

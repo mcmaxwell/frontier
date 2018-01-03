@@ -185,14 +185,14 @@ $global-flexbox: true;
     content: $icon-scroll-Down;
   }
 }
-.icon-LinkedIn {
+.icon-linkedin {
   &:before {
-    content: $icon-LinkedIn;
+    content: $icon-linkedin;
   }
 }
-.icon-Twitter {
+.icon-twitter {
   &:before {
-    content: $icon-Twitter;
+    content: $icon-twitter;
   }
 }
 .icon-facebook {
@@ -201,6 +201,24 @@ $global-flexbox: true;
   }
 }
 
+h1 {
+  font-family: $ProximaBold;
+  font-size: rem-calc(24);
+  margin-bottom: $margin-2;
+
+  @include breakpoint(medium) {
+    font-size: rem-calc(40);
+    margin-bottom: $margin-4;
+  }
+}
+
+h2 {
+  font-size: rem-calc(28);
+  @include breakpoint(medium) {
+    font-size: rem-calc(40);
+    margin-bottom: $margin-4;
+  }
+}
 
 h1, h2, h3, h4 {
   line-height: 1.28;
@@ -220,5 +238,45 @@ h1, h2, h3, h4 {
     width: 100%;
     left: 0;
     text-align: center;
+  }
+}
+
+.load-more {
+  border-radius: $border-radius;
+  color: $line-color;
+  border: 1px solid;
+  font-family: $ProximaBold;
+  padding: 9px 25px;
+  display: block;
+  margin: auto;
+  width: 210px;
+  transition: all $default-time;
+}
+
+.back-button {
+  margin: $margin-2 0;
+  display: inline-block;
+  color: $black;
+  @include breakpoint(medium) {
+    margin: $margin-4 0 $margin-3;
+  }
+
+  i {
+    font-size: rem-calc(15);
+    margin-right: $margin-1;
+    display: inline-block;
+    @include breakpoint(medium) {
+      font-size: rem-calc(13);
+    }
+  }
+
+  span {
+    border-bottom: 2px solid;
+    font-size: rem-calc(18);
+    font-family: $ProximaBold;
+    line-height: 1.33;
+    @include breakpoint(medium) {
+      font-size: rem-calc(24);
+    }
   }
 }

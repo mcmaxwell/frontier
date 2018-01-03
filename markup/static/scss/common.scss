@@ -25,225 +25,297 @@ body {
 .news-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  @include breakpoint(medium) {
+    justify-content: flex-start;
+  }
+}
 
-  .news-item {
-    width: 100%;
-    min-height: 300px;
-    position: relative;
-    border: 1px solid $line-color;
-    border-radius: $border-radius;
-    overflow: hidden;
+.news-item {
+  width: 100%;
+  min-height: 350px;
+  position: relative;
+  border: 1px solid $line-color;
+  border-radius: $border-radius;
+  overflow: hidden;
+  margin-bottom: $margin-2;
+  transition: all $default-time;
+
+  @include breakpoint(medium) {
+    min-width: calc(50% - 15px);
+    max-width: calc(50% - 15px);
+    min-height: 360px;
+    margin-right: $margin-3;
     margin-bottom: $margin-3;
-    transition: all $default-time;
-    @include breakpoint(medium) {
-      min-width: calc(50% - 15px);
-      max-width: calc(50% - 15px);
-      margin-right: $margin-3;
-      min-height: 360px;
 
-      &:nth-child(2n + 1) {
-        margin-right: 0;
-      }
-    }
-
-    @include breakpoint(large) {
-      min-width: 31.163%;
-      max-width: 31.163%;
-      margin-bottom: $margin-4;
-      min-height: 400px;
+    &:nth-child(2n + 1) {
       margin-right: 0;
     }
+  }
 
-    &:hover {
+  @include breakpoint(large) {
+    min-width: 31.25%;
+    max-width: 31.25%;
+    margin-bottom: $margin-4;
+    min-height: 400px;
+    margin-right: 3.126%;
+
+    &:nth-child(2n + 1) {
+      margin-right: 3.126%;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3n + 2) {
+      margin-right: 0;
+    }
+  }
+
+  &:hover {
+    @include breakpoint(large) {
       background-color: $brand-secondary-color;
       color: #fff;
+    }
 
-      .news-item__read-more {
+    .news-item__read-more {
+      @include breakpoint(large) {
         opacity: 1;
         margin: 0;
         bottom: $margin-4;
       }
+    }
 
-      .news-item__date {
+    .news-item__date {
+      margin-bottom: $margin-1;
+      @include breakpoint(large) {
         opacity: 1;
-        margin-bottom: $margin-1;
-      }
-
-      .news-item__description {
-        &::after {
-          background-color: $brand-secondary-color;
-          color: #fff;
-
-        }
-
-        &::before {
-          color: #fff;
-          background-color: $brand-secondary-color;
-        }
-      }
-
-      .news-item__title {
-        &::after {
-          background-color: $brand-secondary-color;
-          color: #fff;
-
-        }
-
-        &::before {
-          color: #fff;
-          background-color: $brand-secondary-color;
-        }
       }
     }
 
-    &__date {
-      font-size: rem-calc(16);
-      opacity: .5;
-    }
-
-    &__title {
-      font-family: $ProximaBold;
-      margin-bottom: $margin-2;
-      font-size: rem-calc(24);
-      line-height: 2rem;
-      max-height: 6rem;
-
-      overflow: hidden;
-      position: relative;
-      text-align: justify;
+    .news-item__description {
+      &::after {
+        @include breakpoint(large) {
+          background-color: $brand-secondary-color;
+          color: #fff;
+        }
+      }
 
       &::before {
-        content: '...';
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        background: #fff;
-        padding-left: 7px;
-        transition: all $default-time;
+        @include breakpoint(large) {
+          background-color: $brand-secondary-color;
+          color: #fff;
+        }
       }
+    }
 
+    .news-item__title {
       &::after {
-        content: '';
-        position: absolute;
-        right: 0;
-        width: 1em;
-        height: 1em;
-        margin-top: .2em;
-        background: #fff;
-        transition: all $default-time;
+        @include breakpoint(large) {
+          background-color: $brand-secondary-color;
+          color: #fff;
+        }
       }
-    }
-
-    &__img {
-      display: none;
-
-      @include breakpoint(medium) {
-        background-position: center center;
-        background-size: cover;
-        min-width: 50%;
-        height: auto;
-        display: block;
-      }
-
-      @include breakpoint(large) {
-        min-width: 52.382%;
-      }
-    }
-
-    &__img-contain {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      @include breakpoint(medium) {
-        flex-direction: row;
-        min-width: 100%;
-        max-width: 100%;
-      }
-
-      @include breakpoint(large) {
-        flex-direction: row;
-        min-width: 65.272%;
-        max-width: 65.272%;
-      }
-    }
-
-    &__content {
-      padding: $margin-4;
-      height: 300px;
-    }
-
-    &__description {
-      overflow: hidden;
-      position: relative;
-      line-height: 1.2em;
-      max-height: 4.8em;
-      text-align: justify;
 
       &::before {
-        content: '...';
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        background: #fff;
-        padding-left: 7px;
-        transition: all $default-time;
-      }
-
-      &::after {
-        content: '';
-        position: absolute;
-        right: 0;
-        width: 1em;
-        height: 1em;
-        margin-top: .2em;
-        background: #fff;
-        transition: all $default-time;
+        @include breakpoint(large) {
+          background-color: $brand-secondary-color;
+          color: #fff;
+        }
       }
     }
+  }
 
-    &__read-more {
-      transition: all $default-time;
-      opacity: 0;
+  &__date {
+    font-size: rem-calc(16);
+    opacity: .5;
+  }
+
+  &__title {
+    font-family: $ProximaBold;
+    margin-bottom: $margin-2;
+    font-size: rem-calc(24);
+    line-height: 2rem;
+    max-height: 6rem;
+
+    overflow: hidden;
+    position: relative;
+    text-align: justify;
+
+    &::before {
+      content: '...';
       position: absolute;
+      right: 0;
+      bottom: 0;
+      background: #fff;
+      padding-left: 7px;
+      transition: all $default-time;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      width: 1em;
+      height: 1em;
+      margin-top: .2em;
+      background: #fff;
+      transition: all $default-time;
+    }
+  }
+
+  &__img {
+    display: none;
+
+    @include breakpoint(medium) {
+      background-position: center center;
+      background-size: cover;
+      min-width: 50%;
+      height: auto;
+      display: block;
+    }
+
+    @include breakpoint(large) {
+      min-width: 52.507%;
+    }
+  }
+
+  &__img-contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include breakpoint(medium) {
+      flex-direction: row;
+      min-width: 100%;
+      max-width: 100%;
+    }
+
+    @include breakpoint(large) {
+      flex-direction: row;
+      min-width: 65.626%;
+      max-width: 65.626%;
+    }
+  }
+
+  &__content {
+    padding: $margin-2;
+    height: 300px;
+    @include breakpoint(medium) {
+      padding: $margin-3;
+    }
+    @include breakpoint(large) {
+      padding: $margin-4;
+    }
+  }
+
+  &__description {
+    overflow: hidden;
+    position: relative;
+    line-height: 1.2em;
+    max-height: 4.8em;
+    text-align: justify;
+
+    &::before {
+      content: '...';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background: #fff;
+      padding-left: 7px;
+      transition: all $default-time;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      width: 1em;
+      height: 1em;
+      margin-top: .2em;
+      background: #fff;
+      transition: all $default-time;
+    }
+  }
+
+  &__read-more {
+    transition: all $default-time;
+    color: $black;
+    border-bottom: 2px solid;
+    font-family: $ProximaBold;
+    position: absolute;
+    bottom: $margin-2;
+
+    @include breakpoint(medium) {
+      bottom: $margin-4;
+    }
+
+    @include breakpoint(large) {
+      opacity: 0;
       bottom: -100px;
       color: #fff;
     }
+  }
+}
 
-    &.all-news {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+.all-news {
+  @extend #{'.news-item'};
+  min-height: 0;
+  width: auto;
+  display: inline-block;
+  border-width: 0 0 2px;
+  border-color: $black;
+  font-family: $ProximaBold;
+  margin-bottom: $margin-6;
+  position: relative;
+  margin-right: $margin-3;
+  overflow: visible;
 
-      &:hover {
-        span {
-          color: #fff;
-        }
+  @include breakpoint(medium) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $line-color;
+    margin-bottom: $margin-3;
+  }
+
+  @include breakpoint(large) {
+    margin-bottom: $margin-4;
+  }
+
+  &:hover {
+    span {
+      color: $brand-color;
+      @include breakpoint(large) {
+        color: #fff;
       }
+    }
+  }
 
-      span {
-        display: flex;
-        align-items: center;
-        color: $black;
-        &::before {
-          display: none;
-        }
+  span {
+    display: flex;
+    align-items: center;
+    color: $black;
+    &::before {
+      display: none;
+    }
 
-        &::after {
-          content: $icon-arr;
-          transform: rotate(180deg);
-          display: inline-block;
-          font-family: 'frontier' !important;
-          speak: none;
-          font-style: normal;
-          font-weight: normal;
-          font-variant: normal;
-          text-transform: none;
-          line-height: 1;
-          margin-left: 19px;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-        }
+    &::after {
+      content: $icon-arr;
+      transform: rotate(180deg);
+      display: inline-block;
+      font-family: 'frontier' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      margin-left: 19px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      position: absolute;
+      right: -30px;
+      top: 5px;
+      @include breakpoint(medium) {
+        position: static;
       }
     }
   }

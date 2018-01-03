@@ -1,0 +1,31 @@
+<div class="share-page">
+  <ul>
+    <li class="icon icon-facebook">
+      <a class="telegram-share" href="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href), '_blank', 'toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400')">telegram</a>
+    </li>
+    <li class="icon icon-twitter">
+      <a class="twitter-share-button"
+                href="https://twitter.com/intent/tweet">
+              Tweet</a>
+              <script>window.twttr = (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                  t = window.twttr || {};
+                if (d.getElementById(id)) return t;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "https://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+
+                t._e = [];
+                t.ready = function(f) {
+                  t._e.push(f);
+                };
+
+                return t;
+              }(document, "script", "twitter-wjs"));</script>
+    </li>
+    <li class="icon icon-linkedin">
+      <a href="javascript:window.open('https://www.linkedin.com/shareArticle?mini=true&url='+encodeURIComponent(window.location.href), '_blank', 'toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400')"  id="myLinkedInButton">linkedin</a>
+    </li>
+  </ul>
+</div>

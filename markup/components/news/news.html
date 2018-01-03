@@ -1,8 +1,11 @@
-<section class="home-news" id="news">
+<section class="news">
+  <div class="news-top" style="background-image: url(%=static=%img/assets/news/news.jpg)">
+    <h1>{{title}}</h1>
+  </div>
   <div class="row align-center">
     <div class="columns small-12">
-      <h2 class="decor-title icon-underline">{{title}}</h2>
-      <div class="news-grid js-news-grid">
+      <a href="/" class="back-button"><i class="icon icon-arr"></i><span>Back to home</span></a>
+      <div class="news-grid">
         {{#each newsList}}
           <div class="news-item {{#if this.img}} news-item__img-contain {{/if}}">
             {{#if this.img }}
@@ -16,10 +19,8 @@
             </div>
           </div>
         {{/each}}
-          <a href="news.html" class="all-news">
-            <span class="icon-arr">Read all news</span>
-          </a>
       </div>
+      <a href="#" class="load-more">Load more news</a>
     </div>
   </div>
 </section>

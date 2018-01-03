@@ -1,0 +1,29 @@
+.news {
+  &-top {
+    height: 152px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-family: $ProximaBold;
+    margin: 0 $margin-2;
+    font-size: rem-calc(50);
+    padding: $margin-2;
+    @include breakpoint(medium) {
+      height: 210px;
+      margin: 0 $margin-4;
+      padding: $margin-4;
+    }
+    @include breakpoint(xxlarge) {
+      height: 300px;
+      padding: 100px;
+      margin: 0 $margin-8;
+    }
+
+    h1 {
+      font-family: $ProximaBold;
+    }
+  }
+}

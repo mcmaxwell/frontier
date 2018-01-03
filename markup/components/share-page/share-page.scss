@@ -1,0 +1,48 @@
+.share-page {
+  color: $line-color;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      width: 30px;
+      height: 30px;
+      margin-bottom: $margin-3;
+      font-size: rem-calc(30);
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      transition: all $default-time;
+
+      &:hover {
+        color: $brand-color;
+      }
+
+      a,
+      iframe {
+        width: 30px;
+        height: 30px;
+        display: block;
+        opacity: 0;
+      }
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        text-indent: 0;
+      }
+
+      &.icon-twitter {
+        font-size: rem-calc(25);
+      }
+
+      &.icon-linkedin {
+        font-size: rem-calc(27);
+      }
+    }
+  }
+}

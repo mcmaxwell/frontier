@@ -1,0 +1,53 @@
+.news-item {
+  .columns {
+    position: relative;
+  }
+
+  &__date {
+    color: rgba(#1D1D1D, .5);
+    font-size: rem-calc(16);
+    margin: $margin-1 0  ;
+    display: block;
+  }
+
+  &__container {
+    max-width: 620px;
+    margin: auto;
+  }
+
+  .back-button {
+    margin: 0 0 $margin-2;
+
+    @include breakpoint(xlarge) {
+      float: left;
+    }
+  }
+
+  .share-page {
+    @include breakpoint(large) {
+      position: absolute;
+      top: 170px;
+      left: calc(50% - 392px);
+    }
+
+    ul {
+      display: flex;
+      margin: $margin-4 0 0;
+      @include breakpoint(large) {
+        display: inline-block;
+        margin: 0;
+      }
+
+      li {
+        margin-right: $margin-3;
+        @include breakpoint(large) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  img {
+    margin: $margin-4 0;
+  }
+}

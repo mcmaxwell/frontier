@@ -1,9 +1,11 @@
 .home-concept {
-  margin-top: $margin-6;
-
+  margin-top: $margin-5;
+  @include breakpoint(medium) {
+    margin-top: $margin-8;
+  }
   &__list-contain {
     overflow: auto;
-    padding-top: 80px;
+    padding-top: $margin-8;
   }
 
   &__list {
@@ -15,10 +17,9 @@
       flex-direction: column;
       align-items: center;
       border: 2px solid $line-color;
-      padding: $margin-2;
+      padding: $margin-6 22px $margin-2;
       transition: all $default-time;
       height: 290px;
-      padding-top: $margin-4;
       text-align: center;
       position: relative;
       background-color: #fff;
@@ -91,7 +92,9 @@
       }
 
       h3 {
-          margin-top: $margin-2;
+        margin-top: $margin-2;
+        font-size: rem-calc(24);
+        font-family: $ProximaBold;
       }
 
       &:hover {
@@ -118,7 +121,7 @@
 }
 
 .scheme {
-  margin-bottom: $margin-8;
+  margin-bottom: $margin-6;
 
   &__img {
     margin: $margin-8 0;
@@ -127,6 +130,8 @@
 
   &__title {
     font-family: $ProximaBold;
+    font-size: rem-calc(24);
+    margin-bottom: $margin-2;
   }
 
   &__list {
@@ -134,8 +139,13 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    @include breakpoint(large) {
+    @include breakpoint(medium) {
       flex-direction: row;
+      align-items: flex-start;
+    }
+
+    li {
+      margin-bottom: 6px;
     }
   }
 

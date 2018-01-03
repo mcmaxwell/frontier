@@ -1,9 +1,12 @@
 .home-map {
   position: relative;
   display: none;
-  margin: 0 0 $margin-6;
+  margin: 0 0 $margin-8;
   @include breakpoint(medium) {
     display: block;
+  }
+  @include breakpoint(large) {
+    margin: 0 0 $margin-6*2;
   }
 
   &.active {
@@ -23,6 +26,10 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    @include breakpoint(large) {
+      width: 120px;
+      height: 120px;
+    }
 
     &::before {
       content: $icon-enlarge;
@@ -88,42 +95,42 @@
   }
 
   .spot1 {
-    top: 14.713%;
-    left: 22.084%;
+    top: 17%;
+    left: 21.8%;
 
     & + div {
-      top: calc(14.713% - 10px);
-      left: calc(22.084% + 77px);
+      top: calc(17% - 10px);
+      left: calc(21.8% + 77px);
     }
   }
 
   .spot2 {
-    top: 26.333%;
-    left: 44.306%;
+    top: 30.6%;
+    left: 44%;
 
     & + div {
-      top: calc(26.333% - 10px);
-      left: calc(44.306% + 77px);
+      top: calc(30.6% - 10px);
+      left: calc(44% + 77px);
     }
   }
 
   .spot3 {
-    top: 60.448%;
-    left: 31.737%;
+    top: 70.1%;
+    left: 31.5%;
 
     & + div {
-      top: calc(60.448% - 10px);
-      left: calc(31.737% + 77px);
+      top: calc(70.1% - 10px);
+      left: calc(31.5% + 77px);
     }
   }
 
   .spot4 {
-    top: 60.342%;
-    left: 60.348%;
+    top: 70%;
+    left: 60.4%;
 
     & + div {
-      top: calc(60.342% - 10px);
-      left: calc(60.348% + 77px);
+      top: calc(70% - 10px);
+      left: calc(60.4% + 77px);
     }
   }
 }

@@ -3,7 +3,10 @@
   flex-direction: column;
   height: 100%;
   align-items: center;
-  margin-bottom: $margin-8;
+  margin-bottom: $margin-4;
+  @include breakpoint(large) {
+    margin-bottom: $margin-7;
+  }
 }
 
 .home-top__contain {
@@ -20,7 +23,7 @@
   padding: $margin-2;
 
   @include breakpoint(medium) {
-    height: calc(100% - #{$header-height-medium} - #{$header-height-medium});
+    height: calc(100% - #{$header-height-medium} - #{$header-height-medium - 20});
     width: calc(100% - #{$margin-4} - #{$margin-4});
     padding: $margin-4;
   }
@@ -40,7 +43,6 @@
     font-size: rem-calc(36);
     display: block;
     max-width: 630px;
-    margin-top: $margin-4;
     line-height: 1.1;
   }
 }
@@ -56,5 +58,6 @@
 
   .icon {
     font-size: rem-calc(36);
+    line-height: 1.2;
   }
 }

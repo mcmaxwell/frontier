@@ -80,12 +80,11 @@ body {
         @include breakpoint(large) {
           opacity: 1;
           margin: 0;
-          bottom: $margin-4;
+          bottom: 32px;
         }
       }
 
       .news-item__date {
-        margin-bottom: $margin-1;
         @include breakpoint(large) {
           opacity: 1;
         }
@@ -327,7 +326,7 @@ body {
   max-width: 840px;
   margin: auto;
   text-align: center;
-  margin-bottom: $margin-6;
+  margin-bottom: $margin-5;
 }
 
 .linkidin {

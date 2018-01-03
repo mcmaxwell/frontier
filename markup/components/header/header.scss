@@ -22,6 +22,11 @@
     position: relative;
     z-index: 400;
     width: 57%;
+        width: 200px;
+
+    @include breakpoint(medium) {
+      width: 202px;
+    }
 
     @include breakpoint(large) {
       width: 268px;
@@ -49,6 +54,7 @@
 
     a {
       font-family: $ProximaBold;
+      padding: 0.7rem 13px;
     }
   }
 
@@ -140,7 +146,7 @@
     @include breakpoint(medium) {
       margin-right: $margin-1;
       text-indent: 0;
-      font-size: rem-calc(18);
+      font-size: rem-calc(20);
 
       span {
         display: none;
@@ -150,6 +156,7 @@
     @include breakpoint(large) {
       margin-left: $margin-4;
       margin-right: 0;
+      font-size: rem-calc(20);
     }
   }
 }

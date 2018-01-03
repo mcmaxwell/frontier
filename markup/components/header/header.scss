@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: $margin-2;
+  padding: $margin-2 0 $margin-2 $margin-2;
   z-index: 100;
 
   &.active {
@@ -11,7 +11,7 @@
   }
 
   @include breakpoint(medium) {
-    padding: $margin-4;
+    padding: $margin-4 $margin-2 $margin-4 $margin-4;
   }
 
   @include breakpoint(large) {
@@ -21,7 +21,7 @@
   .logo {
     position: relative;
     z-index: 400;
-    width: 202px;
+    width: 57%;
 
     @include breakpoint(large) {
       width: 268px;
@@ -128,9 +128,23 @@
   &__lang {
     font-family: $ProximaBold;
     white-space: nowrap;
+    text-indent: -9999em;
+    font-size: 0;
+
+    span {
+      display: block;
+      text-indent: 0;
+      font-size: rem-calc(18);
+    }
 
     @include breakpoint(medium) {
       margin-right: $margin-1;
+      text-indent: 0;
+      font-size: rem-calc(18);
+
+      span {
+        display: none;
+      }
     }
 
     @include breakpoint(large) {

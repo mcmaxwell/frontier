@@ -23,7 +23,8 @@ header: {
       }
     ],
     langUrl: '/en/',
-    langText: 'Switch to English'
+    langText: 'Switch to English',
+    langTextShort: 'Eng'
   },
   en: {
     mainNav: [
@@ -49,6 +50,7 @@ header: {
       }
     ],
     langUrl: '/',
-    langText: 'Switch to Norway'
+    langText: 'Switch to Norway',
+    langTextShort: 'Nor'
   }
 }

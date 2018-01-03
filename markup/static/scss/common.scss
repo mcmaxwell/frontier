@@ -29,230 +29,232 @@ body {
   @include breakpoint(medium) {
     justify-content: flex-start;
   }
-}
 
-.news-item {
-  width: 100%;
-  min-height: 350px;
-  position: relative;
-  border: 1px solid $line-color;
-  border-radius: $border-radius;
-  overflow: hidden;
-  margin-bottom: $margin-2;
-  transition: all $default-time;
 
-  @include breakpoint(medium) {
-    min-width: calc(50% - 15px);
-    max-width: calc(50% - 15px);
-    min-height: 360px;
-    margin-right: $margin-3;
-    margin-bottom: $margin-3;
+  .news-item {
+    width: 100%;
+    min-height: 350px;
+    position: relative;
+    border: 1px solid $line-color;
+    border-radius: $border-radius;
+    overflow: hidden;
+    margin-bottom: $margin-2;
+    transition: all $default-time;
 
-    &:nth-child(2n + 1) {
-      margin-right: 0;
-    }
-  }
+    @include breakpoint(medium) {
+      min-width: calc(50% - 15px);
+      max-width: calc(50% - 15px);
+      min-height: 360px;
+      margin-right: $margin-3;
+      margin-bottom: $margin-3;
 
-  @include breakpoint(large) {
-    min-width: 31.25%;
-    max-width: 31.25%;
-    margin-bottom: $margin-4;
-    min-height: 400px;
-    margin-right: 3.126%;
-
-    &:nth-child(2n + 1) {
-      margin-right: 3.126%;
+      &:nth-child(2n + 1) {
+        margin-right: 0;
+      }
     }
 
-    &:nth-child(2),
-    &:nth-child(3n + 2) {
-      margin-right: 0;
-    }
-  }
-
-  &:hover {
     @include breakpoint(large) {
-      background-color: $brand-secondary-color;
-      color: #fff;
+      min-width: 31.25%;
+      max-width: 31.25%;
+      margin-bottom: $margin-4;
+      min-height: 400px;
+      margin-right: 3.126%;
+
+      &:nth-child(2n + 1) {
+        margin-right: 3.126%;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3n + 2) {
+        margin-right: 0;
+      }
     }
 
-    .news-item__read-more {
+    &:hover {
       @include breakpoint(large) {
-        opacity: 1;
-        margin: 0;
+        background-color: $brand-secondary-color;
+        color: #fff;
+      }
+
+      .news-item__read-more {
+        @include breakpoint(large) {
+          opacity: 1;
+          margin: 0;
+          bottom: $margin-4;
+        }
+      }
+
+      .news-item__date {
+        margin-bottom: $margin-1;
+        @include breakpoint(large) {
+          opacity: 1;
+        }
+      }
+
+      .news-item__description {
+        &::after {
+          @include breakpoint(large) {
+            background-color: $brand-secondary-color;
+            color: #fff;
+          }
+        }
+
+        &::before {
+          @include breakpoint(large) {
+            background-color: $brand-secondary-color;
+            color: #fff;
+          }
+        }
+      }
+
+      .news-item__title {
+        &::after {
+          @include breakpoint(large) {
+            background-color: $brand-secondary-color;
+            color: #fff;
+          }
+        }
+
+        &::before {
+          @include breakpoint(large) {
+            background-color: $brand-secondary-color;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    &__date {
+      font-size: rem-calc(16);
+      opacity: .5;
+    }
+
+    &__title {
+      font-family: $ProximaBold;
+      margin-bottom: $margin-2;
+      font-size: rem-calc(24);
+      line-height: 2rem;
+      max-height: 6rem;
+
+      overflow: hidden;
+      position: relative;
+      text-align: justify;
+
+      &::before {
+        content: '...';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        padding-left: 7px;
+        transition: all $default-time;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 1em;
+        height: 1em;
+        margin-top: .2em;
+        background: #fff;
+        transition: all $default-time;
+      }
+    }
+
+    &__img {
+      display: none;
+
+      @include breakpoint(medium) {
+        background-position: center center;
+        background-size: cover;
+        min-width: 50%;
+        height: auto;
+        display: block;
+      }
+
+      @include breakpoint(large) {
+        min-width: 52.507%;
+      }
+    }
+
+    &__img-contain {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @include breakpoint(medium) {
+        flex-direction: row;
+        min-width: 100%;
+        max-width: 100%;
+      }
+
+      @include breakpoint(large) {
+        flex-direction: row;
+        min-width: 65.626%;
+        max-width: 65.626%;
+      }
+    }
+
+    &__content {
+      padding: $margin-2;
+      height: 300px;
+      @include breakpoint(medium) {
+        padding: $margin-3;
+      }
+      @include breakpoint(large) {
+        padding: $margin-4;
+      }
+    }
+
+    &__description {
+      overflow: hidden;
+      position: relative;
+      line-height: 1.2em;
+      max-height: 4.8em;
+      text-align: justify;
+
+      &::before {
+        content: '...';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        padding-left: 7px;
+        transition: all $default-time;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 1em;
+        height: 1em;
+        margin-top: .2em;
+        background: #fff;
+        transition: all $default-time;
+      }
+    }
+
+    &__read-more {
+      transition: all $default-time;
+      color: $black;
+      border-bottom: 2px solid;
+      font-family: $ProximaBold;
+      position: absolute;
+      bottom: $margin-2;
+
+      @include breakpoint(medium) {
         bottom: $margin-4;
       }
-    }
 
-    .news-item__date {
-      margin-bottom: $margin-1;
       @include breakpoint(large) {
-        opacity: 1;
-      }
-    }
-
-    .news-item__description {
-      &::after {
-        @include breakpoint(large) {
-          background-color: $brand-secondary-color;
-          color: #fff;
-        }
-      }
-
-      &::before {
-        @include breakpoint(large) {
-          background-color: $brand-secondary-color;
-          color: #fff;
-        }
-      }
-    }
-
-    .news-item__title {
-      &::after {
-        @include breakpoint(large) {
-          background-color: $brand-secondary-color;
-          color: #fff;
-        }
-      }
-
-      &::before {
-        @include breakpoint(large) {
-          background-color: $brand-secondary-color;
-          color: #fff;
-        }
+        opacity: 0;
+        bottom: -100px;
+        color: #fff;
       }
     }
   }
 
-  &__date {
-    font-size: rem-calc(16);
-    opacity: .5;
-  }
-
-  &__title {
-    font-family: $ProximaBold;
-    margin-bottom: $margin-2;
-    font-size: rem-calc(24);
-    line-height: 2rem;
-    max-height: 6rem;
-
-    overflow: hidden;
-    position: relative;
-    text-align: justify;
-
-    &::before {
-      content: '...';
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      background: #fff;
-      padding-left: 7px;
-      transition: all $default-time;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      width: 1em;
-      height: 1em;
-      margin-top: .2em;
-      background: #fff;
-      transition: all $default-time;
-    }
-  }
-
-  &__img {
-    display: none;
-
-    @include breakpoint(medium) {
-      background-position: center center;
-      background-size: cover;
-      min-width: 50%;
-      height: auto;
-      display: block;
-    }
-
-    @include breakpoint(large) {
-      min-width: 52.507%;
-    }
-  }
-
-  &__img-contain {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    @include breakpoint(medium) {
-      flex-direction: row;
-      min-width: 100%;
-      max-width: 100%;
-    }
-
-    @include breakpoint(large) {
-      flex-direction: row;
-      min-width: 65.626%;
-      max-width: 65.626%;
-    }
-  }
-
-  &__content {
-    padding: $margin-2;
-    height: 300px;
-    @include breakpoint(medium) {
-      padding: $margin-3;
-    }
-    @include breakpoint(large) {
-      padding: $margin-4;
-    }
-  }
-
-  &__description {
-    overflow: hidden;
-    position: relative;
-    line-height: 1.2em;
-    max-height: 4.8em;
-    text-align: justify;
-
-    &::before {
-      content: '...';
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      background: #fff;
-      padding-left: 7px;
-      transition: all $default-time;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      width: 1em;
-      height: 1em;
-      margin-top: .2em;
-      background: #fff;
-      transition: all $default-time;
-    }
-  }
-
-  &__read-more {
-    transition: all $default-time;
-    color: $black;
-    border-bottom: 2px solid;
-    font-family: $ProximaBold;
-    position: absolute;
-    bottom: $margin-2;
-
-    @include breakpoint(medium) {
-      bottom: $margin-4;
-    }
-
-    @include breakpoint(large) {
-      opacity: 0;
-      bottom: -100px;
-      color: #fff;
-    }
-  }
 }
 
 .all-news {
@@ -366,4 +368,8 @@ body {
       background: $brand-secondary-color;
     }
   }
+}
+
+.close-button {
+  font-family: monospace;
 }

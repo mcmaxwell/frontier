@@ -1,5 +1,17 @@
 .home-map {
   position: relative;
+  display: none;
+  margin: 0 0 $margin-6;
+  @include breakpoint(medium) {
+    display: block;
+  }
+
+  &.active {
+    .home-map__item {
+      display: block;
+    }
+  }
+
   &__toggle {
     position: absolute;
     top: 0;
@@ -22,6 +34,96 @@
       &::before {
         content: $icon-reduce;
       }
+    }
+  }
+
+  &__list {
+    &>  ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+
+  &__item-list {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    padding: $margin-4;
+    box-shadow: 5px 14px 40px 0 rgba($black, .3);
+    border-radius: $border-radius;
+    z-index: 100;
+
+    &::after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 12px 11px 12px 0;
+      border-color: transparent #fff transparent transparent;
+      position: absolute;
+      top: 23px;
+      left: -11px;
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__item {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 7px solid rgba(#000, .2);
+    display: none;
+
+    &-title {
+      font-family: $ProximaBold;
+      margin-bottom: $margin-1;
+      font-size: rem-calc(24);
+    }
+  }
+
+  .spot1 {
+    top: 14.713%;
+    left: 22.084%;
+
+    & + div {
+      top: calc(14.713% - 10px);
+      left: calc(22.084% + 77px);
+    }
+  }
+
+  .spot2 {
+    top: 26.333%;
+    left: 44.306%;
+
+    & + div {
+      top: calc(26.333% - 10px);
+      left: calc(44.306% + 77px);
+    }
+  }
+
+  .spot3 {
+    top: 60.448%;
+    left: 31.737%;
+
+    & + div {
+      top: calc(60.448% - 10px);
+      left: calc(31.737% + 77px);
+    }
+  }
+
+  .spot4 {
+    top: 60.342%;
+    left: 60.348%;
+
+    & + div {
+      top: calc(60.342% - 10px);
+      left: calc(60.348% + 77px);
     }
   }
 }

@@ -9,7 +9,6 @@
     color: #fff;
     font-family: $ProximaBold;
     margin: 0 $margin-2;
-    font-size: rem-calc(50);
     padding: $margin-2;
     @include breakpoint(medium) {
       height: 210px;
@@ -24,6 +23,8 @@
 
     h1 {
       font-family: $ProximaBold;
+      font-size: rem-calc(50);
+      margin: 0;
     }
   }
 }

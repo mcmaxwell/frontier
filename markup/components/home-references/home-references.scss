@@ -1,5 +1,8 @@
 .home-references {
-  margin: $margin-6 0;
+  margin: $margin-2 0;
+  @include breakpoint(medium) {
+    margin: $margin-6 0;
+  }
 
   .section-description {
     max-width: 600px;

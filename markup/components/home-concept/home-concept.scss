@@ -1,5 +1,5 @@
 .home-concept {
-  margin-top: $margin-5;
+  margin-top: $margin-6;
   @include breakpoint(medium) {
     margin-top: $margin-8;
   }
@@ -151,11 +151,15 @@
 
   &__item {
     max-width: 510px;
-    min-height: 440px;
+    min-height: 400px;
     width: 100%;
     margin: 0 $margin-2 $margin-2;
-    padding: $margin-3 $margin-4;
+    padding: $margin-1 $margin-2;
     border: 1px solid $line-color;
+    @include breakpoint(medium) {
+      padding: $margin-3 $margin-4;
+      min-height: 440px;
+    }
   }
 
   &__icon {

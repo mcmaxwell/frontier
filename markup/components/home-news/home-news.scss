@@ -1,10 +1,9 @@
 .home-news {
-  margin-bottom: $margin-5;
-  @include breakpoint(large) {
-    margin-bottom: $margin-8;
-  }
+  margin-bottom: $margin-8;
   .news-grid {
-    margin-top: $margin-9;
+    @include breakpoint(medium) {
+      margin-top: $margin-9;
+    }
   }
 
   .news-grid .news-item__date {

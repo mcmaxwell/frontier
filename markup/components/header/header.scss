@@ -43,7 +43,7 @@
     z-index: 300;
     transition: all $default-time;
     background-color: #fff;
-    padding: calc(#{$header-height-medium} + 68px) 98px 98px;
+    padding: calc(#{$header-height-medium} + 23px) 98px 98px;
 
     @include breakpoint(large) {
       display: flex;

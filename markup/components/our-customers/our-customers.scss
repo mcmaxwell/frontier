@@ -1,10 +1,14 @@
 .our-customers {
   color: #fff;
-  padding: $margin-8 0 $margin-4;
+  padding: $margin-4 0;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   margin-bottom: $margin-8;
+  @include breakpoint(medium) {
+    padding: $margin-8 0 $margin-4;
+  }
+
   @include breakpoint(large) {
     margin-bottom: $margin-6*2;
   }
@@ -27,11 +31,12 @@
     }
 
     li {
-      margin-bottom: $margin-5;
+      margin-bottom: 26px;
       display: flex;
       align-items: center;
       @include breakpoint(medium) {
         width: 30%;
+        margin-bottom: $margin-5;
       }
 
       i {

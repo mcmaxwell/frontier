@@ -30,10 +30,9 @@ body {
     justify-content: flex-start;
   }
 
-
   .news-item {
     width: 100%;
-    min-height: 350px;
+    min-height: 335px;
     position: relative;
     border: 1px solid $line-color;
     border-radius: $border-radius;
@@ -124,13 +123,16 @@ body {
     }
 
     &__date {
-      font-size: rem-calc(16);
+      font-size: rem-calc(14);
       opacity: .5;
+      @include breakpoint(medium) {
+        font-size: rem-calc(16);
+      }
     }
 
     &__title {
       font-family: $ProximaBold;
-      margin-bottom: $margin-2;
+      margin-bottom: $margin-1;
       font-size: rem-calc(24);
       line-height: 2rem;
       max-height: 6rem;
@@ -138,6 +140,9 @@ body {
       overflow: hidden;
       position: relative;
       text-align: justify;
+      @include breakpoint(medium) {
+        margin-bottom: $margin-2;
+      }
 
       &::before {
         content: '...';
@@ -264,7 +269,6 @@ body {
   border-width: 0 0 2px;
   border-color: $black;
   font-family: $ProximaBold;
-  margin-bottom: $margin-6;
   position: relative;
   margin-right: $margin-3;
   overflow: visible;
@@ -327,6 +331,11 @@ body {
   margin: auto;
   text-align: center;
   margin-bottom: $margin-5;
+  font-size: rem-calc(22);
+  @include breakpoint(large) {
+    font-size: rem-calc(24);
+    color: #fff;
+  }
 }
 
 .linkidin {

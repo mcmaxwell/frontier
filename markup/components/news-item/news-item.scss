@@ -15,6 +15,10 @@
     margin: auto;
   }
 
+  &__content p {
+    line-height: 1.4;
+  }
+
   .back-button {
     margin: 0 0 $margin-2;
 
@@ -26,8 +30,8 @@
   .share-page {
     @include breakpoint(large) {
       position: absolute;
-      top: 170px;
-      left: calc(50% - 392px);
+      top: 192px;
+      left: calc(50% - 399px);
     }
 
     ul {
@@ -48,6 +52,6 @@
   }
 
   img {
-    margin: $margin-4 0;
+    margin: $margin-2 0 $margin-4;
   }
 }

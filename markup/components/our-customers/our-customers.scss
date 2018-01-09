@@ -12,9 +12,6 @@
   @include breakpoint(large) {
     margin-bottom: $margin-6*2;
   }
-  .decor-title::before {
-    color: #fff;
-  }
 
   &__list {
     list-style: none;
@@ -34,13 +31,15 @@
       margin-bottom: 26px;
       display: flex;
       align-items: center;
+      line-height: 1.4;
       @include breakpoint(medium) {
-        width: 30%;
+        width: 31%;
         margin-bottom: $margin-5;
       }
 
       i {
-        margin-right: $margin-1;
+        margin-right: $margin-2;
+        line-height: 1;
       }
     }
   }

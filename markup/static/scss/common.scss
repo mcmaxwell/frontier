@@ -22,6 +22,13 @@ body {
   }
 }
 
+a:hover {
+  color: $brand-secondary-color;
+  svg {
+    stroke: $brand-secondary-color;
+  }
+}
+
 .news-grid {
   display: flex;
   flex-wrap: wrap;
@@ -39,6 +46,7 @@ body {
     overflow: hidden;
     margin-bottom: $margin-2;
     transition: all $default-time;
+    color: $black;
 
     @include breakpoint(medium) {
       min-width: calc(50% - 15px);
@@ -73,19 +81,21 @@ body {
       @include breakpoint(large) {
         background-color: $brand-secondary-color;
         color: #fff;
+        border-color: #fff;
       }
 
       .news-item__read-more {
         @include breakpoint(large) {
           opacity: 1;
-          margin: 0;
           bottom: 32px;
+          pointer-events: auto;
         }
       }
 
       .news-item__date {
         @include breakpoint(large) {
           opacity: 1;
+          color: #fff;
         }
       }
 
@@ -253,31 +263,27 @@ body {
 
       @include breakpoint(large) {
         opacity: 0;
-        bottom: -100px;
         color: #fff;
       }
     }
   }
-
 }
 
 .all-news {
   @extend #{'.news-item'};
   min-height: 0;
   width: auto;
-  display: inline-block;
-  border-width: 0 0 2px;
-  border-color: $black;
+  display: flex;
+  align-items: center;
   font-family: $ProximaBold;
   position: relative;
   margin-right: $margin-3;
   overflow: visible;
+  padding: $margin-2 0;
 
   @include breakpoint(medium) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border: 1px solid $line-color;
+    padding: $margin-4;
     margin-bottom: $margin-3;
   }
 
@@ -287,9 +293,17 @@ body {
 
   &:hover {
     span {
-      color: $brand-color;
+      color: $black;
       @include breakpoint(large) {
         color: #fff;
+        border-color: #fff;
+      }
+    }
+    svg {
+      stroke: $black;
+      @include breakpoint(large) {
+        stroke: #fff;
+        border-color: #fff;
       }
     }
   }
@@ -298,31 +312,9 @@ body {
     display: flex;
     align-items: center;
     color: $black;
-    &::before {
-      display: none;
-    }
-
-    &::after {
-      content: $icon-arr;
-      transform: rotate(180deg);
-      display: inline-block;
-      font-family: 'frontier' !important;
-      speak: none;
-      font-style: normal;
-      font-weight: normal;
-      font-variant: normal;
-      text-transform: none;
-      line-height: 1;
-      margin-left: 19px;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      position: absolute;
-      right: -30px;
-      top: 5px;
-      @include breakpoint(medium) {
-        position: static;
-      }
-    }
+    border-bottom: solid 2px $black;
+    margin-right: $margin-1;
+    transition: all $default-time;
   }
 }
 
@@ -334,7 +326,6 @@ body {
   font-size: rem-calc(22);
   @include breakpoint(large) {
     font-size: rem-calc(24);
-    color: #fff;
   }
 }
 
@@ -380,4 +371,16 @@ body {
 
 .close-button {
   font-family: monospace;
+}
+
+.hideme {
+  @include breakpoint(large) {
+    transition: all $default-time;
+    opacity: 0;
+    transform: translate(0, 80px);
+  }
+}
+.show {
+  opacity: 1;
+  transform: translate(0);
 }

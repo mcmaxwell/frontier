@@ -26,12 +26,6 @@
          padding: $margin-4;
        }
 
-       &:hover {
-         .home-services__grid-item-img {
-           transform: scale(1.1);
-         }
-       }
-
        &:nth-child(2),
        &:nth-child(3) {
          @include breakpoint(large) {
@@ -63,6 +57,7 @@
        h3 {
          font-size: rem-calc(24);
          font-family: $ProximaBold;
+         margin-top: $margin-2;
        }
      }
   }

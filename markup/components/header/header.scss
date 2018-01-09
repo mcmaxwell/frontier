@@ -5,10 +5,10 @@
   align-items: center;
   padding: $margin-2 0 $margin-2 $margin-2;
   z-index: 100;
-
-  &.active {
-    position: fixed;
-  }
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  transition: all $default-time;
 
   @include breakpoint(medium) {
     padding: $margin-4 $margin-2 $margin-4 $margin-4;
@@ -18,11 +18,15 @@
     padding: $margin-4 $margin-8;
   }
 
+  &.active {
+    top: 0!important;
+  }
+
   .logo {
     position: relative;
     z-index: 400;
     width: 57%;
-        width: 200px;
+    width: 200px;
 
     @include breakpoint(medium) {
       width: 202px;
@@ -34,21 +38,22 @@
   }
 
   .menu {
-    display: none;
+    opacity: 0;
     position: fixed;
     left: 0;
-    top: 0;
+    top: -100%;
     width: 100%;
     flex-direction: column;
     z-index: 300;
-    transition: all $default-time;
     background-color: #fff;
     padding: calc(#{$header-height-medium} + 23px) 98px 98px;
+    transition: top $default-time $default-time, opacity $default-time;
 
     @include breakpoint(large) {
       display: flex;
       position: static;
       flex-direction: row;
+      opacity: 1;
       padding: 0;
     }
 
@@ -62,9 +67,25 @@
     display: flex;
     align-items: center;
 
+    &::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 0;
+      background-color: rgba($black, 0);
+      z-index: -1;
+      transition: background-color $default-time;
+    }
+
     &.active {
       .menu {
         display: flex;
+        opacity: 1;
+        top: 0;
+        transition: opacity $default-time;
+
       }
 
       &::after {
@@ -73,7 +94,7 @@
         top: 0;
         left: 0;
         right: 0;
-        bottom: 0;
+        height: 100%;
         background-color: rgba($black, .5);
         z-index: -1;
       }
@@ -136,6 +157,8 @@
     white-space: nowrap;
     text-indent: -9999em;
     font-size: 0;
+    position: relative;
+    z-index: 300;
 
     span {
       display: block;

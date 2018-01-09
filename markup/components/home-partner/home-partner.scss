@@ -13,9 +13,11 @@
       margin: $margin-2 $margin-6 0;
       display: block;
       filter: grayscale(100%);
+      opacity: .5;
       transition: all $default-time;
       &:hover {
         filter: grayscale(0);
+        opacity: 1;
       }
     }
   }

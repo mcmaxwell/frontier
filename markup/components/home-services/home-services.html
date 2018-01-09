@@ -1,4 +1,4 @@
-<section class="home-services" id="services">
+<section class="home-services hideme" id="services">
   <div class="row align-center">
     <div class="columns small-12">
       <h2 class="decor-title icon-underline">{{title}}</h2>
@@ -7,7 +7,7 @@
         {{#each homeServiceGrid }}
           <div class="home-services__grid-item">
             <div class="home-services__grid-item-img" style="background-image: url({{this.image}})"></div>
-            <i class="icon {{this.icon}}"></i>
+            {{{this.icon}}}
             <h3>{{this.title}}</h3>
             <p>{{this.description}}</p>
           </div>

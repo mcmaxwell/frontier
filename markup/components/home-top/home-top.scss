@@ -38,7 +38,6 @@
 
   h1 {
     max-width: 970px;
-    font-family: $Proxima;
     font-size: rem-calc(32);
     @include breakpoint(medium) {
       font-size: rem-calc(50);
@@ -61,9 +60,42 @@
   font-size: rem-calc(16);
   text-align: center;
 
-  &:hover .icon-arr {
-    color: $brand-color;
+  &:hover {
+    svg {
+      opacity: .8;
+      stroke: $brand-secondary-color;
+
+      circle {
+        fill: $brand-secondary-color;
+      }
+    }
   }
+
+  svg {
+    stroke: #8E8E8E;
+    fill: #fff;
+    opacity: .5;
+    circle {
+      fill: #8E8E8E;
+    }
+
+    &.mouse {
+      display: none;
+      @include breakpoint(medium) {
+        display: block;
+      }
+    }
+    &.arr {
+      display: inline-block;
+      width: 16px;
+      transform: rotate(90deg);
+      @include breakpoint(medium) {
+        display: none;
+      }
+    }
+  }
+
+
 
   span {
     display: block;

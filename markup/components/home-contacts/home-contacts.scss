@@ -40,6 +40,15 @@
     a {
       color: $black;
       display: block;
+      transition: all $default-time;
+
+      &:hover {
+        color: $brand-secondary-color;
+
+        svg {
+          fill: $brand-secondary-color;
+        }
+      }
     }
 
     &-email,

@@ -32,8 +32,8 @@
       }
 
       @include breakpoint(large) {
-        width: calc(25% - 30px);
-        min-width: calc(25% - 30px);
+        min-width: 290px;
+        width: 290px;
         margin-right: 0;
       }
 
@@ -44,7 +44,7 @@
         left: 100%;
         top: 50%;
         transform: translate(-50%);
-        height: 1px;
+        height: 2px;
         background-color: $line-color;
         z-index: -1;
       }
@@ -56,39 +56,64 @@
         transform: translate(-50%);
         width: 44px;
         height: 44px;
-        border: 1px solid $line-color;
+        border: 2px solid $line-color;
         border-radius: 50%;
         color: $line-color;
         font-size: rem-calc(24);
-        line-height: 44px;
+        line-height: 42px;
         display: inline-block;
         transition: all $default-time;
       }
 
-      &:nth-child(1)::after {
-        content: '1';
-      }
-
-      &:nth-child(2)::after {
-        content: '2';
-      }
-
-      &:nth-child(3)::after {
-        content: '3';
-      }
-
-      &:nth-child(4)::after {
-        content: '4';
-      }
-
-      .icon {
-        font-size: rem-calc(56);
-        vertical-align: middle;
-
-        &.icon-box {
-          font-size: 73px;
-          margin-top: -23px;
+      &:nth-child(1) {
+        &::after {
+          content: '1';
         }
+        svg {
+          width: 100%;
+        }
+      }
+
+      &:nth-child(2) {
+        svg {
+          stroke: $black;
+        }
+
+        &::after {
+          content: '2';
+        }
+      }
+
+      &:nth-child(3) {
+        svg {
+          stroke: $black;
+        }
+
+        &::after {
+          content: '3';
+        }
+      }
+
+      &:nth-child(4) {
+        svg {
+          stroke: $black;
+        }
+
+        &::after {
+          content: '4';
+        }
+      }
+
+      i {
+        margin-top: 11px;
+        min-height: 73px;
+        max-height: 73px;
+        display: flex;
+        align-items: center;
+      }
+
+      p {
+        line-height: 1.4;
       }
 
       h3 {
@@ -111,9 +136,13 @@
         &:before {
           background: $brand-secondary-color;
         }
-
+      }
+      &:hover svg {
+        fill: #fff;
+      }
+      &:not(:nth-child(1)):hover {
         svg {
-          fill: #fff;
+          stroke: #fff;
         }
       }
     }
@@ -141,7 +170,7 @@
     align-items: center;
     @include breakpoint(medium) {
       flex-direction: row;
-      align-items: flex-start;
+      align-items: stretch;
     }
 
     li {
@@ -163,6 +192,6 @@
   }
 
   &__icon {
-    font-size: rem-calc(70);
+    margin-bottom: $margin-2;
   }
 }

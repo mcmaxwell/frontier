@@ -1,0 +1,39 @@
+<!doctype html>
+<html class="no-js" lang="no">
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body class="page home-page">
+        %=symbols=%
+        <div class="home-top">
+          <div class="fake-header"></div>
+          <header class="header">
+            {{> header/header header.en }}
+          </header>
+          {{> home-top/home-top homeTop.en }}
+        </div>
+        <main class="page__wrapper">
+          {{> home-news/home-news homeNews.en }}
+          {{> home-services/home-services homeServices.en }}
+          {{> home-concept/home-concept homeConcept.en }}
+          {{> home-map/home-map homeMap.en }}
+          {{> home-partner/home-partner homePartner.en }}
+          {{> our-customers/our-customers ourCustomers.en }}
+          {{> home-contacts/home-contacts homeContacts.en }}
+          {{> home-references/home-references homeReferences.en }}
+        </main>
+
+        <footer class="footer">
+            {{> footer/footer footer.en }}
+        </footer>
+
+        <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="%=static=%js/vendor%=hash=%%=min=%.js"></script>
+        <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+    </body>
+
+</html>

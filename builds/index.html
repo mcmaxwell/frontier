@@ -29,7 +29,8 @@
     <body class="page home-page">
 
         <div class="home-top">
-            <header class="header">
+            <div class="fake-header"></div>
+            <header class="header nav-down">
                 <a href="/" class="logo">
                     <img src="static/img/general/frontier-logo.svg" alt="frontier">
                 </a>
@@ -54,55 +55,81 @@
                 <h1>Vi leverer en enkel og miljøvennlig løsning for effektiv drift</h1>
                 <span>Din leverandør av elektrisk- og fiber anlegg til havbruk</span>
             </div>
-            <a href="#" class="scroll-down"><span class="icon icon-scroll-Down"></span><span class="icon icon-arr"></span><span>Scroll Down</span></a>
+            <a href="#" class="scroll-down">
+                <svg class="mouse" width="24px" height="36px" viewBox="0 0 24 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke-width="1" fill-rule="evenodd" transform="translate(-708.000000, -740.000000)">
+                        <g transform="translate(678.000000, 740.000000)">
+                            <g transform="translate(30.000000, 0.000000)">
+                                <rect stroke-width="2" x="1" y="1" width="22" height="34" rx="11"></rect>
+                                <circle cx="12" cy="12" r="2"></circle>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <svg class="arr" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.33 17">
+                    <defs>
+                        <style>
+                            .a{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}
+                        </style>
+                    </defs>
+                    <title>arr</title>
+                    <path class="a" d="M16.67,8.5H1.33" transform="translate(-0.33)" />
+                    <polyline class="a" points="8 16 16.33 8.5 8 1" />
+                </svg>
+                <span>Scroll Down</span>
+            </a>
         </div>
         <main class="page__wrapper">
-            <section class="home-news" id="news">
+            <section class="home-news hideme" id="news">
                 <div class="row align-center">
                     <div class="columns small-12">
                         <h2 class="decor-title icon-underline">Nyheter</h2>
                         <div class="news-grid js-news-grid">
-                            <div class="news-item  news-item__img-contain ">
+                            <a href="news-item.html" class="news-item  news-item__img-contain ">
                                 <div class="news-item__img" style="background-image:url(static/img/assets/home-news/home-news.jpg)"></div>
                                 <div class="news-item__content">
                                     <span class="news-item__date">Oct 18, 2017</span>
                                     <p class="news-item__title">Opprinnelses sertifikat Din garanti for «grønn» energi</p>
                                     <p class="news-item__description">Frontier Infrastructure utsteder opprinnelses garantier av din strømleveranse i samarbeid med Ishavskraft.</p>
-                                    <a href="news-item.html" class="news-item__read-more">Read more</a>
+                                    <span class="news-item__read-more">Read more</span>
                                 </div>
-                            </div>
-                            <div class="news-item ">
+                            </a>
+                            <a href="news-item.html" class="news-item ">
                                 <div class="news-item__content">
                                     <span class="news-item__date">Oct 18, 2017</span>
                                     <p class="news-item__title">Understanding Operating Systems</p>
                                     <p class="news-item__description">If you own an Iphone, you’ve probably already worked out how much fun it is to use it to watch movies-it movies-it movies-it has that nice…</p>
-                                    <a href="news-item.html" class="news-item__read-more">Read more</a>
+                                    <span class="news-item__read-more">Read more</span>
                                 </div>
-                            </div>
-                            <div class="news-item ">
+                            </a>
+                            <a href="news-item.html" class="news-item ">
                                 <div class="news-item__content">
                                     <span class="news-item__date">Oct 18, 2017</span>
                                     <p class="news-item__title">Vi leverer en enkel og miljøvennlig løsning for effektiv drift</p>
                                     <p class="news-item__description">If you own an Iphone, you’ve probably already worked out how much fun it is to use it to watch movies-it movies-it movies-it has that nice…</p>
-                                    <a href="news-item.html" class="news-item__read-more">Read more</a>
+                                    <span class="news-item__read-more">Read more</span>
                                 </div>
-                            </div>
-                            <div class="news-item ">
+                            </a>
+                            <a href="news-item.html" class="news-item ">
                                 <div class="news-item__content">
                                     <span class="news-item__date">Oct 18, 2017</span>
                                     <p class="news-item__title">Understanding Operating Systems</p>
                                     <p class="news-item__description">Vi kan dermed tilby 100 % fornybar energi til alle selskapets kunder</p>
-                                    <a href="news-item.html" class="news-item__read-more">Read more</a>
+                                    <span class="news-item__read-more">Read more</span>
                                 </div>
-                            </div>
+                            </a>
                             <a href="news.html" class="all-news">
-                                <span class="icon-arr">Read all news</span>
+                                <span>Read all news</span>
+                                <svg class="icon-arr" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.33 17">
+                                    <path d="M16.67,8.5H1.33" transform="translate(-0.33)" />
+                                    <polyline points="8 16 16.33 8.5 8 1" />
+                                </svg>
                             </a>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="home-services" id="services">
+            <section class="home-services hideme" id="services">
                 <div class="row align-center">
                     <div class="columns small-12">
                         <h2 class="decor-title icon-underline">Tjenester</h2>
@@ -110,25 +137,93 @@
                         <div class="home-services__grid">
                             <div class="home-services__grid-item">
                                 <div class="home-services__grid-item-img" style="background-image: url(static/img/assets/home-services/consulting.jpg)"></div>
-                                <i class="icon icon-consulring"></i>
+
+                                <svg width="77px" height="65px" viewBox="0 0 77 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Homepage-–-Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-119.000000, -2457.000000)">
+                                        <g id="Services" transform="translate(80.000000, 2028.000000)">
+                                            <g id="Service-1" transform="translate(0.000000, 278.000000)">
+                                                <g id="Group-63" transform="translate(41.000000, 153.000000)">
+                                                    <path d="M44,0.26 L6.5,0.26 C3.0475,0.26 0.25,3.07988 0.25,6.56 L0.25,34.28 C0.25,37.76012 3.0475,40.58 6.5,40.58 L12.75,40.58 L12.75,50.66 L25.25,40.58 L44,40.58 C47.4525,40.58 50.25,37.76012 50.25,34.28 L50.25,6.56 C50.25,3.07988 47.4525,0.26 44,0.26 L44,0.26 Z"
+                                                    id="Stroke-59" stroke="#FCFCFC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M25.3675,49.4693 C26.3925,50.2127 27.64,50.65874 29,50.65874 L47.75,50.65874 L60.25,60.73874 L60.25,50.65874 L66.5,50.65874 C69.9525,50.65874 72.75,47.83886 72.75,44.35874 L72.75,16.63874 C72.75,13.16114 69.9525,10.33874 66.5,10.33874 L57.75,10.33874"
+                                                    id="Stroke-61" stroke="#FCFCFC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <text id="?" font-family=".SFNSDisplay, .SF NS Display" font-size="30" font-weight="normal" fill="#FFFFFF">
+                                                        <tspan x="18" y="31">?</tspan>
+                                                    </text>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+
                                 <h3>Consulting</h3>
                                 <p>Vi gir råd og vurdering av anlegg i forhold til, beregning av lønnsomhet, montering, samt elektrisk tilkopling. Sammen finner vi de løsningene som er best og dekker kundens behov.</p>
                             </div>
                             <div class="home-services__grid-item">
                                 <div class="home-services__grid-item-img" style="background-image: url(static/img/assets/home-services/tilleggstjenester.jpg)"></div>
-                                <i class="icon icon-tilleggstjenester"></i>
+
+                                <svg width="100px" height="65px" viewBox="0 0 100 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Homepage-–-Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-887.000000, -2457.000000)" stroke-linecap="round" stroke-linejoin="round">
+                                        <g id="Services" transform="translate(80.000000, 2028.000000)" stroke="#FCFCFC" stroke-width="3">
+                                            <g id="Service-2" transform="translate(770.000000, 278.000000)">
+                                                <g id="Group" transform="translate(39.000000, 152.000000)">
+                                                    <path d="M53.7045517,46.6931579 C51.7555862,46.6931579 50.6830345,45.9668421 49.5111724,45.2211579 C47.3313103,43.8338947 44.4736552,45.5116842 44.6896552,48.0513684 L44.6896552,62 L30.2126897,62 C28.9812414,62 28.224,60.6635789 28.8918621,59.6491579 C29.5671724,58.6202105 30.1704828,57.5936842 30.1704828,55.8674737 C30.1704828,52.4804211 26.6673103,49.8947368 22.3448276,49.8947368 C18.0223448,49.8947368 14.5191724,52.4804211 14.5191724,55.8674737 C14.5191724,57.5936842 15.1224828,58.6202105 15.7977931,59.6491579 C16.4656552,60.6635789 15.7084138,62 14.4769655,62 L0,62 L0,16 L14.4769655,16 C15.7084138,16 16.4656552,17.3364211 15.7977931,18.3508421 C15.1224828,19.3797895 14.5191724,20.4063158 14.5191724,22.1325263 C14.5191724,25.5195789 18.0223448,28.1052632 22.3448276,28.1052632 C26.6673103,28.1052632 30.1704828,25.5195789 30.1704828,22.1325263 C30.1704828,20.4063158 29.5671724,19.3797895 28.8918621,18.3508421 C28.224,17.3364211 28.9812414,16 30.2126897,16 L44.6896552,16 L44.6896552,30 C44.4736552,32.5396842 47.3313103,34.2174737 49.5111724,32.8302105 C50.6830345,32.0845263 51.7555862,31.3582105 53.7045517,31.3582105 C57.1630345,31.3582105 59.966069,34.7912632 59.966069,39.0256842 C59.966069,43.2601053 57.1630345,46.6931579 53.7045517,46.6931579 Z"
+                                                    id="Stroke-12-Copy-3"></path>
+                                                    <path d="M88.3649132,7.64132695 L88.3649132,21.641327 C88.1489132,24.1810112 91.0065683,25.8588006 93.1864304,24.4715375 C94.3582925,23.7258533 95.4308442,22.9995375 97.3798097,22.9995375 C100.838292,22.9995375 103.641327,26.4325901 103.641327,30.6670112 C103.641327,34.9014322 100.838292,38.3344848 97.3798097,38.3344848 L97.0864304,38.3344848 C95.1374649,38.3344848 94.3582925,37.6081691 93.1864304,36.8624848 C91.0065683,35.4752217 88.1489132,37.1530112 88.3649132,39.6926954 L88.3649132,53.641327 L73.3115871,53.641327 C72.0801388,53.641327 71.3228974,52.3049059 71.9907595,51.2904848 C72.6660698,50.2615375 73.2693802,49.2350112 73.2693802,47.5088006 C73.2693802,44.121748 69.7662078,41.5360638 65.443725,41.5360638 C61.1212422,41.5360638 57.6180698,44.121748 57.6180698,47.5088006 C57.6180698,49.2350112 58.2213802,50.2615375 58.8966905,51.2904848 C59.5645526,52.3049059 58.8073112,53.641327 57.5758629,53.641327 L42.358673,53.641327 L42.358673,7.64132695"
+                                                    id="Stroke-12-Copy-4" stroke-dasharray="2,8" transform="translate(73.000000, 30.641327) rotate(-90.000000) translate(-73.000000, -30.641327) "></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+
                                 <h3>Tilleggstjenester</h3>
                                 <p>Utstede GOS (opprinnelses garanti / garanties of origion, klimanøytral energi) sammen med Ishavskraft. Fotavtrykk 0.</p>
                             </div>
                             <div class="home-services__grid-item">
                                 <div class="home-services__grid-item-img" style="background-image: url(static/img/assets/home-services/overvakning.jpg)"></div>
-                                <i class="icon icon-overvakning"></i>
+
+                                <svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Homepage-–-Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-121.000000, -2886.000000)" stroke-linecap="round" stroke-linejoin="round">
+                                        <g id="Services" transform="translate(80.000000, 2028.000000)" stroke="#FFFFFF" stroke-width="3">
+                                            <g id="Service-3" transform="translate(0.000000, 718.000000)">
+                                                <g id="Group-12" transform="translate(43.000000, 142.000000)">
+                                                    <path d="M52.9222584,32.94 C53.0465455,31.98 53.1386893,31.02 53.1386893,30 C53.1386893,28.98 53.0465455,28.02 52.9222584,27.06 L59.4301851,22.1110345 C60.0151914,21.66 60.1694787,20.8510345 59.8009034,20.1910345 L53.6315517,9.81103448 C53.2608335,9.15103448 52.429396,8.91103448 51.750103,9.15103448 L44.0700209,12.1510345 C42.4671466,10.9510345 40.7399853,9.96 38.8585366,9.21103448 L37.6863813,1.26 C37.5942374,0.54 36.9470876,0 36.1756508,0 L23.8390904,0 C23.0676536,0 22.4205038,0.54 22.3262171,1.26 L21.1540617,9.21103448 C19.2747559,9.96 17.5475946,10.98 15.9425774,12.1510345 L8.2624953,9.15103448 C7.553202,8.88 6.75176486,9.15103448 6.38104661,9.81103448 L0.213837832,20.1910345 C-0.186880737,20.8510345 -0.00259305305,21.66 0.58455608,22.1110345 L7.09033991,27.06 C6.96819575,28.02 6.87605191,29.0110345 6.87605191,30 C6.87605191,30.9910345 6.96819575,31.98 7.09033991,32.94 L0.58455608,37.8910345 C-0.00259305305,38.34 -0.156880417,39.1510345 0.213837832,39.8110345 L6.38104661,50.1910345 C6.75176486,50.8510345 7.5853452,51.0910345 8.2624953,50.8510345 L15.9425774,47.8510345 C17.5475946,49.0510345 19.2747559,50.04 21.1540617,50.7910345 L22.3262171,58.74 C22.4205038,59.46 23.0676536,60 23.8390904,60 L36.1756508,60 C36.9470876,60 37.5942374,59.46 37.6863813,58.74 L38.8585366,50.7910345 C40.7399853,50.04 42.4671466,49.02 44.0700209,47.8510345 L51.750103,50.8510345 C52.4593963,51.12 53.2608335,50.8510345 53.6315517,50.1910345 L59.8009034,39.8110345 C60.1694787,39.1510345 60.0151914,38.34 59.4301851,37.8910345 L52.9222584,32.94 L52.9222584,32.94 Z"
+                                                    id="Stroke-1"></path>
+                                                    <path d="M45,30 C45,30 38.285185,39 29.999058,39 C21.7166991,39 15,30 15,30 C15,30 21.7166991,21 29.999058,21 C38.285185,21 45,30 45,30 L45,30 Z" id="Stroke-4399"></path>
+                                                    <path d="M33,30 C33,31.656 31.6572,33 30,33 C28.3428,33 27,31.656 27,30 C27,28.3428 28.3428,27 30,27 C31.6572,27 33,28.3428 33,30 L33,30 Z" id="Stroke-4400"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+
                                 <h3>Overvåkning, drift og vedlikehold</h3>
                                 <p>fra vårt driftssenter. Frontier Infrastucture har norsk lager for hurtig utskifting av nøkkelkomponenter, ved behov.</p>
                             </div>
                             <div class="home-services__grid-item">
                                 <div class="home-services__grid-item-img" style="background-image: url(static/img/assets/home-services/prosjektledelse.jpg)"></div>
-                                <i class="icon icon-prosjektledelse"></i>
+
+                                <svg width="56px" height="68px" viewBox="0 0 56 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Homepage-–-Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-668.000000, -2884.000000)" stroke-linecap="round" stroke-linejoin="round">
+                                        <g id="Services" transform="translate(80.000000, 2028.000000)" stroke="#FCFCFC" stroke-width="3">
+                                            <g id="Service-4" transform="translate(550.000000, 718.000000)">
+                                                <g id="Group-3" transform="translate(40.000000, 140.000000)">
+                                                    <polyline id="Stroke-7890" points="21 52.5833333 21 56 8 56 8 43 16.75 43"></polyline>
+                                                    <polyline id="Stroke-7891" points="13 47.625 16.2727273 51 23 43"></polyline>
+                                                    <polygon id="Stroke-7892" points="8 33 21 33 21 20 8 20"></polygon>
+                                                    <path d="M29,50 L43,50" id="Stroke-7893"></path>
+                                                    <path d="M29,27 L43,27" id="Stroke-7894"></path>
+                                                    <path d="M12.2348571,6 L3.05809524,6 C1.36685714,6 0,7.23733333 0,8.76251852 L0,61.2374815 C0,62.7626667 1.36685714,64 3.05809524,64 L48.9394286,64 C50.6306667,64 52,62.7626667 52,61.2374815 L52,8.76251852 C52,7.23733333 50.6306667,6 48.9394286,6 L39.7626667,6"
+                                                    id="Stroke-7895"></path>
+                                                    <path d="M30.0725455,2.66666667 C29.2523636,1.08 27.7467273,0 26,0 C24.2556364,0 22.7476364,1.08 21.9298182,2.66666667 L15.3636364,2.66666667 C14.0589091,2.66666667 13,3.86133333 13,5.33333333 L13,8 L39,8 L39,5.33333333 C39,3.86133333 37.9434545,2.66666667 36.6363636,2.66666667 L30.0725455,2.66666667 Z"
+                                                    id="Stroke-7897"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+
                                 <h3>Prosjektledelse</h3>
                                 <p>for utbygging av elektrisitet og fiber. Vi gjennomfører installasjon av nøkkelferdige anlegg, inklusiv leveranse av alle komponenter og nødvendige tjenester.</p>
                             </div>
@@ -136,7 +231,7 @@
                     </div>
                 </div>
             </section>
-            <div class="home-concept" id="concept">
+            <div class="home-concept hideme" id="concept">
                 <div class="row align-center">
                     <div class="columns small-12">
                         <h2 class="decor-title icon-underline">Forretningskonsept</h2>
@@ -145,26 +240,83 @@
                         <div class="home-concept__list-contain">
                             <div class="home-concept__list js-home-concept__list">
                                 <div class="home-concept__list-item">
-                                    <i class="icon icon-pen">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59 59.04"><path d="M16.77,4.56a1.5,1.5,0,0,1,2.12,2.12l-3.65,3.65a1.5,1.5,0,0,1-2.12-2.12Z" transform="translate(-0.5 -0.47)"/><path d="M20.42,8.21a1.5,1.5,0,1,1,2.12,2.12L20.1,12.77A1.5,1.5,0,1,1,18,10.65Z" transform="translate(-0.5 -0.47)"/><path d="M24.07,11.87A1.5,1.5,0,0,1,26.19,14l-3.65,3.65a1.5,1.5,0,0,1-2.12-2.12Z" transform="translate(-0.5 -0.47)"/><path d="M46,33.8a1.5,1.5,0,1,1,2.12,2.12l-3.65,3.65a1.5,1.5,0,1,1-2.12-2.12Z" transform="translate(-0.5 -0.47)"/><path d="M49.63,37.45a1.5,1.5,0,0,1,2.12,2.12L49.32,42a1.5,1.5,0,1,1-2.12-2.12Z" transform="translate(-0.5 -0.47)"/><path d="M53.29,41.1a1.5,1.5,0,0,1,2.12,2.12l-3.65,3.65a1.5,1.5,0,0,1-2.12-2.12Z" transform="translate(-0.5 -0.47)"/><path d="M5.81,42a1.5,1.5,0,0,1,2.12-2.12L20.1,52.07A1.5,1.5,0,1,1,18,54.19Z" transform="translate(-0.5 -0.47)"/><path d="M17.67,44.44a1.5,1.5,0,1,1-2.12-2.12L49.63,8.21a1.5,1.5,0,1,1,2.12,2.12Z" transform="translate(-0.5 -0.47)"/><path d="M18.26,51.79,55.51,14.51a3.37,3.37,0,0,0,0-4.77L50.22,4.45a3.37,3.37,0,0,0-4.76,0L8.21,41.73l-4,14.08ZM57.63,7.62a6.37,6.37,0,0,1,0,9L20.1,54.19a1.5,1.5,0,0,1-.65.38l-17,4.87A1.5,1.5,0,0,1,.56,57.59L5.43,40.53a1.5,1.5,0,0,1,.38-.65L43.34,2.33a6.37,6.37,0,0,1,9,0Z" transform="translate(-0.5 -0.47)"/><path d="M7.93,42a1.5,1.5,0,0,1-2.12-2.12L43.34,2.33a6.37,6.37,0,0,1,9,0l5.29,5.29a6.37,6.37,0,0,1,0,9L20.1,54.19A1.5,1.5,0,1,1,18,52.07L55.51,14.51a3.37,3.37,0,0,0,0-4.77L50.22,4.45a3.37,3.37,0,0,0-4.76,0Z" transform="translate(-0.5 -0.47)"/><path d="M55.88,45.82,41.11,31a1.5,1.5,0,0,1,2.12-2.12L59.06,44.76a1.5,1.5,0,0,1,0,2.12L46.89,59.06a1.5,1.5,0,0,1-2.12,0L28.94,43.22a1.5,1.5,0,0,1,2.12-2.12L45.83,55.88Z" transform="translate(-0.5 -0.47)"/><path d="M4.12,14.15,18.89,28.92A1.5,1.5,0,1,1,16.77,31L.94,15.21a1.5,1.5,0,0,1,0-2.12L13.11.91a1.5,1.5,0,0,1,2.12,0L31.06,16.74a1.5,1.5,0,0,1-2.12,2.12L14.17,4.09Z" transform="translate(-0.5 -0.47)"/></svg>
+                                    <i class="icon-pen">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59 59.04" stroke="none"><path d="M16.77,4.56a1.5,1.5,0,0,1,2.12,2.12l-3.65,3.65a1.5,1.5,0,0,1-2.12-2.12Z" transform="translate(-0.5 -0.47)"/><path d="M20.42,8.21a1.5,1.5,0,1,1,2.12,2.12L20.1,12.77A1.5,1.5,0,1,1,18,10.65Z" transform="translate(-0.5 -0.47)"/><path d="M24.07,11.87A1.5,1.5,0,0,1,26.19,14l-3.65,3.65a1.5,1.5,0,0,1-2.12-2.12Z" transform="translate(-0.5 -0.47)"/><path d="M46,33.8a1.5,1.5,0,1,1,2.12,2.12l-3.65,3.65a1.5,1.5,0,1,1-2.12-2.12Z" transform="translate(-0.5 -0.47)"/><path d="M49.63,37.45a1.5,1.5,0,0,1,2.12,2.12L49.32,42a1.5,1.5,0,1,1-2.12-2.12Z" transform="translate(-0.5 -0.47)"/><path d="M53.29,41.1a1.5,1.5,0,0,1,2.12,2.12l-3.65,3.65a1.5,1.5,0,0,1-2.12-2.12Z" transform="translate(-0.5 -0.47)"/><path d="M5.81,42a1.5,1.5,0,0,1,2.12-2.12L20.1,52.07A1.5,1.5,0,1,1,18,54.19Z" transform="translate(-0.5 -0.47)"/><path d="M17.67,44.44a1.5,1.5,0,1,1-2.12-2.12L49.63,8.21a1.5,1.5,0,1,1,2.12,2.12Z" transform="translate(-0.5 -0.47)"/><path d="M18.26,51.79,55.51,14.51a3.37,3.37,0,0,0,0-4.77L50.22,4.45a3.37,3.37,0,0,0-4.76,0L8.21,41.73l-4,14.08ZM57.63,7.62a6.37,6.37,0,0,1,0,9L20.1,54.19a1.5,1.5,0,0,1-.65.38l-17,4.87A1.5,1.5,0,0,1,.56,57.59L5.43,40.53a1.5,1.5,0,0,1,.38-.65L43.34,2.33a6.37,6.37,0,0,1,9,0Z" transform="translate(-0.5 -0.47)"/><path d="M7.93,42a1.5,1.5,0,0,1-2.12-2.12L43.34,2.33a6.37,6.37,0,0,1,9,0l5.29,5.29a6.37,6.37,0,0,1,0,9L20.1,54.19A1.5,1.5,0,1,1,18,52.07L55.51,14.51a3.37,3.37,0,0,0,0-4.77L50.22,4.45a3.37,3.37,0,0,0-4.76,0Z" transform="translate(-0.5 -0.47)"/><path d="M55.88,45.82,41.11,31a1.5,1.5,0,0,1,2.12-2.12L59.06,44.76a1.5,1.5,0,0,1,0,2.12L46.89,59.06a1.5,1.5,0,0,1-2.12,0L28.94,43.22a1.5,1.5,0,0,1,2.12-2.12L45.83,55.88Z" transform="translate(-0.5 -0.47)"/><path d="M4.12,14.15,18.89,28.92A1.5,1.5,0,1,1,16.77,31L.94,15.21a1.5,1.5,0,0,1,0-2.12L13.11.91a1.5,1.5,0,0,1,2.12,0L31.06,16.74a1.5,1.5,0,0,1-2.12,2.12L14.17,4.09Z" transform="translate(-0.5 -0.47)"/></svg>
                         </i>
                                     <h3>Konseptutvikling</h3>
                                     <p>Prosjektering</p>
                                 </div>
                                 <div class="home-concept__list-item">
-                                    <i class="icon icon-hands">
+                                    <i class="icon-hands">
+                          
+                  <svg width="80px" height="50px" viewBox="0 0 80 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <g id="Homepage-–-Desktop"  stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-515.000000, -3707.000000)" stroke-linecap="round" stroke-linejoin="round">
+                          <g id="Business-Concept" transform="translate(-4.000000, 3266.000000)"  stroke-width="3">
+                              <g id="Business-timeline" transform="translate(84.000000, 310.000000)">
+                                  <g id="Group-362" transform="translate(437.000000, 133.000000)">
+                                      <path d="M11.9726027,26.3977273 C13.1568493,27.4013636 16.7590411,31.4786364 18.4794521,32.9318182 C24.7078082,38.1669318 32.8257534,43.8568182 34.0958904,44.6931818 C35.1734247,45.4040909 36.4487671,46 38,46 C39.4861644,46 41.4252055,46.0182955 41.9041096,44.6931818 C44.3272603,46.9173864 48.1168493,43.9613636 48.4109589,40.7727273 C50.3916438,42.6284091 55.2847945,40.2630682 54.9178082,36.8522727 C57.2680822,38.4805682 61.880137,36.6039773 60.1232877,32.9318182 C57.9213699,28.3292045 44.3272603,18.3764773 39.3013699,13.3295455 C36.4383562,14.3671591 30.3245205,19.8923864 26.2876712,18.5568182 C22.2534247,17.22125 26.0560274,10.9485227 28.890411,8.10227273 C34.5227397,2.44636364 37.9010959,1.21534091 44.5068493,4.18181818 C51.1073973,7.14829545 56.2191781,9.40909091 56.2191781,9.40909091" id="Stroke-346"></path>
+                                      <path d="M31.4931507,5 L15.8767123,5" id="Stroke-348"></path>
+                                      <path d="M60.1232877,32.9318182 L64.0273973,30.3181818" id="Stroke-350"></path>
+                                      <path d="M54.9178082,36.8522727 C53.2286301,35.5140909 44.5068493,26.3977273 44.5068493,26.3977273" id="Stroke-352"></path>
+                                      <path d="M48.4109589,40.7727273 C46.2819178,39.0634091 40.1836986,32.5868182 39.3013699,31.625" id="Stroke-354"></path>
+                                      <path d="M41.9041096,44.6931818 C39.7152055,42.8375 35.8735616,38.7628409 34.0958904,36.8522727" id="Stroke-356"></path>
+                                      <path d="M0.260273973,29.0688636 C4.36219178,29.0688636 10.6712329,29.0113636 10.6712329,29.0113636 C10.6712329,29.0113636 15.140137,11.3536364 15.8767123,2.875 C13.2739726,0.261363636 0.260273973,0.261363636 0.260273973,0.261363636 L0.260273973,29.0688636 L0.260273973,29.0688636 Z" id="Stroke-358"></path>
+                                      <path d="M54.9178082,5.48863636 C57.1223288,9.04840909 64.1549315,27.3569318 65.3287671,31.625 L75.739726,31.625 L75.739726,2.875 C63.0747945,2.875 54.9178082,5.48863636 54.9178082,5.48863636 L54.9178082,5.48863636 Z" id="Stroke-360"></path>
+                                  </g>
+                              </g>
+                          </g>
+                      </g>
+                  </svg>
+                  
                         </i>
                                     <h3>Avtale inngåelse</h3>
                                     <p>Business case</p>
                                 </div>
                                 <div class="home-concept__list-item">
-                                    <i class="icon icon-box">
+                                    <i class="icon-box">
+                          
+                  <svg width="72px" height="76px" viewBox="0 0 72 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <g id="Homepage-–-Desktop" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-849.000000, -3687.000000)" stroke-linecap="round" stroke-linejoin="round">
+                          <g id="Business-Concept" transform="translate(-4.000000, 3266.000000)" stroke-width="3">
+                              <g id="Business-timeline" transform="translate(84.000000, 310.000000)">
+                                  <g id="Group-3-Copy-3" transform="translate(771.000000, 113.000000)">
+                                      <polyline id="Stroke-7775" points="8.69172932 41.2484802 8.69172932 66.0205167 34 72.2895137 34 24.2272036"></polyline>
+                                      <polygon id="Stroke-7776" points="23.1992481 41.2484802 0 41.2484802 10.8007519 26.3168693 34 24.2272036"></polygon>
+                                      <polyline id="Stroke-7777" points="34 24.2272036 34 72.2895137 59.3082707 66.0205167 59.3082707 41.2484802"></polyline>
+                                      <polygon id="Stroke-7778" points="44.8007519 41.2484802 68 41.2484802 57.1992481 26.3168693 34 24.2272036"></polygon>
+                                      <g id="Group-245" transform="translate(24.052632, 0.000000)">
+                                          <polyline id="Stroke-43" points="18.9473684 8 9.94736842 0 0.947368421 8"></polyline>
+                                          <path d="M9.94736842,1 L9.94736842,18" id="Stroke-44"></path>
+                                      </g>
+                                  </g>
+                              </g>
+                          </g>
+                      </g>
+                  </svg>
+                  
                         </i>
                                     <h3>Installasjon</h3>
                                     <p>Prosjektledelse Installasjon</p>
                                 </div>
                                 <div class="home-concept__list-item">
-                                    <i class="icon icon-drift">
+                                    <i class="icon-drift">
+                          
+                  <svg width="87px" height="64px" viewBox="0 0 87 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <g id="Homepage-–-Desktop" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1171.000000, -3695.000000)" stroke-linejoin="round">
+                          <g id="Business-Concept" transform="translate(-4.000000, 3266.000000)" stroke-width="3">
+                              <g id="Business-timeline" transform="translate(84.000000, 310.000000)">
+                                  <g id="Group-747-Copy-2" transform="translate(1093.000000, 121.000000)">
+                                      <path d="M11.0409896,38 C6.3587032,21.1051537 18.0608557,4.52862109 34.338393,0.798814756 C45.5844324,-1.78921413 56.8482887,2.0824494 64,9.93649428" id="Stroke-8825" stroke-linecap="round"></path>
+                                      <path d="M20.0409896,60 C15.3587032,43.1051537 27.0608557,26.5286211 43.338393,22.7988148 C54.5844324,20.2107859 65.8482887,24.0824494 73,31.9364943" id="Stroke-8825-Copy" stroke-linecap="round" transform="translate(46.000000, 41.000000) scale(-1, -1) translate(-46.000000, -41.000000) "></path>
+                                      <polyline id="Stroke-43" stroke-linecap="round" transform="translate(72.534808, 26.000000) rotate(-7.000000) translate(-72.534808, -26.000000) " points="82.5348082 31 72.5348082 21 62.5348082 31"></polyline>
+                                      <polyline id="Stroke-43-Copy" stroke-linecap="round" transform="translate(10.659056, 34.000000) scale(1, -1) rotate(9.000000) translate(-10.659056, -34.000000) " points="20.6590557 39 10.6590557 29 0.659055731 39"></polyline>
+                                      <polygon id="Stroke-8826" points="57.7894737 25.7672414 39.1745152 49.4310345 42.2087535 35.2327586 28.3157895 35.2327586 45.3795014 11.5689655 42.2770083 25.7672414"></polygon>
+                                  </g>
+                              </g>
+                          </g>
+                      </g>
+                  </svg>
+                  
                         </i>
                                     <h3>Drift</h3>
                                     <p>Daglig drift,
@@ -175,15 +327,17 @@
                     </div>
                 </div>
             </div>
-            <div class="scheme">
+            <div class="scheme hideme">
                 <div class="scheme__img-contain">
-                    <img src="static/img/assets/home-concept/concept.svg" alt="Forretningskonsept" class="scheme__img">
+                    <img src="static/img/assets/home-concept/concept.png" alt="Forretningskonsept" class="scheme__img">
                 </div>
                 <div class="row align-center">
                     <div class="columns small-12">
                         <div class="scheme__list">
                             <div class="scheme__item">
-                                <div class="scheme__icon icon-baloon"></div>
+                                <div class="scheme__icon">
+                                    <img src="static/img/assets/home-concept/baloon.svg" width="46">
+                                </div>
                                 <h3 class="scheme__title">Vår leveranse</h3>
                                 <ul class="scheme__item-list">
                                     <li>Prosjektledelse</li>
@@ -195,7 +349,9 @@
                                 </ul>
                             </div>
                             <div class="scheme__item">
-                                <div class="scheme__icon icon-wealth"></div>
+                                <div class="scheme__icon">
+                                    <img src="static/img/assets/home-concept/wealth.svg" width="58">
+                                </div>
                                 <h3 class="scheme__title">Kundens merverdi</h3>
                                 <ul class="scheme__item-list">
                                     <li>Langsiktig kontrakt (finansiert/OPEX &amp; driftes)</li>
@@ -208,8 +364,9 @@
                     </div>
                 </div>
             </div>
-            <section class="home-map">
-                <img src="static/img/assets/home-map/map.jpg" alt="" width="100%">
+            <section class="home-map hideme">
+                <img src="static/img/assets/home-map/map.jpg" width="100%">
+                <img class="active" src="static/img/assets/home-map/map-active.jpg" width="100%">
                 <div class="home-map__list">
                     <ul>
                         <li>
@@ -286,9 +443,18 @@
                         </li>
                     </ul>
                 </div>
-                <div class="home-map__toggle icon"></div>
+                <div class="home-map__toggle icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="in" width="39" viewBox="0 0 31.03 31.17">
+                        <path d="M22.7,12.65a10,10,0,1,0-10,10,10,10,0,0,0,10-10Zm2.23,0A12.28,12.28,0,1,1,12.65.37,12.28,12.28,0,0,1,24.93,12.65Zm6.14,17a1.12,1.12,0,1,1-1.58,1.58L20,21.74a1.12,1.12,0,1,1,1.58-1.58ZM11.53,8.93a1.12,1.12,0,0,1,2.23,0v7.44a1.12,1.12,0,0,1-2.23,0Zm4.84,2.6a1.12,1.12,0,0,1,0,2.23H8.93a1.12,1.12,0,0,1,0-2.23Z"
+                        transform="translate(-0.37 -0.37)" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="out" width="39" viewBox="0 0 31.03 31.17">
+                        <path d="M22.7,12.65a10,10,0,1,0-10,10,10,10,0,0,0,10-10Zm2.23,0A12.28,12.28,0,1,1,12.65.37,12.28,12.28,0,0,1,24.93,12.65Zm6.14,17a1.12,1.12,0,1,1-1.58,1.58L20,21.74a1.12,1.12,0,1,1,1.58-1.58Zm-14.7-18.1a1.12,1.12,0,0,1,0,2.23H8.93a1.12,1.12,0,0,1,0-2.23Z"
+                        transform="translate(-0.37 -0.37)" />
+                    </svg>
+                </div>
             </section>
-            <section class="home-partner">
+            <section class="home-partner hideme">
                 <div class="row align-center">
                     <div class="columns small-12">
                         <h2 class="decor-title icon-underline">Partnere</h2>
@@ -313,28 +479,28 @@
                     </div>
                 </div>
             </section>
-            <section class="our-customers" style="background-image: url(static/img/assets/our-customers/our-customers.jpg)">
+            <section class="our-customers hideme" style="background-image: url(static/img/assets/our-customers/our-customers.jpg)">
                 <div class="row align-center">
                     <div class="columns small-12">
-                        <h2 class="decor-title icon-underline">Vi skaper merverdi for våre kunder</h2>
+                        <h2 class="decor-title icon-underline white">Vi skaper merverdi for våre kunder</h2>
                         <p class="section-description">Våre tjenester bidrar til effektivisering og kostnadsreduksjon for kunde.</p>
                         <ul class="our-customers__list">
-                            <li><i class="icon icon-man-net" style="font-size: 39px"></i> Ett kontaktpunkt for kunden</li>
-                            <li><i class="icon icon-analitics" style="font-size: 46px"></i> Forutsigbare priser</li>
-                            <li><i class="icon icon-standart" style="font-size: 47px"></i> Standardisert dokumentasjon</li>
-                            <li><i class="icon icon-money-box" style="font-size: 32px"></i> Attraktiv utleier med høyt servicenivå, OPEX istedenfor CAPEX</li>
-                            <li><i class="icon icon-speed" style="font-size: 34px"></i> Høy leveransepresisjon sammen med våre samarbeidspartnere</li>
-                            <li><i class="icon icon-7" style="font-size: 46px"></i> 24/7 beredskap gjennom kundesenter og SLA avtaler</li>
-                            <li><i class="icon icon-lower-cost" style="font-size: 32px"></i> Lavere driftskostnader</li>
-                            <li><i class="icon icon-cube" style="font-size: 44px"></i> Standardiserte løsninger</li>
-                            <li><i class="icon icon-short-response" style="font-size: 29px"></i> Kort responstid</li>
+                            <li><i class="icon icon-man-net"></i> Ett kontaktpunkt for kunden</li>
+                            <li><i class="icon icon-analitics"></i> Forutsigbare priser</li>
+                            <li><i class="icon icon-standart"></i> Standardisert dokumentasjon</li>
+                            <li><i class="icon icon-money-box"></i> Attraktiv utleier med høyt servicenivå, OPEX istedenfor CAPEX</li>
+                            <li><i class="icon icon-speed"></i> Høy leveransepresisjon sammen med våre samarbeidspartnere</li>
+                            <li><i class="icon icon-7"></i> 24/7 beredskap gjennom kundesenter og SLA avtaler</li>
+                            <li><i class="icon icon-lower-cost"></i> Lavere driftskostnader</li>
+                            <li><i class="icon icon-cube"></i> Standardiserte løsninger</li>
+                            <li><i class="icon icon-short-response"></i> Kort responstid</li>
                         </ul>
                     </div>
                 </div>
             </section>
-            <section class="home-contacts" id="contact">
-                <div class="row align-center">
-                    <div class="columns small-10">
+            <section class="home-contacts hideme" id="contact">
+                <div class="row align-center collapse">
+                    <div class="columns small-12 xlarge-10">
                         <h2 class="decor-title icon-underline">Kontakter</h2>
                         <p class="section-description">Kontakt oss for råd og vurdering av løsning for dine anlegg.</p>
                         <div class="home-contacts__list">
@@ -347,13 +513,7 @@
                                     <a href="mailto:roman@probarents.no" class="home-contacts__item-email">roman@probarents.no</a>
                                     <a href="https://www.linkedin.com/in/roman-fredriksen-603346a5/" class="linkidin">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="18">
-                                            <defs>
-                                                <style>
-                                                    .a{fill:#1d1d1d;}
-                                                </style>
-                                            </defs>
-                                            <title>linkedin</title>
-                                            <path class="a" d="M0,2.19a2.18,2.18,0,0,1,.16-.83A2.14,2.14,0,0,1,.63.65,2.51,2.51,0,0,1,1.34.17,2,2,0,0,1,2.18,0,2,2,0,0,1,3,.17a2.51,2.51,0,0,1,.71.49,2.14,2.14,0,0,1,.47.71,2.18,2.18,0,0,1,.16.83A2.23,2.23,0,0,1,4.2,3a2.14,2.14,0,0,1-.47.71A2.36,2.36,0,0,1,3,4.23a2.13,2.13,0,0,1-.83.16,2.13,2.13,0,0,1-.83-.16,2.36,2.36,0,0,1-.71-.48A2.14,2.14,0,0,1,.16,3,2.23,2.23,0,0,1,0,2.19ZM.12,17.56V6.15A.41.41,0,0,1,.16,6a.77.77,0,0,1,.09-.15A.5.5,0,0,1,.4,5.73a.45.45,0,0,1,.18,0h3.2a.45.45,0,0,1,.18,0,.5.5,0,0,1,.15.11A.77.77,0,0,1,4.2,6a.41.41,0,0,1,0,.17v11.4a.41.41,0,0,1,0,.17.77.77,0,0,1-.09.15A.38.38,0,0,1,4,18a.58.58,0,0,1-.18,0H.58A.58.58,0,0,1,.4,18a.38.38,0,0,1-.15-.1.77.77,0,0,1-.09-.15A.41.41,0,0,1,.12,17.56Zm5.87,0V6.15A.41.41,0,0,1,6,6a.54.54,0,0,1,.25-.26.4.4,0,0,1,.17,0H9.56l.16,0,.12.05a.32.32,0,0,1,.09.09A.4.4,0,0,1,10,6l0,.15a.74.74,0,0,1,0,.1v.28a4.07,4.07,0,0,1,1.42-.85,5.38,5.38,0,0,1,1.8-.28,6.47,6.47,0,0,1,2,.28,4.28,4.28,0,0,1,1.51.83,3.51,3.51,0,0,1,.95,1.41A5.47,5.47,0,0,1,18,9.85v7.69a.46.46,0,0,1,0,.19.5.5,0,0,1-.11.15.38.38,0,0,1-.15.1l-.17,0H14.26l-.17,0a.38.38,0,0,1-.15-.1.5.5,0,0,1-.11-.15.46.46,0,0,1,0-.19V10.61a3.25,3.25,0,0,0-.09-.81,1.58,1.58,0,0,0-.26-.57A1.06,1.06,0,0,0,13,8.91a2.37,2.37,0,0,0-.76-.11,2.51,2.51,0,0,0-1,.17,1.39,1.39,0,0,0-.63.5,2.24,2.24,0,0,0-.36.81,4.65,4.65,0,0,0-.11,1.08v6.19a.41.41,0,0,1,0,.17.5.5,0,0,1-.11.15.27.27,0,0,1-.14.1l-.18,0H6.45l-.17,0a.38.38,0,0,1-.15-.1A.5.5,0,0,1,6,17.73.41.41,0,0,1,6,17.56Z"
+                                            <path d="M0,2.19a2.18,2.18,0,0,1,.16-.83A2.14,2.14,0,0,1,.63.65,2.51,2.51,0,0,1,1.34.17,2,2,0,0,1,2.18,0,2,2,0,0,1,3,.17a2.51,2.51,0,0,1,.71.49,2.14,2.14,0,0,1,.47.71,2.18,2.18,0,0,1,.16.83A2.23,2.23,0,0,1,4.2,3a2.14,2.14,0,0,1-.47.71A2.36,2.36,0,0,1,3,4.23a2.13,2.13,0,0,1-.83.16,2.13,2.13,0,0,1-.83-.16,2.36,2.36,0,0,1-.71-.48A2.14,2.14,0,0,1,.16,3,2.23,2.23,0,0,1,0,2.19ZM.12,17.56V6.15A.41.41,0,0,1,.16,6a.77.77,0,0,1,.09-.15A.5.5,0,0,1,.4,5.73a.45.45,0,0,1,.18,0h3.2a.45.45,0,0,1,.18,0,.5.5,0,0,1,.15.11A.77.77,0,0,1,4.2,6a.41.41,0,0,1,0,.17v11.4a.41.41,0,0,1,0,.17.77.77,0,0,1-.09.15A.38.38,0,0,1,4,18a.58.58,0,0,1-.18,0H.58A.58.58,0,0,1,.4,18a.38.38,0,0,1-.15-.1.77.77,0,0,1-.09-.15A.41.41,0,0,1,.12,17.56Zm5.87,0V6.15A.41.41,0,0,1,6,6a.54.54,0,0,1,.25-.26.4.4,0,0,1,.17,0H9.56l.16,0,.12.05a.32.32,0,0,1,.09.09A.4.4,0,0,1,10,6l0,.15a.74.74,0,0,1,0,.1v.28a4.07,4.07,0,0,1,1.42-.85,5.38,5.38,0,0,1,1.8-.28,6.47,6.47,0,0,1,2,.28,4.28,4.28,0,0,1,1.51.83,3.51,3.51,0,0,1,.95,1.41A5.47,5.47,0,0,1,18,9.85v7.69a.46.46,0,0,1,0,.19.5.5,0,0,1-.11.15.38.38,0,0,1-.15.1l-.17,0H14.26l-.17,0a.38.38,0,0,1-.15-.1.5.5,0,0,1-.11-.15.46.46,0,0,1,0-.19V10.61a3.25,3.25,0,0,0-.09-.81,1.58,1.58,0,0,0-.26-.57A1.06,1.06,0,0,0,13,8.91a2.37,2.37,0,0,0-.76-.11,2.51,2.51,0,0,0-1,.17,1.39,1.39,0,0,0-.63.5,2.24,2.24,0,0,0-.36.81,4.65,4.65,0,0,0-.11,1.08v6.19a.41.41,0,0,1,0,.17.5.5,0,0,1-.11.15.27.27,0,0,1-.14.1l-.18,0H6.45l-.17,0a.38.38,0,0,1-.15-.1A.5.5,0,0,1,6,17.73.41.41,0,0,1,6,17.56Z"
                                             />
                                         </svg>romanfredriksen</a>
                                 </div>
@@ -367,13 +527,7 @@
                                     <a href="mailto:fred.falch@icloud.com" class="home-contacts__item-email">fred.falch@icloud.com</a>
                                     <a href="https://www.linkedin.com/in/fred-falch-a6794a/" class="linkidin">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="18">
-                                            <defs>
-                                                <style>
-                                                    .a{fill:#1d1d1d;}
-                                                </style>
-                                            </defs>
-                                            <title>linkedin</title>
-                                            <path class="a" d="M0,2.19a2.18,2.18,0,0,1,.16-.83A2.14,2.14,0,0,1,.63.65,2.51,2.51,0,0,1,1.34.17,2,2,0,0,1,2.18,0,2,2,0,0,1,3,.17a2.51,2.51,0,0,1,.71.49,2.14,2.14,0,0,1,.47.71,2.18,2.18,0,0,1,.16.83A2.23,2.23,0,0,1,4.2,3a2.14,2.14,0,0,1-.47.71A2.36,2.36,0,0,1,3,4.23a2.13,2.13,0,0,1-.83.16,2.13,2.13,0,0,1-.83-.16,2.36,2.36,0,0,1-.71-.48A2.14,2.14,0,0,1,.16,3,2.23,2.23,0,0,1,0,2.19ZM.12,17.56V6.15A.41.41,0,0,1,.16,6a.77.77,0,0,1,.09-.15A.5.5,0,0,1,.4,5.73a.45.45,0,0,1,.18,0h3.2a.45.45,0,0,1,.18,0,.5.5,0,0,1,.15.11A.77.77,0,0,1,4.2,6a.41.41,0,0,1,0,.17v11.4a.41.41,0,0,1,0,.17.77.77,0,0,1-.09.15A.38.38,0,0,1,4,18a.58.58,0,0,1-.18,0H.58A.58.58,0,0,1,.4,18a.38.38,0,0,1-.15-.1.77.77,0,0,1-.09-.15A.41.41,0,0,1,.12,17.56Zm5.87,0V6.15A.41.41,0,0,1,6,6a.54.54,0,0,1,.25-.26.4.4,0,0,1,.17,0H9.56l.16,0,.12.05a.32.32,0,0,1,.09.09A.4.4,0,0,1,10,6l0,.15a.74.74,0,0,1,0,.1v.28a4.07,4.07,0,0,1,1.42-.85,5.38,5.38,0,0,1,1.8-.28,6.47,6.47,0,0,1,2,.28,4.28,4.28,0,0,1,1.51.83,3.51,3.51,0,0,1,.95,1.41A5.47,5.47,0,0,1,18,9.85v7.69a.46.46,0,0,1,0,.19.5.5,0,0,1-.11.15.38.38,0,0,1-.15.1l-.17,0H14.26l-.17,0a.38.38,0,0,1-.15-.1.5.5,0,0,1-.11-.15.46.46,0,0,1,0-.19V10.61a3.25,3.25,0,0,0-.09-.81,1.58,1.58,0,0,0-.26-.57A1.06,1.06,0,0,0,13,8.91a2.37,2.37,0,0,0-.76-.11,2.51,2.51,0,0,0-1,.17,1.39,1.39,0,0,0-.63.5,2.24,2.24,0,0,0-.36.81,4.65,4.65,0,0,0-.11,1.08v6.19a.41.41,0,0,1,0,.17.5.5,0,0,1-.11.15.27.27,0,0,1-.14.1l-.18,0H6.45l-.17,0a.38.38,0,0,1-.15-.1A.5.5,0,0,1,6,17.73.41.41,0,0,1,6,17.56Z"
+                                            <path d="M0,2.19a2.18,2.18,0,0,1,.16-.83A2.14,2.14,0,0,1,.63.65,2.51,2.51,0,0,1,1.34.17,2,2,0,0,1,2.18,0,2,2,0,0,1,3,.17a2.51,2.51,0,0,1,.71.49,2.14,2.14,0,0,1,.47.71,2.18,2.18,0,0,1,.16.83A2.23,2.23,0,0,1,4.2,3a2.14,2.14,0,0,1-.47.71A2.36,2.36,0,0,1,3,4.23a2.13,2.13,0,0,1-.83.16,2.13,2.13,0,0,1-.83-.16,2.36,2.36,0,0,1-.71-.48A2.14,2.14,0,0,1,.16,3,2.23,2.23,0,0,1,0,2.19ZM.12,17.56V6.15A.41.41,0,0,1,.16,6a.77.77,0,0,1,.09-.15A.5.5,0,0,1,.4,5.73a.45.45,0,0,1,.18,0h3.2a.45.45,0,0,1,.18,0,.5.5,0,0,1,.15.11A.77.77,0,0,1,4.2,6a.41.41,0,0,1,0,.17v11.4a.41.41,0,0,1,0,.17.77.77,0,0,1-.09.15A.38.38,0,0,1,4,18a.58.58,0,0,1-.18,0H.58A.58.58,0,0,1,.4,18a.38.38,0,0,1-.15-.1.77.77,0,0,1-.09-.15A.41.41,0,0,1,.12,17.56Zm5.87,0V6.15A.41.41,0,0,1,6,6a.54.54,0,0,1,.25-.26.4.4,0,0,1,.17,0H9.56l.16,0,.12.05a.32.32,0,0,1,.09.09A.4.4,0,0,1,10,6l0,.15a.74.74,0,0,1,0,.1v.28a4.07,4.07,0,0,1,1.42-.85,5.38,5.38,0,0,1,1.8-.28,6.47,6.47,0,0,1,2,.28,4.28,4.28,0,0,1,1.51.83,3.51,3.51,0,0,1,.95,1.41A5.47,5.47,0,0,1,18,9.85v7.69a.46.46,0,0,1,0,.19.5.5,0,0,1-.11.15.38.38,0,0,1-.15.1l-.17,0H14.26l-.17,0a.38.38,0,0,1-.15-.1.5.5,0,0,1-.11-.15.46.46,0,0,1,0-.19V10.61a3.25,3.25,0,0,0-.09-.81,1.58,1.58,0,0,0-.26-.57A1.06,1.06,0,0,0,13,8.91a2.37,2.37,0,0,0-.76-.11,2.51,2.51,0,0,0-1,.17,1.39,1.39,0,0,0-.63.5,2.24,2.24,0,0,0-.36.81,4.65,4.65,0,0,0-.11,1.08v6.19a.41.41,0,0,1,0,.17.5.5,0,0,1-.11.15.27.27,0,0,1-.14.1l-.18,0H6.45l-.17,0a.38.38,0,0,1-.15-.1A.5.5,0,0,1,6,17.73.41.41,0,0,1,6,17.56Z"
                                             />
                                         </svg>fredfalch</a>
                                 </div>
@@ -387,13 +541,7 @@
                                     <a href="mailto:morten.guttormsen@sinus247.no" class="home-contacts__item-email">morten.guttormsen@sinus247.no</a>
                                     <a href="https://www.linkedin.com/in/morten-guttormsen-82b5b124/" class="linkidin">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="18">
-                                            <defs>
-                                                <style>
-                                                    .a{fill:#1d1d1d;}
-                                                </style>
-                                            </defs>
-                                            <title>linkedin</title>
-                                            <path class="a" d="M0,2.19a2.18,2.18,0,0,1,.16-.83A2.14,2.14,0,0,1,.63.65,2.51,2.51,0,0,1,1.34.17,2,2,0,0,1,2.18,0,2,2,0,0,1,3,.17a2.51,2.51,0,0,1,.71.49,2.14,2.14,0,0,1,.47.71,2.18,2.18,0,0,1,.16.83A2.23,2.23,0,0,1,4.2,3a2.14,2.14,0,0,1-.47.71A2.36,2.36,0,0,1,3,4.23a2.13,2.13,0,0,1-.83.16,2.13,2.13,0,0,1-.83-.16,2.36,2.36,0,0,1-.71-.48A2.14,2.14,0,0,1,.16,3,2.23,2.23,0,0,1,0,2.19ZM.12,17.56V6.15A.41.41,0,0,1,.16,6a.77.77,0,0,1,.09-.15A.5.5,0,0,1,.4,5.73a.45.45,0,0,1,.18,0h3.2a.45.45,0,0,1,.18,0,.5.5,0,0,1,.15.11A.77.77,0,0,1,4.2,6a.41.41,0,0,1,0,.17v11.4a.41.41,0,0,1,0,.17.77.77,0,0,1-.09.15A.38.38,0,0,1,4,18a.58.58,0,0,1-.18,0H.58A.58.58,0,0,1,.4,18a.38.38,0,0,1-.15-.1.77.77,0,0,1-.09-.15A.41.41,0,0,1,.12,17.56Zm5.87,0V6.15A.41.41,0,0,1,6,6a.54.54,0,0,1,.25-.26.4.4,0,0,1,.17,0H9.56l.16,0,.12.05a.32.32,0,0,1,.09.09A.4.4,0,0,1,10,6l0,.15a.74.74,0,0,1,0,.1v.28a4.07,4.07,0,0,1,1.42-.85,5.38,5.38,0,0,1,1.8-.28,6.47,6.47,0,0,1,2,.28,4.28,4.28,0,0,1,1.51.83,3.51,3.51,0,0,1,.95,1.41A5.47,5.47,0,0,1,18,9.85v7.69a.46.46,0,0,1,0,.19.5.5,0,0,1-.11.15.38.38,0,0,1-.15.1l-.17,0H14.26l-.17,0a.38.38,0,0,1-.15-.1.5.5,0,0,1-.11-.15.46.46,0,0,1,0-.19V10.61a3.25,3.25,0,0,0-.09-.81,1.58,1.58,0,0,0-.26-.57A1.06,1.06,0,0,0,13,8.91a2.37,2.37,0,0,0-.76-.11,2.51,2.51,0,0,0-1,.17,1.39,1.39,0,0,0-.63.5,2.24,2.24,0,0,0-.36.81,4.65,4.65,0,0,0-.11,1.08v6.19a.41.41,0,0,1,0,.17.5.5,0,0,1-.11.15.27.27,0,0,1-.14.1l-.18,0H6.45l-.17,0a.38.38,0,0,1-.15-.1A.5.5,0,0,1,6,17.73.41.41,0,0,1,6,17.56Z"
+                                            <path d="M0,2.19a2.18,2.18,0,0,1,.16-.83A2.14,2.14,0,0,1,.63.65,2.51,2.51,0,0,1,1.34.17,2,2,0,0,1,2.18,0,2,2,0,0,1,3,.17a2.51,2.51,0,0,1,.71.49,2.14,2.14,0,0,1,.47.71,2.18,2.18,0,0,1,.16.83A2.23,2.23,0,0,1,4.2,3a2.14,2.14,0,0,1-.47.71A2.36,2.36,0,0,1,3,4.23a2.13,2.13,0,0,1-.83.16,2.13,2.13,0,0,1-.83-.16,2.36,2.36,0,0,1-.71-.48A2.14,2.14,0,0,1,.16,3,2.23,2.23,0,0,1,0,2.19ZM.12,17.56V6.15A.41.41,0,0,1,.16,6a.77.77,0,0,1,.09-.15A.5.5,0,0,1,.4,5.73a.45.45,0,0,1,.18,0h3.2a.45.45,0,0,1,.18,0,.5.5,0,0,1,.15.11A.77.77,0,0,1,4.2,6a.41.41,0,0,1,0,.17v11.4a.41.41,0,0,1,0,.17.77.77,0,0,1-.09.15A.38.38,0,0,1,4,18a.58.58,0,0,1-.18,0H.58A.58.58,0,0,1,.4,18a.38.38,0,0,1-.15-.1.77.77,0,0,1-.09-.15A.41.41,0,0,1,.12,17.56Zm5.87,0V6.15A.41.41,0,0,1,6,6a.54.54,0,0,1,.25-.26.4.4,0,0,1,.17,0H9.56l.16,0,.12.05a.32.32,0,0,1,.09.09A.4.4,0,0,1,10,6l0,.15a.74.74,0,0,1,0,.1v.28a4.07,4.07,0,0,1,1.42-.85,5.38,5.38,0,0,1,1.8-.28,6.47,6.47,0,0,1,2,.28,4.28,4.28,0,0,1,1.51.83,3.51,3.51,0,0,1,.95,1.41A5.47,5.47,0,0,1,18,9.85v7.69a.46.46,0,0,1,0,.19.5.5,0,0,1-.11.15.38.38,0,0,1-.15.1l-.17,0H14.26l-.17,0a.38.38,0,0,1-.15-.1.5.5,0,0,1-.11-.15.46.46,0,0,1,0-.19V10.61a3.25,3.25,0,0,0-.09-.81,1.58,1.58,0,0,0-.26-.57A1.06,1.06,0,0,0,13,8.91a2.37,2.37,0,0,0-.76-.11,2.51,2.51,0,0,0-1,.17,1.39,1.39,0,0,0-.63.5,2.24,2.24,0,0,0-.36.81,4.65,4.65,0,0,0-.11,1.08v6.19a.41.41,0,0,1,0,.17.5.5,0,0,1-.11.15.27.27,0,0,1-.14.1l-.18,0H6.45l-.17,0a.38.38,0,0,1-.15-.1A.5.5,0,0,1,6,17.73.41.41,0,0,1,6,17.56Z"
                                             />
                                         </svg>mortenguttormsen</a>
                                 </div>
@@ -407,13 +555,7 @@
                                     <a href="mailto:ronny.sandstrak@sinus247.no" class="home-contacts__item-email">ronny.sandstrak@sinus247.no</a>
                                     <a href="https://www.linkedin.com/in/ronny-sandstrak-899aa9b4/" class="linkidin">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="18">
-                                            <defs>
-                                                <style>
-                                                    .a{fill:#1d1d1d;}
-                                                </style>
-                                            </defs>
-                                            <title>linkedin</title>
-                                            <path class="a" d="M0,2.19a2.18,2.18,0,0,1,.16-.83A2.14,2.14,0,0,1,.63.65,2.51,2.51,0,0,1,1.34.17,2,2,0,0,1,2.18,0,2,2,0,0,1,3,.17a2.51,2.51,0,0,1,.71.49,2.14,2.14,0,0,1,.47.71,2.18,2.18,0,0,1,.16.83A2.23,2.23,0,0,1,4.2,3a2.14,2.14,0,0,1-.47.71A2.36,2.36,0,0,1,3,4.23a2.13,2.13,0,0,1-.83.16,2.13,2.13,0,0,1-.83-.16,2.36,2.36,0,0,1-.71-.48A2.14,2.14,0,0,1,.16,3,2.23,2.23,0,0,1,0,2.19ZM.12,17.56V6.15A.41.41,0,0,1,.16,6a.77.77,0,0,1,.09-.15A.5.5,0,0,1,.4,5.73a.45.45,0,0,1,.18,0h3.2a.45.45,0,0,1,.18,0,.5.5,0,0,1,.15.11A.77.77,0,0,1,4.2,6a.41.41,0,0,1,0,.17v11.4a.41.41,0,0,1,0,.17.77.77,0,0,1-.09.15A.38.38,0,0,1,4,18a.58.58,0,0,1-.18,0H.58A.58.58,0,0,1,.4,18a.38.38,0,0,1-.15-.1.77.77,0,0,1-.09-.15A.41.41,0,0,1,.12,17.56Zm5.87,0V6.15A.41.41,0,0,1,6,6a.54.54,0,0,1,.25-.26.4.4,0,0,1,.17,0H9.56l.16,0,.12.05a.32.32,0,0,1,.09.09A.4.4,0,0,1,10,6l0,.15a.74.74,0,0,1,0,.1v.28a4.07,4.07,0,0,1,1.42-.85,5.38,5.38,0,0,1,1.8-.28,6.47,6.47,0,0,1,2,.28,4.28,4.28,0,0,1,1.51.83,3.51,3.51,0,0,1,.95,1.41A5.47,5.47,0,0,1,18,9.85v7.69a.46.46,0,0,1,0,.19.5.5,0,0,1-.11.15.38.38,0,0,1-.15.1l-.17,0H14.26l-.17,0a.38.38,0,0,1-.15-.1.5.5,0,0,1-.11-.15.46.46,0,0,1,0-.19V10.61a3.25,3.25,0,0,0-.09-.81,1.58,1.58,0,0,0-.26-.57A1.06,1.06,0,0,0,13,8.91a2.37,2.37,0,0,0-.76-.11,2.51,2.51,0,0,0-1,.17,1.39,1.39,0,0,0-.63.5,2.24,2.24,0,0,0-.36.81,4.65,4.65,0,0,0-.11,1.08v6.19a.41.41,0,0,1,0,.17.5.5,0,0,1-.11.15.27.27,0,0,1-.14.1l-.18,0H6.45l-.17,0a.38.38,0,0,1-.15-.1A.5.5,0,0,1,6,17.73.41.41,0,0,1,6,17.56Z"
+                                            <path d="M0,2.19a2.18,2.18,0,0,1,.16-.83A2.14,2.14,0,0,1,.63.65,2.51,2.51,0,0,1,1.34.17,2,2,0,0,1,2.18,0,2,2,0,0,1,3,.17a2.51,2.51,0,0,1,.71.49,2.14,2.14,0,0,1,.47.71,2.18,2.18,0,0,1,.16.83A2.23,2.23,0,0,1,4.2,3a2.14,2.14,0,0,1-.47.71A2.36,2.36,0,0,1,3,4.23a2.13,2.13,0,0,1-.83.16,2.13,2.13,0,0,1-.83-.16,2.36,2.36,0,0,1-.71-.48A2.14,2.14,0,0,1,.16,3,2.23,2.23,0,0,1,0,2.19ZM.12,17.56V6.15A.41.41,0,0,1,.16,6a.77.77,0,0,1,.09-.15A.5.5,0,0,1,.4,5.73a.45.45,0,0,1,.18,0h3.2a.45.45,0,0,1,.18,0,.5.5,0,0,1,.15.11A.77.77,0,0,1,4.2,6a.41.41,0,0,1,0,.17v11.4a.41.41,0,0,1,0,.17.77.77,0,0,1-.09.15A.38.38,0,0,1,4,18a.58.58,0,0,1-.18,0H.58A.58.58,0,0,1,.4,18a.38.38,0,0,1-.15-.1.77.77,0,0,1-.09-.15A.41.41,0,0,1,.12,17.56Zm5.87,0V6.15A.41.41,0,0,1,6,6a.54.54,0,0,1,.25-.26.4.4,0,0,1,.17,0H9.56l.16,0,.12.05a.32.32,0,0,1,.09.09A.4.4,0,0,1,10,6l0,.15a.74.74,0,0,1,0,.1v.28a4.07,4.07,0,0,1,1.42-.85,5.38,5.38,0,0,1,1.8-.28,6.47,6.47,0,0,1,2,.28,4.28,4.28,0,0,1,1.51.83,3.51,3.51,0,0,1,.95,1.41A5.47,5.47,0,0,1,18,9.85v7.69a.46.46,0,0,1,0,.19.5.5,0,0,1-.11.15.38.38,0,0,1-.15.1l-.17,0H14.26l-.17,0a.38.38,0,0,1-.15-.1.5.5,0,0,1-.11-.15.46.46,0,0,1,0-.19V10.61a3.25,3.25,0,0,0-.09-.81,1.58,1.58,0,0,0-.26-.57A1.06,1.06,0,0,0,13,8.91a2.37,2.37,0,0,0-.76-.11,2.51,2.51,0,0,0-1,.17,1.39,1.39,0,0,0-.63.5,2.24,2.24,0,0,0-.36.81,4.65,4.65,0,0,0-.11,1.08v6.19a.41.41,0,0,1,0,.17.5.5,0,0,1-.11.15.27.27,0,0,1-.14.1l-.18,0H6.45l-.17,0a.38.38,0,0,1-.15-.1A.5.5,0,0,1,6,17.73.41.41,0,0,1,6,17.56Z"
                                             />
                                         </svg>fredfalch</a>
                                 </div>
@@ -422,7 +564,7 @@
                     </div>
                 </div>
             </section>
-            <section class="home-references" id="referanser">
+            <section class="home-references hideme" id="referanser">
                 <div class="row align-center">
                     <div class="columns small-12">
                         <h2 class="decor-title icon-underline">Referanser</h2>

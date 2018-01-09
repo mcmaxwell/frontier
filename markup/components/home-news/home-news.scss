@@ -1,5 +1,6 @@
 .home-news {
   margin-bottom: $margin-8;
+
   .news-grid {
     @include breakpoint(medium) {
       margin-top: $margin-9;

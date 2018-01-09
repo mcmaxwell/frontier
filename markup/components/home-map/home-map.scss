@@ -13,6 +13,26 @@
     .home-map__item {
       display: block;
     }
+
+    img {
+      opacity: 0;
+    }
+
+    img.active  {
+      opacity: 1;
+    }
+  }
+
+  img.active {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  img {
+    transition: all $default-time;
   }
 
   &__toggle {
@@ -31,15 +51,25 @@
       height: 120px;
     }
 
-    &::before {
-      content: $icon-enlarge;
-      color: #fff;
-      font-size: rem-calc(39);
+    svg {
+      fill: #fff;
+      transition: all $default-time;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .out {
+      opacity: 0;
     }
 
     &.active {
-      &::before {
-        content: $icon-reduce;
+      .in {
+        opacity: 0;
+      }
+      .out {
+        opacity: 1;
       }
     }
   }
@@ -86,6 +116,13 @@
     background-color: #fff;
     border: 7px solid rgba(#000, .2);
     display: none;
+    transition: all $default-time;
+
+    &:hover,
+    &.active {
+      border-color: #fff;
+      background-color: $brand-secondary-color;
+    }
 
     &-title {
       font-family: $ProximaBold;

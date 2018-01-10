@@ -1,4 +1,15 @@
 .home-contacts {
+  @media (max-width:1290px) {
+    .row,
+    .columns {
+      max-width: 100%;
+      flex: 100%
+    }
+    .columns {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+    }
+  }
   &__list {
     display: flex;
     flex-wrap: wrap;

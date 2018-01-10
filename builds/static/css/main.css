@@ -5082,6 +5082,20 @@ a:hover svg {
   margin-bottom: 20px;
 }
 
+@media (max-width: 1290px) {
+  .home-contacts .row,
+  .home-contacts .columns {
+    max-width: 100%;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
+  .home-contacts .columns {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
 .home-contacts__list {
   display: -webkit-box;
   display: -ms-flexbox;

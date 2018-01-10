@@ -4,8 +4,11 @@ $('.toggle-menu').click(function () {
   $('.header').toggleClass('active')
   return false
 })
-
 $('.fake-header').css('height', $('.header').outerHeight())
+
+$(window).resize(function () {
+  $('.fake-header').css('height', $('.header').outerHeight())
+})
 
 function sctollToEl (el) {
   if (el && location.hash) {

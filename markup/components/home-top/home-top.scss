@@ -82,7 +82,7 @@
     &.mouse {
       display: none;
       @include breakpoint(medium) {
-        display: block;
+        display: inline-block;
       }
     }
     &.arr {

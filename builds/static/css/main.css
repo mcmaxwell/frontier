@@ -5184,20 +5184,6 @@ a:hover svg {
   }
 }
 
-.home-news {
-  margin-bottom: 80px;
-}
-
-@media print, screen and (min-width: 48em) {
-  .home-news .news-grid {
-    margin-top: 90px;
-  }
-}
-
-.home-news .news-grid .news-item__date {
-  margin: 0 0 10px;
-}
-
 .home-map {
   position: relative;
   display: none;
@@ -5383,6 +5369,20 @@ a:hover svg {
 .home-map .spot4 + div {
   top: calc(70% - 10px);
   left: calc(60.4% + 77px);
+}
+
+.home-news {
+  margin-bottom: 80px;
+}
+
+@media print, screen and (min-width: 48em) {
+  .home-news .news-grid {
+    margin-top: 90px;
+  }
+}
+
+.home-news .news-grid .news-item__date {
+  margin: 0 0 10px;
 }
 
 .home-partner {
@@ -5636,7 +5636,7 @@ a:hover svg {
 
 @media print, screen and (min-width: 48em) {
   .scroll-down svg.mouse {
-    display: block;
+    display: inline-block;
   }
 }
 
@@ -5797,57 +5797,6 @@ a:hover svg {
   margin: 20px 0 40px;
 }
 
-.share-page {
-  color: rgba(29, 29, 29, 0.2);
-}
-
-.share-page ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.share-page ul li {
-  width: 30px;
-  height: 30px;
-  margin-bottom: 30px;
-  font-size: 1.875rem;
-  overflow: hidden;
-  cursor: pointer;
-  position: relative;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  opacity: .2;
-}
-
-.share-page ul li:hover {
-  color: #192A67;
-}
-
-.share-page ul li a,
-.share-page ul li iframe {
-  width: 30px;
-  height: 30px;
-  display: block;
-  opacity: 0;
-}
-
-.share-page ul li::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  text-indent: 0;
-}
-
-.share-page ul li.icon-twitter {
-  font-size: 1.5625rem;
-}
-
-.share-page ul li.icon-linkedin {
-  font-size: 1.6875rem;
-}
-
 .our-customers {
   color: #fff;
   padding: 40px 0;
@@ -5923,4 +5872,55 @@ a:hover svg {
 .our-customers__list li i {
   margin-right: 20px;
   line-height: 1;
+}
+
+.share-page {
+  color: rgba(29, 29, 29, 0.2);
+}
+
+.share-page ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.share-page ul li {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 30px;
+  font-size: 1.875rem;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: .2;
+}
+
+.share-page ul li:hover {
+  color: #192A67;
+}
+
+.share-page ul li a,
+.share-page ul li iframe {
+  width: 30px;
+  height: 30px;
+  display: block;
+  opacity: 0;
+}
+
+.share-page ul li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  text-indent: 0;
+}
+
+.share-page ul li.icon-twitter {
+  font-size: 1.5625rem;
+}
+
+.share-page ul li.icon-linkedin {
+  font-size: 1.6875rem;
 }

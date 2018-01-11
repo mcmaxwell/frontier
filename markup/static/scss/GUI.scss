@@ -57,14 +57,15 @@ $global-flexbox: true;
 //   }
 // }
 .icon-arr {
-    width: 16px;
-    height: 15px;
-    stroke-width: 2px;
-    stroke: $black;
-    fill: none;
-    stroke-linecap:round;
-    stroke-linejoin:round;
-    transition: all $default-time;
+  width: 21px;
+  height: 17px;
+  stroke-width: 2px;
+  stroke: $black;
+  fill: none;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  transition: all $default-time;
+  margin-top: 3px;
 }
 // .icon-enlarge {
 //   &:before {
@@ -258,7 +259,7 @@ h1, h2, h3, h4 {
   margin-bottom: $margin-6;
   line-height: 1.3;
   @include breakpoint(medium) {
-    margin-bottom: $margin-7;
+    margin-bottom: 63px;
   }
 
   &::before {
@@ -267,7 +268,7 @@ h1, h2, h3, h4 {
     width: 100%;
     height: 16px;
     position: absolute;
-    bottom: -$margin-3;
+    bottom: -25px;
     left: 0;
     text-align: center;
     @include breakpoint(medium) {
@@ -307,6 +308,7 @@ h1, h2, h3, h4 {
   margin: $margin-2 0;
   display: inline-block;
   color: $black;
+  transition: all $default-time ;
   @include breakpoint(medium) {
     margin: $margin-4 0 $margin-3;
   }
@@ -315,6 +317,8 @@ h1, h2, h3, h4 {
     margin-right: $margin-1;
     display: inline-block;
     transform: rotate(180deg);
+    margin-top: 0;
+    margin-bottom: -3px;
     @include breakpoint(medium) {
     }
   }
@@ -325,7 +329,7 @@ h1, h2, h3, h4 {
     font-family: $ProximaBold;
     line-height: 1.33;
     @include breakpoint(medium) {
-      font-size: rem-calc(24);
+      font-size: rem-calc(20);
     }
   }
 }

@@ -1,9 +1,16 @@
 .home-news {
-  margin-bottom: $margin-8;
+  margin-bottom: $margin-2;
+
+  @include breakpoint(medium) {
+    margin-bottom: 89px;
+  }
 
   .news-grid {
     @include breakpoint(medium) {
-      margin-top: $margin-9;
+      @include breakpoint(medium) {
+
+      }
+      margin-top: 82px;
     }
   }
 

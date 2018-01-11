@@ -1,26 +1,48 @@
-$('.toggle-menu').click(function () {
-  $(this).toggleClass('active')
+
+function toggleMenu () {
+  if(!$('.fake-header').length) {
+    $('<div class="fake-header"></div>').css('height', $('.header').outerHeight()).insertBefore('.header')
+  } else {
+    $('.fake-header').remove()
+  }
+  $('.toggle-menu').toggleClass('active')
   $('.header .main-nav').toggleClass('active')
   $('.header').toggleClass('active')
-  return false
-})
-$('.fake-header').css('height', $('.header').outerHeight())
+  $('.header-clone').toggle()
 
-$(window).resize(function () {
-  $('.fake-header').css('height', $('.header').outerHeight())
-})
+}
 
 function sctollToEl (el) {
   if (el && location.hash) {
     let top = el ? $(el).offset().top : $(location.hash).offset().top
     if (top) {
-      $('body,html').animate({scrollTop: top}, 1500)
+      $('body,html').animate({scrollTop: top}, 500)
       if ($(window).width() < 1024) {
-        $('.toggle-menu').click()
+        toggleMenu()
       }
     }
   }
 }
+
+$('.toggle-menu').click(function () {
+  toggleMenu()
+  return false
+})
+
+$('.header')
+  .clone(true, true)
+  .addClass('header-clone')
+  .appendTo('body')
+  .on('click', '.menu a', function () {
+    sctollToEl($(this).attr('href'))
+  })
+  // .on('click', '.toggle-menu', function () {
+  //   $(this).toggleClass('active')
+  //   $('.header:not(.clone-header) .main-nav').toggleClass('active')
+  //   $('.header').not('.clone-header').toggleClass('active')
+  //   return false
+  // })
+
 
 if (location.pathname !== '/') {
   for (let i = 0; i < $('#menu a').length; i++) {
@@ -33,6 +55,7 @@ if (location.pathname !== '/') {
 $('#menu').on('click', 'a', function () {
   sctollToEl($(this).attr('href'))
 })
+
 // Hide Header on on scroll down
 let didScroll
 let lastScrollTop = 0
@@ -41,6 +64,11 @@ let navbarHeight = $('.header').outerHeight()
 
 $(window).scroll(function () {
   didScroll = true
+  if ($(window).scrollTop() > 240) {
+    $('.scroll-down').fadeOut(300)
+  } else {
+    $('.scroll-down').fadeIn(300)
+  }
 })
 
 setInterval(function (event) {
@@ -48,7 +76,7 @@ setInterval(function (event) {
     hasScrolled()
     didScroll = false
   }
-}, 250)
+}, 30)
 
 
 function hasScrolled () {
@@ -59,15 +87,21 @@ function hasScrolled () {
     return
   }
 
+
   // If they scrolled down and are past the navbar, add class .nav-up.
   // This is necessary so you never see what is "behind" the navbar.
-  if (st > lastScrollTop && st > navbarHeight) {
+  if(st < navbarHeight + 100) {
+    $('.header-clone').addClass('top')
+  } else {
+    $('.header-clone').removeClass('top')
+  }
+  if (st > lastScrollTop && st > navbarHeight || st < navbarHeight + 300) {
       // Scroll Down
-      $('.header').css('top', -$('.header').outerHeight())
+      $('.header-clone').removeClass('show')
   } else {
       // Scroll Up
     if (st + $(window).height() < $(document).height()) {
-      $('.header').css('top', '')
+      $('.header-clone').addClass('show')
     }
   }
 

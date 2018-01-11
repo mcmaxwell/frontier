@@ -1,7 +1,10 @@
 .home-references {
-  margin: $margin-2 0;
   @include breakpoint(medium) {
-    margin: $margin-6 0;
+    margin: $margin-6 0 0;
+  }
+
+  @include breakpoint(large) {
+    margin: 74px 0 0
   }
 
   .section-description {

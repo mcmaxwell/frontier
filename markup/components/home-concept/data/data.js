@@ -86,13 +86,13 @@ homeConcept: {
       {
         schemeIcon: '%=static=%img/assets/home-concept/baloon.svg',
         schemeTitle: 'Vår leveranse',
-        widthImg: '46',
+        widthImg: 51,
         schemeItemList: ['Prosjektledelse', 'Tilknytning fra land', 'Sjøkabel med installasjon', 'Transformatorer, kontrollstasjoner o.a.', 'Sentralbord/Beredskap - 24/7', 'Drift og Service']
       },
       {
         schemeIcon: '%=static=%img/assets/home-concept/wealth.svg',
         schemeTitle: 'Kundens merverdi',
-        widthImg: '58',
+        widthImg: 64,
         schemeItemList: ['Langsiktig kontrakt (finansiert/OPEX & driftes)', 'Et kontaktpunkt', 'Standarisert dokumentasjon', 'Kort responstid']
       }
     ]

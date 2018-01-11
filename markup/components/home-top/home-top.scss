@@ -32,7 +32,7 @@
   @include breakpoint(large) {
     height: calc(100% - #{$header-height} - #{$header-height});
     width: calc(100% - #{$margin-8} - #{$margin-8});
-    margin: 0 $margin-8 $margin-4;
+    margin: 0 $margin-8 0;
     padding: 100px;
   }
 
@@ -59,14 +59,19 @@
   color: rgba($black, .5);
   font-size: rem-calc(16);
   text-align: center;
+  margin: 50px 0;
+  transition: all $default-time;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
+    color: rgba($black, .75);
+
     svg {
-      opacity: .8;
-      stroke: $brand-secondary-color;
+      stroke: rgba($black, .75);
 
       circle {
-        fill: $brand-secondary-color;
+        fill: rgba($black, .75);
       }
     }
   }
@@ -75,6 +80,8 @@
     stroke: #8E8E8E;
     fill: #fff;
     opacity: .5;
+    transition: all $default-time;
+
     circle {
       fill: #8E8E8E;
     }

@@ -9,13 +9,15 @@
     li {
       width: 30px;
       height: 30px;
-      margin-bottom: $margin-3;
       font-size: rem-calc(30);
       overflow: hidden;
       cursor: pointer;
       position: relative;
       transition: all $default-time;
       opacity: .2;
+      @include breakpoint(large) {
+        margin-bottom: $margin-3;
+      }
 
       &:hover {
         color: $brand-color;

@@ -6,7 +6,7 @@
     display: block;
   }
   @include breakpoint(large) {
-    margin: 0 0 $margin-6*2;
+    margin: 0 0 126px;
   }
 
   &.active {

@@ -1,3 +1,50 @@
+.header-clone {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(0,-100%,0);
+  transform: translate3d(0,-100%,0);
+  visibility: hidden;
+  transition: transform .3s ease,visibility 0s .3s linear;
+  z-index: 100;
+
+  &.show {
+    transform: translate3d(0,0,0);
+    visibility: visible;
+    transition: transform .3s ease;
+    padding: $margin-2 0 $margin-2 $margin-2;
+
+    @include breakpoint(medium) {
+      padding: $margin-4 $margin-2 $margin-4 $margin-4;
+    }
+
+    @include breakpoint(large) {
+      padding: 21px 80px;
+    }
+  }
+  &.top {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transform: translate3d(0,-100%,0);
+    transition-property: none;
+    transition-duration: 0s;
+    z-index: 0;
+    opacity: 0;
+  }
+
+  // &.active:not(.top) {
+  //   transform: translate3d(0,0,0);
+  //   height: auto;
+  //   position: fixed;
+  //   visibility: visible;
+  //   opacity: 1;
+  //   z-index: 400;
+  // }
+}
+
 .header {
   width: 100%;
   display: flex;
@@ -5,21 +52,27 @@
   align-items: center;
   padding: $margin-2 0 $margin-2 $margin-2;
   z-index: 100;
-  position: fixed;
   top: 0;
   background-color: #fff;
   transition: all $default-time;
+  min-height: 100px;
+  max-height: 100px;
 
   @include breakpoint(medium) {
     padding: $margin-4 $margin-2 $margin-4 $margin-4;
+    min-height: 140px;
+    max-height: 140px;
   }
 
   @include breakpoint(large) {
     padding: $margin-4 $margin-8;
+    min-height: 160px;
+    max-height: 160px;
   }
 
   &.active {
-    top: 0!important;
+    position: fixed;
+    z-index: 400;
   }
 
   .logo {
@@ -60,6 +113,7 @@
     a {
       font-family: $ProximaBold;
       padding: 0.7rem 13px;
+      transition: all $default-time;
     }
   }
 
@@ -70,33 +124,29 @@
     &::after {
       content: "";
       position: fixed;
-      top: 0;
+      top: -100%;
       left: 0;
       right: 0;
-      height: 0;
-      background-color: rgba($black, 0);
+      height: 100%;
+      background-color: rgba($black, .5);
+      opacity: 0;
       z-index: -1;
-      transition: background-color $default-time;
+      transition: opacity $default-time;
     }
 
     &.active {
+      &::after {
+        content: "";
+        opacity: 1;
+        top: 0;
+        transition: opacity $default-time;
+      }
+
       .menu {
         display: flex;
         opacity: 1;
         top: 0;
         transition: opacity $default-time;
-
-      }
-
-      &::after {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 100%;
-        background-color: rgba($black, .5);
-        z-index: -1;
       }
     }
   }
@@ -159,6 +209,7 @@
     font-size: 0;
     position: relative;
     z-index: 300;
+    transition: all $default-time;
 
     span {
       display: block;

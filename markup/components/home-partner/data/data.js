@@ -10,13 +10,13 @@ homePartner: {
       },
       {
         link: '#',
-        img: '%=static=%img/assets/home-partner/seloy.png',
-        responsive: '%=static=%img/assets/home-partner/seloy@2x.png 2x, %=static=%img/assets/home-partner/seloy@3x.png 3x'
+        img: '%=static=%img/assets/home-partner/sinus.png',
+        responsive: '%=static=%img/assets/home-partner/sinus@2x.png 2x, %=static=%img/assets/home-partner/sinus@3x.png 3x'
       },
       {
         link: '#',
-        img: '%=static=%img/assets/home-partner/sinus.png',
-        responsive: '%=static=%img/assets/home-partner/sinus@2x.png 2x, %=static=%img/assets/home-partner/sinus@3x.png 3x'
+        img: '%=static=%img/assets/home-partner/seloy.png',
+        responsive: '%=static=%img/assets/home-partner/seloy@2x.png 2x, %=static=%img/assets/home-partner/seloy@3x.png 3x'
       },
     ]
   }

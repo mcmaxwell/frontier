@@ -5,12 +5,18 @@
   background-position: center center;
   background-size: cover;
   margin-bottom: $margin-8;
+
   @include breakpoint(medium) {
-    padding: $margin-8 0 $margin-4;
+    padding: 87px 0 $margin-5;
   }
 
   @include breakpoint(large) {
-    margin-bottom: $margin-6*2;
+    margin-bottom: 68px;
+  }
+
+  .section-description {
+    max-width: 400px;
+    margin-bottom: 43px;
   }
 
   &__list {
@@ -23,8 +29,9 @@
     flex-direction: column;
     @include breakpoint(medium) {
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: flex-start;
+      padding: 0px 0 0 17px;
     }
 
     li {
@@ -32,14 +39,32 @@
       display: flex;
       align-items: center;
       line-height: 1.4;
+      padding-left: 74px;
+
       @include breakpoint(medium) {
-        width: 31%;
-        margin-bottom: $margin-5;
+        width: 31.5%;
+        margin-bottom: 54px;
+        position: relative;
+        min-height: 37px;
+        margin-right: 2.6%;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+        width: 30%;
+      }
+
+      &:nth-child(2),
+      &:nth-child(5),
+      &:nth-child(8) {
+        margin-right: 3.9%;
       }
 
       i {
-        margin-right: $margin-2;
+        margin-right: 29px;
         line-height: 1;
+        position: absolute;
+        left: 0;
       }
     }
   }

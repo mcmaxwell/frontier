@@ -1,5 +1,5 @@
 .home-partner {
-  margin-bottom: 110px;
+  margin-bottom: 168px;
 
   &__list {
     list-style: none;
@@ -9,8 +9,13 @@
     justify-content: center;
     flex-wrap: wrap;
 
+    li {
+      display: flex;
+      align-items: center;
+    }
+
     a {
-      margin: $margin-2 $margin-6 0;
+      margin: 2px 62px 0;
       display: block;
       filter: grayscale(100%);
       opacity: .5;

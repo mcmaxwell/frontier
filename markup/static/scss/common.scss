@@ -59,7 +59,7 @@ a:hover {
     @include breakpoint(medium) {
       min-width: calc(50% - 15px);
       max-width: calc(50% - 15px);
-      min-height: 360px;
+      min-height: 350px;
       margin-right: $margin-3;
       margin-bottom: $margin-3;
 
@@ -144,22 +144,26 @@ a:hover {
       font-size: rem-calc(14);
       opacity: .5;
       display: inline-block;
+      margin: 0 0 8px;
       @include breakpoint(medium) {
         font-size: rem-calc(16);
+        margin: 0 0 5  px;
       }
     }
 
     &__title {
       font-family: $ProximaBold;
-      margin-bottom: $margin-1;
-      font-size: rem-calc(24);
-      line-height: 2rem;
+      margin-bottom: 14px;
+      font-size: rem-calc(22);
       max-height: 6rem;
+      line-height: 1.36;
 
       overflow: hidden;
       position: relative;
       @include breakpoint(medium) {
         margin-bottom: $margin-2;
+        line-height: 2rem;
+        font-size: rem-calc(24);
       }
     }
 
@@ -197,10 +201,10 @@ a:hover {
     }
 
     &__content {
-      padding: $margin-2;
+      padding: 15px 18px;
       height: 300px;
       @include breakpoint(medium) {
-        padding: $margin-3;
+        padding: 21px 30px;
       }
       @include breakpoint(large) {
         padding: 32px 39px 40px;
@@ -210,7 +214,7 @@ a:hover {
     &__description {
       overflow: hidden;
       position: relative;
-      line-height: 1.4;
+      line-height: 1.44;
       max-height: 5.8em;
     }
 
@@ -220,62 +224,16 @@ a:hover {
       border-bottom: 2px solid;
       font-family: $ProximaBold;
       position: absolute;
-      bottom: 35px;
-
+      bottom: 18px;
+      @include breakpoint(medium) {
+        bottom: 20px;
+      }
       @include breakpoint(large) {
         opacity: 0;
+        bottom: 35px;
         color: #fff;
       }
     }
-  }
-}
-
-.all-news {
-  @extend #{'.news-item'};
-  min-height: 0;
-  width: auto;
-  display: flex;
-  align-items: center;
-  font-family: $ProximaBold;
-  position: relative;
-  margin-right: $margin-3;
-  overflow: visible;
-  padding: $margin-2 0;
-
-  @include breakpoint(medium) {
-    border: 1px solid $line-color;
-    padding: $margin-4;
-    margin-bottom: $margin-3;
-  }
-
-  @include breakpoint(large) {
-    margin-bottom: $margin-4;
-  }
-
-  &:hover {
-    span {
-      color: $black;
-      @include breakpoint(large) {
-        color: #fff;
-        border-color: #fff;
-      }
-    }
-    svg {
-      stroke: $black;
-      @include breakpoint(large) {
-        stroke: #fff;
-        border-color: #fff;
-      }
-    }
-  }
-
-  span {
-    display: flex;
-    align-items: center;
-    color: $black;
-    border-bottom: solid 2px $black;
-    margin-right: 7px;
-    transition: all $default-time;
   }
 }
 
@@ -283,19 +241,25 @@ a:hover {
   max-width: 840px;
   margin: auto;
   text-align: center;
-  margin-bottom: 61px;
+  margin-bottom: 35px;
   font-size: rem-calc(22);
   line-height: 1.3;
-  @include breakpoint(large) {
+  @include breakpoint(medium) {
     font-size: rem-calc(24);
+  }
+  @include breakpoint(large) {
+    margin-bottom: 61px;
   }
 }
 
 .linkidin {
-  font-size: rem-calc(20);
+  font-size: rem-calc(18);
   border-bottom: 1px solid;
   display: inline-block;
   margin-top: $margin-1;
+  @include breakpoint(medium) {
+    font-size: rem-calc(20);
+  }
 
   svg {
     margin-right: 8px;

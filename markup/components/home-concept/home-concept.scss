@@ -1,8 +1,13 @@
 .home-concept {
-  margin-top: $margin-6;
+  margin-top: 66px;
   @include breakpoint(medium) {
+    margin-top: 57px
+  }
+
+  @include breakpoint(large) {
     margin-top: 88px;
   }
+
   &__list-contain {
     overflow: auto;
     padding-top: 64px;
@@ -11,22 +16,30 @@
   &__list {
     display: flex;
     justify-content: space-between;
+    -webkit-scroll-snap-type: mandatory;
+    scroll-snap-type: x mandatory;
+    -webkit-scroll-snap-destination: 50% 50%;
+    scroll-snap-destination: 50% 50%;
 
     &-item {
       display: flex;
       flex-direction: column;
       align-items: center;
       border: 2px solid $line-color;
-      padding: 45px 22px $margin-2;
+      padding: 45px 29px $margin-2;
       transition: all $default-time;
-      height: 290px;
+      height: 270px;
       text-align: center;
       position: relative;
       background-color: #fff;
       min-width: 270px;
       margin-right: $margin-2;
+      -webkit-scroll-snap-coordinate: 50% 50%;
+      scroll-snap-coordinate: 50% 50%;
+      scroll-snap-align: center;
 
       @include breakpoint(medium) {
+        padding: 45px 22px $margin-2;
         min-width: 290px;
         margin-right: $margin-4;
       }
@@ -51,9 +64,8 @@
 
       &::after {
         position: absolute;
-        top: -64px;
-        left: 50%;
-        transform: translate(-50%);
+        top: -66px;
+        left: -4px;
         width: 44px;
         height: 44px;
         border: 2px solid $line-color;
@@ -63,6 +75,10 @@
         line-height: 42px;
         display: inline-block;
         transition: all $default-time;
+        @include breakpoint(medium) {
+          left: 50%;
+          transform: translate(-50%);
+        }
       }
 
       &:nth-child(1) {
@@ -127,31 +143,39 @@
 
       h3 {
         margin-top: 37px;
-        font-size: rem-calc(24);
+        font-size: rem-calc(22);
         font-family: $ProximaBold;
+        @include breakpoint(medium) {
+          font-size: rem-calc(24);
+        }
       }
 
       &:hover {
-        background-color: $brand-secondary-color;
-        color: #fff;
-        border-color: $brand-secondary-color;
-
-        &::after {
-          background: $brand-secondary-color;
-          border-color: $brand-secondary-color;
+        @include breakpoint(large) {
+          background-color: $brand-secondary-color;
           color: #fff;
-        }
+          border-color: $brand-secondary-color;
 
-        &:before {
-          background: $brand-secondary-color;
+          &::after {
+            background: $brand-secondary-color;
+            border-color: $brand-secondary-color;
+            color: #fff;
+          }
+
+          &:before {
+            background: $brand-secondary-color;
+          }
+
+          svg {
+            fill: #fff;
+          }
         }
-      }
-      &:hover svg {
-        fill: #fff;
       }
       &:not(:nth-child(1)):hover {
-        svg {
-          stroke: #fff;
+        @include breakpoint(large) {
+          svg {
+            stroke: #fff;
+          }
         }
       }
     }
@@ -162,14 +186,21 @@
   margin-bottom: $margin-6;
 
   &__img {
-    margin: $margin-8 0;
+    margin: 77px 0;
     width: 100%;
+    @include breakpoint(large) {
+      margin: $margin-8 0;
+    }
   }
 
   &__title {
     font-family: $ProximaBold;
-    font-size: rem-calc(24);
-    margin-bottom: $margin-2;
+    font-size: rem-calc(22);
+    margin-bottom: 7px;
+    @include breakpoint(large) {
+      font-size: rem-calc(24);
+      margin-bottom: $margin-2;
+    }
   }
 
   &__list {
@@ -192,15 +223,25 @@
     min-height: 400px;
     width: 100%;
     margin: 0 $margin-2 $margin-2;
-    padding: $margin-1 $margin-2;
+    padding: 17px 16px;
     border: 1px solid $line-color;
     @include breakpoint(medium) {
+      padding: 27px 27px 16px;
+      margin: 0 20px 20px 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    @include breakpoint(large) {
       padding: 27px 39px;
       min-height: 440px;
     }
 
     &-list {
       margin-left: 1rem;
+      margin-bottom: 0;
     }
   }
 

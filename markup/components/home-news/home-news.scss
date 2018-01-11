@@ -1,20 +1,90 @@
 .home-news {
-  margin-bottom: $margin-2;
+  margin-bottom: 68px;
 
   @include breakpoint(medium) {
+    margin-bottom: 56px;
+  }
+  @include breakpoint(large) {
     margin-bottom: 89px;
   }
 
   .news-grid {
-    @include breakpoint(medium) {
-      @include breakpoint(medium) {
+    margin: 0 10px;
 
-      }
-      margin-top: 82px;
+    @include breakpoint(medium) {
+      margin: 82px 0 0;
+    }
+  }
+
+  .news-item {
+    margin-bottom: 9px;
+    @include breakpoint(medium) {
+      margin-bottom: $margin-3;
+    }
+    @include breakpoint(large) {
+      margin-bottom: $margin-4;
     }
   }
 
   .news-grid .news-item__date {
     margin: 0 0 $margin-1;
+  }
+
+  .slick-slide {
+    margin: 0 10px;
+    @include breakpoint(medium) {
+      margin: 0;
+    }
+  }
+}
+
+
+.all-news {
+  @extend #{'.news-item'};
+  min-height: 0;
+  width: auto;
+  display: flex;
+  align-items: center;
+  font-family: $ProximaBold;
+  position: relative;
+  margin-right: $margin-3;
+  overflow: visible;
+  padding: 8px 20px;
+
+  @include breakpoint(medium) {
+    border: 1px solid $line-color;
+    padding: $margin-3;
+    margin-bottom: $margin-3;
+  }
+
+  @include breakpoint(large) {
+    margin-bottom: $margin-4;
+    padding: $margin-4;
+  }
+
+  &:hover {
+    span {
+      color: $black;
+      @include breakpoint(large) {
+        color: #fff;
+        border-color: #fff;
+      }
+    }
+    svg {
+      stroke: $black;
+      @include breakpoint(large) {
+        stroke: #fff;
+        border-color: #fff;
+      }
+    }
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    color: $black;
+    border-bottom: solid 2px $black;
+    margin-right: 7px;
+    transition: all $default-time;
   }
 }

@@ -18,6 +18,7 @@
        @include breakpoint(medium) {
          margin-bottom: $margin-3;
          height: 400px;
+         padding: $margin-3;
        }
 
        @include breakpoint(large) {
@@ -52,15 +53,19 @@
        p {
          margin: 0;
          line-height: 1.4;
-         max-width: 90%;
+         @include breakpoint(medium) {
+           max-width: 90%;
+         }
        }
 
        h3 {
-         font-size: rem-calc(24);
          font-family: $ProximaBold;
          margin-top: $margin-2;
+         font-size: rem-calc(22);
          margin-bottom: $margin-1;
-
+         @include breakpoint(medium) {
+           font-size: rem-calc(24);
+         }
        }
      }
   }

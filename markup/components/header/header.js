@@ -9,15 +9,14 @@ function toggleMenu () {
   $('.header .main-nav').toggleClass('active')
   $('.header').toggleClass('active')
   $('.header-clone').toggle()
-
 }
 
 function sctollToEl (el) {
-  if (el && location.hash) {
+  if (el || location.hash) {
     let top = el ? $(el).offset().top : $(location.hash).offset().top
     if (top) {
       $('body,html').animate({scrollTop: top}, 500)
-      if ($(window).width() < 1024) {
+      if (el && $(window).width() < 1024) {
         toggleMenu()
       }
     }
@@ -36,13 +35,6 @@ $('.header')
   .on('click', '.menu a', function () {
     sctollToEl($(this).attr('href'))
   })
-  // .on('click', '.toggle-menu', function () {
-  //   $(this).toggleClass('active')
-  //   $('.header:not(.clone-header) .main-nav').toggleClass('active')
-  //   $('.header').not('.clone-header').toggleClass('active')
-  //   return false
-  // })
-
 
 if (location.pathname !== '/') {
   for (let i = 0; i < $('#menu a').length; i++) {
@@ -65,9 +57,9 @@ let navbarHeight = $('.header').outerHeight()
 $(window).scroll(function () {
   didScroll = true
   if ($(window).scrollTop() > 240) {
-    $('.scroll-down').fadeOut(300)
+    $('.scroll-down').addClass('hide')
   } else {
-    $('.scroll-down').fadeIn(300)
+    $('.scroll-down').removeClass('hide')
   }
 })
 

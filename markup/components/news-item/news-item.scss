@@ -6,13 +6,24 @@
   &__date {
     color: rgba(#1D1D1D, .5);
     font-size: rem-calc(16);
-    margin:  0 0 $margin-1;
+    margin: 7px 0 19px;
     display: block;
   }
 
+  h1 {
+    margin-bottom: $margin-2;
+    font-size: rem-calc(28);
+    @include breakpoint(medium) {
+      font-size: rem-calc(40);
+      margin-bottom: 33px;
+    }
+  }
+
   &__container {
-    max-width: 620px;
-    margin: auto;
+    @include breakpoint(large) {
+      max-width: 620px;
+      margin: auto;
+    }
   }
 
   &__content p {
@@ -52,6 +63,10 @@
   }
 
   img {
-    margin: $margin-2 0 $margin-4;
+    margin: 9px 0 $margin-2;
+    width: 100%;
+    @include breakpoint(medium) {
+      margin: 15px 0 $margin-4;
+    }
   }
 }

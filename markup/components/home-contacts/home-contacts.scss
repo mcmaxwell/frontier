@@ -1,4 +1,8 @@
 .home-contacts {
+  margin-bottom: 26px;
+  @include breakpoint(medium) {
+    margin: 0;
+  }
   @media (max-width:1290px) {
     .row,
     .columns {
@@ -16,6 +20,9 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    @include breakpoint(medium) {
+      margin-top: 63px;
+    }
 
     @include breakpoint(large) {
       flex-direction: row;
@@ -33,6 +40,10 @@
       flex-direction: row;
       text-align: left;
       margin-bottom: $margin-4;
+      width: 449px;
+    }
+
+    @include breakpoint(large) {
       width: 47%;
     }
 
@@ -67,6 +78,10 @@
     .linkidin {
       border-bottom: 1px solid;
       display: inline-block;
+      margin-top: 12px;
+      @include breakpoint(medium) {
+        margin: 0;
+      }
     }
 
     img {

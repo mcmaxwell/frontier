@@ -1,7 +1,7 @@
 .home-map {
   position: relative;
   display: none;
-  margin: 0 0 $margin-8;
+  margin: 0 0 87px;
   @include breakpoint(medium) {
     display: block;
   }

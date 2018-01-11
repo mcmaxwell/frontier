@@ -1,5 +1,9 @@
 .home-partner {
-  margin-bottom: 168px;
+  margin-bottom: 61px;
+
+  @include breakpoint(large) {
+    margin-bottom: 168px;
+  }
 
   &__list {
     list-style: none;
@@ -9,9 +13,21 @@
     justify-content: center;
     flex-wrap: wrap;
 
+    @include breakpoint(medium) {
+      margin-top: 42px
+    }
+    @include breakpoint(large) {
+      margin: 0;
+    }
+
     li {
       display: flex;
       align-items: center;
+      height: 100px;
+      justify-content: center;
+      @include breakpoint(large) {
+        width: 400px;
+      }
     }
 
     a {

@@ -1,6 +1,6 @@
 .home-references {
   @include breakpoint(medium) {
-    margin: $margin-6 0 0;
+    margin: 35px 0 0
   }
 
   @include breakpoint(large) {

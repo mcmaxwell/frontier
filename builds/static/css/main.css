@@ -5430,13 +5430,17 @@ a:hover svg {
 }
 
 .home-map__item-list {
-  display: none;
   position: absolute;
   background-color: #fff;
-  padding: 40px;
+  padding: 0;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
   box-shadow: 5px 14px 40px 0 rgba(29, 29, 29, 0.3);
   border-radius: 2px;
   z-index: 100;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .home-map__item-list::after {
@@ -5452,7 +5456,10 @@ a:hover svg {
 }
 
 .home-map__item-list.active {
-  display: block;
+  opacity: 1;
+  padding: 40px;
+  height: auto;
+  overflow: visible;
 }
 
 .home-map__item {
@@ -5467,7 +5474,12 @@ a:hover svg {
   transition: all 0.3s;
 }
 
-.home-map__item:hover, .home-map__item.active {
+.home-map__item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.home-map__item.active {
   border-color: #fff;
   background-color: #E63331;
 }
@@ -6050,6 +6062,50 @@ a:hover svg {
   }
 }
 
+.news-top {
+  height: 152px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-family: proxima_nova_altbold;
+  margin: 0 20px;
+  padding: 20px;
+}
+
+@media print, screen and (min-width: 48em) {
+  .news-top {
+    height: 210px;
+    margin: 0 40px;
+    padding: 40px;
+  }
+}
+
+@media screen and (min-width: 85em) {
+  .news-top {
+    height: 300px;
+    padding: 100px;
+    margin: 0 80px;
+  }
+}
+
+.news-top h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+@media print, screen and (min-width: 48em) {
+  .news-top h1 {
+    font-size: 3.125rem;
+  }
+}
+
 .news-item-page .columns {
   position: relative;
 }
@@ -6134,50 +6190,6 @@ a:hover svg {
 @media print, screen and (min-width: 48em) {
   .news-item-page img {
     margin: 15px 0 40px;
-  }
-}
-
-.news-top {
-  height: 152px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #fff;
-  font-family: proxima_nova_altbold;
-  margin: 0 20px;
-  padding: 20px;
-}
-
-@media print, screen and (min-width: 48em) {
-  .news-top {
-    height: 210px;
-    margin: 0 40px;
-    padding: 40px;
-  }
-}
-
-@media screen and (min-width: 85em) {
-  .news-top {
-    height: 300px;
-    padding: 100px;
-    margin: 0 80px;
-  }
-}
-
-.news-top h1 {
-  font-size: 2rem;
-  margin: 0;
-}
-
-@media print, screen and (min-width: 48em) {
-  .news-top h1 {
-    font-size: 3.125rem;
   }
 }
 

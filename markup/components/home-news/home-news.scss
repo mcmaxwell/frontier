@@ -43,7 +43,7 @@
   @extend #{'.news-item'};
   min-height: 0;
   width: auto;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   font-family: $ProximaBold;
   position: relative;
@@ -62,6 +62,16 @@
     padding: $margin-4;
   }
 
+  svg path,
+  svg polyline {
+    transition: all $default-time;
+    stroke: $black;
+  }
+  svg {
+    transition: all $default-time;
+    stroke: $black;
+  }
+
   &:hover {
     span {
       color: $black;
@@ -70,7 +80,9 @@
         border-color: #fff;
       }
     }
-    svg {
+    svg path,
+    svg polyline {
+      transition: all $default-time;
       stroke: $black;
       @include breakpoint(large) {
         stroke: #fff;

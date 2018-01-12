@@ -51,6 +51,12 @@
       height: 120px;
     }
 
+    &:hover {
+      svg {
+        width: 43px;
+      }
+    }
+
     svg {
       fill: #fff;
       transition: all $default-time;

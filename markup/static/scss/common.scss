@@ -22,13 +22,6 @@ body {
   }
 }
 
-svg {
-  transition: all $default-time;
-
-  * {
-    transition: all $default-time;
-  }
-}
 
 a:hover {
   color: $brand-secondary-color;
@@ -142,12 +135,13 @@ a:hover {
 
     &__date {
       font-size: rem-calc(14);
-      opacity: .5;
       display: inline-block;
       margin: 0 0 8px;
+      color: rgba($black, .5);
+      transition: color $default-time;
       @include breakpoint(medium) {
         font-size: rem-calc(16);
-        margin: 0 0 5  px;
+        margin: 0 0 5px;
       }
     }
 

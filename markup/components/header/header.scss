@@ -1,49 +1,3 @@
-.header-clone {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  -webkit-transform: translate3d(0,-100%,0);
-  transform: translate3d(0,-100%,0);
-  visibility: hidden;
-  transition: transform .3s ease,visibility 0s .3s linear;
-  z-index: 100;
-
-  &.show {
-    transform: translate3d(0,0,0);
-    visibility: visible;
-    transition: transform .3s ease;
-    padding: $margin-2 0 $margin-2 $margin-2;
-
-    @include breakpoint(medium) {
-      padding: $margin-4 $margin-2 $margin-4 $margin-4;
-    }
-
-    @include breakpoint(large) {
-      padding: 21px 80px;
-    }
-  }
-  &.top {
-    position: absolute;
-    height: 0;
-    overflow: hidden;
-    visibility: hidden;
-    transform: translate3d(0,-100%,0);
-    transition-property: none;
-    transition-duration: 0s;
-    z-index: 0;
-    opacity: 0;
-  }
-
-  // &.active:not(.top) {
-  //   transform: translate3d(0,0,0);
-  //   height: auto;
-  //   position: fixed;
-  //   visibility: visible;
-  //   opacity: 1;
-  //   z-index: 400;
-  // }
-}
 .fake-header {
   @include breakpoint(large) {
     display: none;
@@ -112,7 +66,7 @@
       padding: calc(#{$header-height-medium} + 23px) 98px 98px;
     }
 
-    @include breakpoint(large) {
+    @media(min-width:1280px) {
       display: flex;
       position: static;
       flex-direction: row;
@@ -127,6 +81,7 @@
       font-size: rem-calc(20);
     }
   }
+
 
   .main-nav {
     display: flex;
@@ -143,7 +98,7 @@
       opacity: 0;
       z-index: -1;
       transition: opacity $default-time;
-      @include breakpoint(large) {
+      @media(min-width:1280px) {
         display: none;
       }
     }
@@ -175,7 +130,7 @@
     z-index: 400;
 
     margin: 50px 0;
-    @include breakpoint(large) {
+    @media(min-width:1280px) {
       display: none;
     }
 
@@ -248,4 +203,63 @@
       font-size: rem-calc(20);
     }
   }
+}
+
+.header-clone {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(0,-100%,0);
+  transform: translate3d(0,-100%,0);
+  visibility: hidden;
+  transition: transform .3s ease,visibility 0s .3s linear;
+  z-index: 100;
+  min-height: 80px;
+  max-height: 80px;
+
+  @include breakpoint(medium) {
+    min-height: 100px;
+    max-height: 100px;
+  }
+
+  @include breakpoint(large) {
+    min-height: 120px;
+    max-height: 120px;
+  }
+
+  &.show {
+    transform: translate3d(0,0,0);
+    visibility: visible;
+    transition: transform .3s ease;
+    padding: $margin-2 0 $margin-2 $margin-2;
+
+    @include breakpoint(medium) {
+      padding: $margin-4 $margin-2 $margin-4 $margin-4;
+    }
+
+    @include breakpoint(large) {
+      padding: 21px 80px;
+    }
+  }
+  &.top {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transform: translate3d(0,-100%,0);
+    transition-property: none;
+    transition-duration: 0s;
+    z-index: 0;
+    opacity: 0;
+  }
+
+  // &.active:not(.top) {
+  //   transform: translate3d(0,0,0);
+  //   height: auto;
+  //   position: fixed;
+  //   visibility: visible;
+  //   opacity: 1;
+  //   z-index: 400;
+  // }
 }

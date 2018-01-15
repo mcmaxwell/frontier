@@ -2,13 +2,14 @@
 function toggleMenu () {
   if(!$('.fake-header').length) {
     $('<div class="fake-header"></div>').css('height', $('.header').outerHeight()).insertBefore('.header')
+    $('.header-clone').css('opacity', 0)
   } else {
     $('.fake-header').remove()
+    $('.header-clone').css('opacity', 1)
   }
   $('.toggle-menu').toggleClass('active')
   $('.header .main-nav').toggleClass('active')
   $('.header').toggleClass('active')
-  $('.header-clone').toggle()
 }
 
 function sctollToEl (el) {
@@ -82,12 +83,12 @@ function hasScrolled () {
 
   // If they scrolled down and are past the navbar, add class .nav-up.
   // This is necessary so you never see what is "behind" the navbar.
-  if(st < navbarHeight + 100) {
+  if(st < navbarHeight) {
     $('.header-clone').addClass('top')
   } else {
     $('.header-clone').removeClass('top')
   }
-  if (st > lastScrollTop && st > navbarHeight || st < navbarHeight + 300) {
+  if (st > lastScrollTop && st > navbarHeight ) {
       // Scroll Down
       $('.header-clone').removeClass('show')
   } else {

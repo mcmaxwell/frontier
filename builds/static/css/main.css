@@ -4552,7 +4552,7 @@ a:hover svg {
   }
 }
 
-.header {
+.header, .header-clone.top {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4574,7 +4574,7 @@ a:hover svg {
 }
 
 @media print, screen and (min-width: 48em) {
-  .header {
+  .header, .header-clone.top {
     padding: 40px 20px 40px 40px;
     min-height: 140px;
     max-height: 140px;
@@ -4582,25 +4582,25 @@ a:hover svg {
 }
 
 @media print, screen and (min-width: 64em) {
-  .header {
-    padding: 40px 80px;
+  .header, .header-clone.top {
+    padding: 40px 2.5rem;
     min-height: 160px;
     max-height: 160px;
   }
 }
 
-.header.active {
+.header.active, .active.header-clone.top {
   position: fixed;
   z-index: 400;
 }
 
 @media print, screen and (min-width: 64em) {
-  .header.active {
+  .header.active, .active.header-clone.top {
     position: static;
   }
 }
 
-.header .logo {
+.header .logo, .header-clone.top .logo {
   position: relative;
   z-index: 400;
   width: 57%;
@@ -4608,18 +4608,18 @@ a:hover svg {
 }
 
 @media print, screen and (min-width: 48em) {
-  .header .logo {
+  .header .logo, .header-clone.top .logo {
     width: 202px;
   }
 }
 
 @media print, screen and (min-width: 64em) {
-  .header .logo {
+  .header .logo, .header-clone.top .logo {
     width: 268px;
   }
 }
 
-.header .menu {
+.header .menu, .header-clone.top .menu {
   opacity: 0;
   position: fixed;
   left: 0;
@@ -4635,13 +4635,13 @@ a:hover svg {
 }
 
 @media print, screen and (min-width: 48em) {
-  .header .menu {
+  .header .menu, .header-clone.top .menu {
     padding: calc(140px + 23px) 98px 98px;
   }
 }
 
 @media (min-width: 1280px) {
-  .header .menu {
+  .header .menu, .header-clone.top .menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4655,7 +4655,7 @@ a:hover svg {
   }
 }
 
-.header .menu a {
+.header .menu a, .header-clone.top .menu a {
   font-family: proxima_nova_altbold;
   padding: 0.7rem 13px;
   -webkit-transition: all 0.3s;
@@ -4663,7 +4663,7 @@ a:hover svg {
   font-size: 1.25rem;
 }
 
-.header .main-nav {
+.header .main-nav, .header-clone.top .main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4672,7 +4672,7 @@ a:hover svg {
           align-items: center;
 }
 
-.header .main-nav::after {
+.header .main-nav::after, .header-clone.top .main-nav::after {
   content: "";
   position: fixed;
   top: -100%;
@@ -4687,12 +4687,12 @@ a:hover svg {
 }
 
 @media (min-width: 1280px) {
-  .header .main-nav::after {
+  .header .main-nav::after, .header-clone.top .main-nav::after {
     display: none;
   }
 }
 
-.header .main-nav.active::after {
+.header .main-nav.active::after, .header-clone.top .main-nav.active::after {
   content: "";
   opacity: 1;
   top: 0;
@@ -4700,7 +4700,7 @@ a:hover svg {
   transition: opacity 0.3s;
 }
 
-.header .main-nav.active .menu {
+.header .main-nav.active .menu, .header-clone.top .main-nav.active .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4708,7 +4708,7 @@ a:hover svg {
   top: 0;
 }
 
-.header .toggle-menu {
+.header .toggle-menu, .header-clone.top .toggle-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4724,30 +4724,30 @@ a:hover svg {
 }
 
 @media (min-width: 1280px) {
-  .header .toggle-menu {
+  .header .toggle-menu, .header-clone.top .toggle-menu {
     display: none;
   }
 }
 
-.header .toggle-menu.active span::after {
+.header .toggle-menu.active span::after, .header-clone.top .toggle-menu.active span::after {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   top: 4.5px;
 }
 
-.header .toggle-menu.active span::before {
+.header .toggle-menu.active span::before, .header-clone.top .toggle-menu.active span::before {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   bottom: 4.5px;
 }
 
-.header .toggle-menu span {
+.header .toggle-menu span, .header-clone.top .toggle-menu span {
   position: relative;
   height: 12px;
   display: block;
 }
 
-.header .toggle-menu span::after, .header .toggle-menu span::before {
+.header .toggle-menu span::after, .header-clone.top .toggle-menu span::after, .header .toggle-menu span::before, .header-clone.top .toggle-menu span::before {
   content: "";
   width: 30px;
   height: 3px;
@@ -4761,7 +4761,7 @@ a:hover svg {
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
-.header .toggle-menu span::before {
+.header .toggle-menu span::before, .header-clone.top .toggle-menu span::before {
   bottom: 0;
   top: auto;
 }
@@ -4815,15 +4815,6 @@ a:hover svg {
   transition: transform .3s ease,visibility 0s .3s linear;
   transition: transform .3s ease,visibility 0s .3s linear,-webkit-transform .3s ease;
   z-index: 100;
-  min-height: 80px;
-  max-height: 80px;
-}
-
-@media print, screen and (min-width: 48em) {
-  .header-clone {
-    min-height: 100px;
-    max-height: 100px;
-  }
 }
 
 @media print, screen and (min-width: 64em) {
@@ -4852,23 +4843,13 @@ a:hover svg {
 
 @media print, screen and (min-width: 64em) {
   .header-clone.show {
-    padding: 21px 80px;
+    padding: 21px 2.5rem;
   }
 }
 
 .header-clone.top {
-  position: absolute;
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
-  -webkit-transform: translate3d(0, -100%, 0);
-          transform: translate3d(0, -100%, 0);
-  -webkit-transition-property: none;
-  transition-property: none;
-  -webkit-transition-duration: 0s;
-          transition-duration: 0s;
-  z-index: 0;
-  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .home-concept {
@@ -4926,7 +4907,7 @@ a:hover svg {
   text-align: center;
   position: relative;
   background-color: #fff;
-  min-width: 270px;
+  min-width: 278px;
   margin-right: 20px;
   -webkit-scroll-snap-coordinate: 50% 50%;
   -ms-scroll-snap-coordinate: 50% 50%;
@@ -5723,7 +5704,7 @@ a:hover svg {
 
 @media print, screen and (min-width: 64em) {
   .home-partner__list li {
-    width: 400px;
+    width: 310px;
   }
 }
 
@@ -5911,8 +5892,8 @@ a:hover svg {
 @media print, screen and (min-width: 64em) {
   .home-top__contain {
     height: calc(100% - 160px - 160px);
-    width: calc(100% - 80px - 80px);
-    margin: 0 80px 0;
+    width: calc(100% - 5rem);
+    margin: 0 2.5rem 0;
     padding: 100px;
   }
 }
@@ -6183,6 +6164,62 @@ a:hover svg {
   }
 }
 
+.share-page {
+  color: rgba(29, 29, 29, 0.2);
+}
+
+.share-page ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.share-page ul li {
+  width: 30px;
+  height: 30px;
+  font-size: 1.875rem;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: .2;
+}
+
+@media print, screen and (min-width: 64em) {
+  .share-page ul li {
+    margin-bottom: 26px;
+  }
+}
+
+.share-page ul li:hover {
+  color: #192A67;
+}
+
+.share-page ul li a,
+.share-page ul li iframe {
+  width: 30px;
+  height: 30px;
+  display: block;
+  opacity: 0;
+}
+
+.share-page ul li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  text-indent: 0;
+}
+
+.share-page ul li.icon-twitter {
+  font-size: 1.5625rem;
+}
+
+.share-page ul li.icon-linkedin {
+  font-size: 1.6875rem;
+}
+
 .our-customers {
   color: #fff;
   padding: 40px 0;
@@ -6312,60 +6349,4 @@ a:hover svg {
   line-height: 1;
   position: absolute;
   left: 0;
-}
-
-.share-page {
-  color: rgba(29, 29, 29, 0.2);
-}
-
-.share-page ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.share-page ul li {
-  width: 30px;
-  height: 30px;
-  font-size: 1.875rem;
-  overflow: hidden;
-  cursor: pointer;
-  position: relative;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  opacity: .2;
-}
-
-@media print, screen and (min-width: 64em) {
-  .share-page ul li {
-    margin-bottom: 26px;
-  }
-}
-
-.share-page ul li:hover {
-  color: #192A67;
-}
-
-.share-page ul li a,
-.share-page ul li iframe {
-  width: 30px;
-  height: 30px;
-  display: block;
-  opacity: 0;
-}
-
-.share-page ul li::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  text-indent: 0;
-}
-
-.share-page ul li.icon-twitter {
-  font-size: 1.5625rem;
-}
-
-.share-page ul li.icon-linkedin {
-  font-size: 1.6875rem;
 }

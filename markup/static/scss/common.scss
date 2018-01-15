@@ -44,7 +44,6 @@ a:hover {
     position: relative;
     border: 2px solid $line-color;
     border-radius: $border-radius;
-    overflow: hidden;
     margin-bottom: $margin-2;
     transition: all $default-time;
     color: $black;
@@ -82,7 +81,7 @@ a:hover {
       @include breakpoint(large) {
         background-color: $brand-secondary-color;
         color: #fff;
-        border-color: #fff;
+        border-color: $brand-secondary-color;
       }
 
       .news-item__read-more {
@@ -170,6 +169,7 @@ a:hover {
         min-width: 50%;
         height: auto;
         display: block;
+        margin: -2px;
       }
 
       @include breakpoint(large) {
@@ -297,7 +297,7 @@ a:hover {
   @include breakpoint(large) {
     transition: all $default-time;
     opacity: 0;
-    transform: translate(0, 80px);
+    transform: translate(0, 50px);
   }
 }
 .show {

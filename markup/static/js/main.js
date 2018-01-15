@@ -19,6 +19,9 @@ $(document).ready(function () {
         //   'opacity': '1',
         //   'transform': 'translate(0)'
         // }, 400)
+      } else {
+        $(this).removeClass('show')
+
       }
     })
   }

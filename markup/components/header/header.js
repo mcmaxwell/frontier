@@ -56,7 +56,7 @@ let navbarHeight = $('.header').outerHeight()
 
 $(window).scroll(function () {
   didScroll = true
-  if ($(window).scrollTop() > 240) {
+  if ($(window).scrollTop() > 50) {
     $('.scroll-down').addClass('hide')
   } else {
     $('.scroll-down').removeClass('hide')

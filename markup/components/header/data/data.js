@@ -23,7 +23,7 @@ header: {
       }
     ],
     langUrl: '/en/',
-    langText: 'Switch to English',
+    langText: 'Eng',
     langTextShort: 'Eng'
   },
   en: {
@@ -50,7 +50,7 @@ header: {
       }
     ],
     langUrl: '/',
-    langText: 'Switch to Norway',
+    langText: 'Nor',
     langTextShort: 'Nor'
   }
 }

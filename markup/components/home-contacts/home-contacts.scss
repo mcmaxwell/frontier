@@ -63,10 +63,12 @@
       color: $black;
       display: block;
       transition: all $default-time;
+      border-bottom: 1px solid;
       svg path {
         color: $black;
         transition: all $default-time;
       }
+
       &:hover {
         color: $brand-secondary-color;
 
@@ -75,11 +77,15 @@
          stroke: none;
         }
       }
+
+      &.home-contacts__item-tel {
+        display: inline-block;
+      }
     }
 
     &-email,
+    &-tel,
     .linkidin {
-      border-bottom: 1px solid;
       display: inline-block;
       margin-top: 12px;
     }

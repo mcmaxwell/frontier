@@ -6,6 +6,8 @@
       <div class="home-concept__list-contain">
         <div class="home-concept__list js-home-concept__list">
           {{#each homeConceptList }}
+          <div class="home-concept__list-item-contain home-concept__list-item-contain-{{this.num}}">
+            <span class="home-concept__list-item-num">{{this.num}}</span>
             <div class="home-concept__list-item">
               <i class="{{this.icon}}">
                 {{{this.img}}}
@@ -13,6 +15,7 @@
               <h3>{{this.title}}</h3>
               <p>{{{this.shortDesc}}}</p>
             </div>
+          </div>
           {{/each}}
         </div>
       </div>

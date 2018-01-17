@@ -47,18 +47,17 @@
   align-items: center;
   font-family: $ProximaBold;
   position: relative;
-  margin-right: $margin-3;
   overflow: visible;
-  padding: 8px 20px;
+  margin: 8px $margin-2 8px;
 
   @include breakpoint(medium) {
     border: 1px solid $line-color;
     padding: $margin-3;
-    margin-bottom: $margin-3;
+    margin: 0 $margin-3 $margin-3 0;
   }
 
   @include breakpoint(large) {
-    margin-bottom: $margin-4;
+    margin: 0 $margin-3 $margin-4 0;
     padding: $margin-4;
   }
 

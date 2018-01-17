@@ -5,12 +5,14 @@ homeConcept: {
     homeConceptList: [
       {
         icon: 'icon-pen',
+        num: 1,
         title: 'Konseptutvikling',
         shortDesc: 'Prosjektering',
         img: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59 59.04" stroke="none"><path d="M16.77,4.56a1.5,1.5,0,0,1,2.12,2.12l-3.65,3.65a1.5,1.5,0,0,1-2.12-2.12Z" transform="translate(-0.5 -0.47)"/><path d="M20.42,8.21a1.5,1.5,0,1,1,2.12,2.12L20.1,12.77A1.5,1.5,0,1,1,18,10.65Z" transform="translate(-0.5 -0.47)"/><path d="M24.07,11.87A1.5,1.5,0,0,1,26.19,14l-3.65,3.65a1.5,1.5,0,0,1-2.12-2.12Z" transform="translate(-0.5 -0.47)"/><path d="M46,33.8a1.5,1.5,0,1,1,2.12,2.12l-3.65,3.65a1.5,1.5,0,1,1-2.12-2.12Z" transform="translate(-0.5 -0.47)"/><path d="M49.63,37.45a1.5,1.5,0,0,1,2.12,2.12L49.32,42a1.5,1.5,0,1,1-2.12-2.12Z" transform="translate(-0.5 -0.47)"/><path d="M53.29,41.1a1.5,1.5,0,0,1,2.12,2.12l-3.65,3.65a1.5,1.5,0,0,1-2.12-2.12Z" transform="translate(-0.5 -0.47)"/><path d="M5.81,42a1.5,1.5,0,0,1,2.12-2.12L20.1,52.07A1.5,1.5,0,1,1,18,54.19Z" transform="translate(-0.5 -0.47)"/><path d="M17.67,44.44a1.5,1.5,0,1,1-2.12-2.12L49.63,8.21a1.5,1.5,0,1,1,2.12,2.12Z" transform="translate(-0.5 -0.47)"/><path d="M18.26,51.79,55.51,14.51a3.37,3.37,0,0,0,0-4.77L50.22,4.45a3.37,3.37,0,0,0-4.76,0L8.21,41.73l-4,14.08ZM57.63,7.62a6.37,6.37,0,0,1,0,9L20.1,54.19a1.5,1.5,0,0,1-.65.38l-17,4.87A1.5,1.5,0,0,1,.56,57.59L5.43,40.53a1.5,1.5,0,0,1,.38-.65L43.34,2.33a6.37,6.37,0,0,1,9,0Z" transform="translate(-0.5 -0.47)"/><path d="M7.93,42a1.5,1.5,0,0,1-2.12-2.12L43.34,2.33a6.37,6.37,0,0,1,9,0l5.29,5.29a6.37,6.37,0,0,1,0,9L20.1,54.19A1.5,1.5,0,1,1,18,52.07L55.51,14.51a3.37,3.37,0,0,0,0-4.77L50.22,4.45a3.37,3.37,0,0,0-4.76,0Z" transform="translate(-0.5 -0.47)"/><path d="M55.88,45.82,41.11,31a1.5,1.5,0,0,1,2.12-2.12L59.06,44.76a1.5,1.5,0,0,1,0,2.12L46.89,59.06a1.5,1.5,0,0,1-2.12,0L28.94,43.22a1.5,1.5,0,0,1,2.12-2.12L45.83,55.88Z" transform="translate(-0.5 -0.47)"/><path d="M4.12,14.15,18.89,28.92A1.5,1.5,0,1,1,16.77,31L.94,15.21a1.5,1.5,0,0,1,0-2.12L13.11.91a1.5,1.5,0,0,1,2.12,0L31.06,16.74a1.5,1.5,0,0,1-2.12,2.12L14.17,4.09Z" transform="translate(-0.5 -0.47)"/></svg>`
       },
       {
         icon: 'icon-hands',
+        num: 2,
         title: 'Avtale inngåelse',
         shortDesc: 'Business case',
         img: `
@@ -36,6 +38,7 @@ homeConcept: {
       },
       {
         icon: 'icon-box',
+        num: 3,
         title: 'Installasjon',
         shortDesc: 'Prosjektledelse Installasjon',
         img: `
@@ -61,6 +64,7 @@ homeConcept: {
       },
       {
         icon: 'icon-drift',
+        num: 4,
         title: 'Drift',
         shortDesc: 'Daglig drift, <br> Service og Beredskap 24/7',
         img: `

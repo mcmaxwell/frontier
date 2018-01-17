@@ -1,12 +1,5 @@
 
 function toggleMenu () {
-  if(!$('.fake-header').length) {
-    $('<div class="fake-header"></div>').css('height', $('.header').outerHeight()).insertBefore('.header')
-    $('.header-clone').css('opacity', 0)
-  } else {
-    $('.fake-header').remove()
-    $('.header-clone').css('opacity', 1)
-  }
   $('.toggle-menu').toggleClass('active')
   $('.header .main-nav').toggleClass('active')
   $('.header').toggleClass('active')
@@ -14,7 +7,7 @@ function toggleMenu () {
 
 function sctollToEl (el) {
   if (el || location.hash) {
-    let top = el ? $(el).offset().top : $(location.hash).offset().top
+    let top = el ? $(el).offset().top - 120 : $(location.hash).offset().top - 120
     if (top) {
       $('body,html').animate({scrollTop: top}, 500)
       if (el && $(window).width() < 1024) {
@@ -24,18 +17,24 @@ function sctollToEl (el) {
   }
 }
 
+if (!$('.fake-header').length) {
+  $('<div class="fake-header"></div>').css('height', $('.header').outerHeight()).insertBefore('.header')
+} else {
+  $('.fake-header').remove()
+}
+
 $('.toggle-menu').click(function () {
   toggleMenu()
   return false
 })
 
-$('.header')
-  .clone(true, true)
-  .addClass('header-clone')
-  .appendTo('body')
-  .on('click', '.menu a', function () {
-    sctollToEl($(this).attr('href'))
-  })
+// $('.header')
+//   .clone(true, true)
+//   .addClass('header-clone')
+//   .appendTo('body')
+//   .on('click', '.menu a', function () {
+//     sctollToEl($(this).attr('href'))
+//   })
 
 if (location.pathname !== '/') {
   for (let i = 0; i < $('#menu a').length; i++) {
@@ -49,11 +48,49 @@ $('#menu').on('click', 'a', function () {
   sctollToEl($(this).attr('href'))
 })
 
+if ($(window).scrollTop() < $('.header').outerHeight()) {
+  $('.header').addClass('top')
+} else {
+  $('.header').removeClass('top')
+}
+
 // Hide Header on on scroll down
 let didScroll
 let lastScrollTop = 0
 let delta = 5
 let navbarHeight = $('.header').outerHeight()
+
+function hasScrolled () {
+  let st = $(window).scrollTop()
+
+  // Make sure they scroll more than delta
+  if (Math.abs(lastScrollTop - st) <= delta) {
+    return
+  }
+
+  // If they scrolled down and are past the navbar, add class .nav-up.
+  // This is necessary so you never see what is "behind" the navbar.
+  if(st < navbarHeight) {
+    $('.header').addClass('top')
+  } else {
+    $('.header').removeClass('top')
+  }
+  if (st > lastScrollTop && st > 0) {
+      // Scroll Down
+      $('.header').removeClass('show')
+  } else {
+      // Scroll Up
+      console.log(3);
+    if (st + $(window).height() < $(document).height()) {
+      console.log(2);
+      $('.header').addClass('show')
+    }
+  }
+
+  lastScrollTop = st
+}
+
+
 
 $(window).scroll(function () {
   didScroll = true
@@ -70,33 +107,3 @@ setInterval(function (event) {
     didScroll = false
   }
 }, 30)
-
-
-function hasScrolled () {
-  let st = $(window).scrollTop()
-
-  // Make sure they scroll more than delta
-  if (Math.abs(lastScrollTop - st) <= delta) {
-    return
-  }
-
-
-  // If they scrolled down and are past the navbar, add class .nav-up.
-  // This is necessary so you never see what is "behind" the navbar.
-  if(st < navbarHeight) {
-    $('.header-clone').addClass('top')
-  } else {
-    $('.header-clone').removeClass('top')
-  }
-  if (st > lastScrollTop && st > navbarHeight ) {
-      // Scroll Down
-      $('.header-clone').removeClass('show')
-  } else {
-      // Scroll Up
-    if (st + $(window).height() < $(document).height()) {
-      $('.header-clone').addClass('show')
-    }
-  }
-
-  lastScrollTop = st
-}

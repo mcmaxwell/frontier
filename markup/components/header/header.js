@@ -70,19 +70,18 @@ function hasScrolled () {
 
   // If they scrolled down and are past the navbar, add class .nav-up.
   // This is necessary so you never see what is "behind" the navbar.
-  if(st < navbarHeight) {
+  if (st < navbarHeight) {
     $('.header').addClass('top')
   } else {
     $('.header').removeClass('top')
   }
+
   if (st > lastScrollTop && st > 0) {
       // Scroll Down
-      $('.header').removeClass('show')
+    $('.header').removeClass('show')
   } else {
       // Scroll Up
-      console.log(3);
     if (st + $(window).height() < $(document).height()) {
-      console.log(2);
       $('.header').addClass('show')
     }
   }

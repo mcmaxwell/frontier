@@ -11,7 +11,7 @@
 
   &.active {
     .home-map__item {
-      display: block;
+      opacity: 1;
     }
 
     img {
@@ -24,15 +24,16 @@
   }
 
   img.active {
-    opacity: 0;
+    //opacity: 0;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
+    z-index: -1;
   }
 
   img {
-    transition: all $default-time;
+    transition: all $default-time ease-in;
   }
 
   &__toggle {
@@ -127,7 +128,7 @@
     border-radius: 50%;
     background-color: #fff;
     border: 7px solid rgba(#000, .2);
-    display: none;
+    opacity: 0;
     transition: all $default-time;
 
     &:hover {

@@ -207,8 +207,8 @@
 }
 
 .header {
-  position: fixed;
   width: 100%;
+  position: fixed;
   top: 0;
   left: 0;
   -webkit-transform: translate3d(0,-100%,0);
@@ -217,11 +217,10 @@
   transition: transform .3s ease,visibility 0s .3s linear;
   z-index: 100;
 
-
-
   &.show {
     transform: translate3d(0,0,0);
     visibility: visible;
+    position: fixed;
     transition: transform .3s ease;
     @include breakpoint(large) {
       min-height: 120px;

@@ -3980,12 +3980,6 @@ html.is-reveal-open body {
   transition: all 0.3s;
 }
 
-.icon-linkedin:before {
-  width: 30px;
-  height: 30px;
-  background: url(../img/general/linkedin.svg) center center/cover no-repeat;
-}
-
 .icon-twitter:before {
   width: 30px;
   height: 30px;
@@ -4629,12 +4623,11 @@ a:hover svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  z-index: 300;
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  z-index: -1;
+  z-index: 300;
   padding: calc(140px + 3px) 83px 98px;
 }
 

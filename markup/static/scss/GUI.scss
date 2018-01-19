@@ -71,7 +71,6 @@ $global-flexbox: true;
   content: "\e919";
 }
 
-
 .icon {
   &:before {
     content: "";
@@ -235,13 +234,7 @@ $global-flexbox: true;
 //     content: $icon-scroll-Down;
 //   }
 // }
-.icon-linkedin {
-  &:before {
-    width: 30px;
-    height: 30px;
-    background: url(%=static=%general/linkedin.svg) center center/cover no-repeat;
-  }
-}
+
 .icon-twitter {
   &:before {
     width: 30px;

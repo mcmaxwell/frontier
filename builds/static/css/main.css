@@ -1026,7 +1026,7 @@ template {
 }
 
 .foundation-mq {
-  font-family: "small=0em&medium=48em&large=64em&xlarge=75em&xxlarge=85em";
+  font-family: "small=0em&medium=48em&large=64em&custom=73.75em&xlarge=75em&xxlarge=85em";
 }
 
 html {
@@ -4570,16 +4570,16 @@ a:hover svg {
 @media print, screen and (min-width: 48em) {
   .header {
     padding: 40px 20px 40px 40px;
-    min-height: 140px;
-    max-height: 140px;
+    min-height: 120px;
+    max-height: 120px;
   }
 }
 
 @media print, screen and (min-width: 64em) {
   .header {
     padding: 40px 2.5rem;
-    min-height: 160px;
-    max-height: 160px;
+    min-height: 120px;
+    max-height: 120px;
   }
 }
 
@@ -4598,12 +4598,6 @@ a:hover svg {
 
 @media print, screen and (min-width: 48em) {
   .header .logo {
-    width: 202px;
-  }
-}
-
-@media print, screen and (min-width: 64em) {
-  .header .logo {
     width: 268px;
   }
 }
@@ -4614,31 +4608,27 @@ a:hover svg {
   left: 0;
   top: 0;
   width: 100%;
+  height: 100vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-transform: translate(0, -100%);
-          transform: translate(0, -100%);
   z-index: 300;
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s 1s;
-  transition: opacity 0.3s, -webkit-transform 0.3s 1s;
-  transition: transform 0.3s 1s, opacity 0.3s;
-  transition: transform 0.3s 1s, opacity 0.3s, -webkit-transform 0.3s 1s;
+  z-index: -1;
   padding: calc(140px + 3px) 83px 98px;
 }
 
 @media print, screen and (min-width: 48em) {
   .header .menu {
-    padding: calc(140px + 23px) 98px 98px;
+    padding: calc(120px + 23px) 126px 98px;
   }
 }
 
-@media (min-width: 1180px) {
+@media screen and (min-width: 73.75em) {
   .header .menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4648,10 +4638,13 @@ a:hover svg {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    opacity: 1;
+    opacity: 1 !important;
     padding: 0;
     -webkit-transform: translate(0);
             transform: translate(0);
+    -webkit-transition: all 0s;
+    transition: all 0s;
+    height: auto;
   }
 }
 
@@ -4672,41 +4665,14 @@ a:hover svg {
           align-items: center;
 }
 
-.header .main-nav::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2000px;
-  background-color: rgba(29, 29, 29, 0.5);
-  opacity: 0;
-  z-index: -1;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-  pointer-events: none;
-}
-
-@media (min-width: 1180px) {
-  .header .main-nav::after {
-    display: none;
-  }
-}
-
-.header .main-nav.active::after {
-  content: "";
+.header .main-nav.active {
   opacity: 1;
-  top: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
 }
 
 .header .main-nav.active .menu {
   opacity: 1;
   -webkit-transform: translate(0);
           transform: translate(0);
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
 }
 
 .header .toggle-menu {
@@ -4724,7 +4690,7 @@ a:hover svg {
   margin: 50px 0;
 }
 
-@media (min-width: 1180px) {
+@media screen and (min-width: 73.75em) {
   .header .toggle-menu {
     display: none;
   }
@@ -4844,25 +4810,12 @@ a:hover svg {
   transition: all 0.3s;
 }
 
-@media print, screen and (min-width: 64em) {
-  .header.top {
-    min-height: 160px;
-    max-height: 160px;
-  }
-}
-
 .header.active {
   position: fixed;
   z-index: 400;
   visibility: visible;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-}
-
-@media (min-width: 1180px) {
-  .header.active {
-    position: static;
-  }
 }
 
 .home-concept {
@@ -5752,100 +5705,6 @@ a:hover svg {
   opacity: 1;
 }
 
-.home-services__grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.home-services__grid-item {
-  width: 100%;
-  height: 335px;
-  position: relative;
-  margin-bottom: 20px;
-  overflow: hidden;
-  padding: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  color: #fff;
-}
-
-@media print, screen and (min-width: 48em) {
-  .home-services__grid-item {
-    margin-bottom: 30px;
-    height: 400px;
-    padding: 30px;
-  }
-}
-
-@media print, screen and (min-width: 64em) {
-  .home-services__grid-item {
-    width: 57.032%;
-    margin-bottom: 40px;
-    padding: 40px;
-  }
-}
-
-@media print, screen and (min-width: 64em) {
-  .home-services__grid-item:nth-child(2), .home-services__grid-item:nth-child(3) {
-    width: 39.844%;
-  }
-}
-
-.home-services__grid-item-img {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-position: center center;
-  background-size: cover;
-  z-index: -1;
-}
-
-.home-services__grid-item .icon {
-  font-size: 3.8125rem;
-}
-
-.home-services__grid-item p {
-  margin: 0;
-  line-height: 1.4;
-}
-
-@media print, screen and (min-width: 48em) {
-  .home-services__grid-item p {
-    max-width: 90%;
-  }
-}
-
-.home-services__grid-item h3 {
-  font-family: proxima_nova_altbold;
-  margin-top: 20px;
-  font-size: 1.375rem;
-  margin-bottom: 10px;
-}
-
-@media print, screen and (min-width: 48em) {
-  .home-services__grid-item h3 {
-    font-size: 1.5rem;
-  }
-}
-
 .home-top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5862,7 +5721,7 @@ a:hover svg {
 }
 
 .home-top__contain {
-  height: calc(100% - 100px - 100px);
+  height: calc(100% - 100px - 80px);
   width: calc(100% - 20px - 20px);
   min-height: 350px;
   margin: 0 20px 0;
@@ -5885,7 +5744,7 @@ a:hover svg {
 
 @media print, screen and (min-width: 48em) {
   .home-top__contain {
-    height: calc(100% - 140px - 120px);
+    height: calc(100% - 120px - 100px);
     width: calc(100% - 40px - 40px);
     padding: 0 40px 50px;
   }
@@ -5893,7 +5752,7 @@ a:hover svg {
 
 @media print, screen and (min-width: 64em) {
   .home-top__contain {
-    height: calc(100% - 160px - 160px);
+    height: calc(100% - 120px - 120px);
     width: calc(100% - 5rem);
     margin: 0 2.5rem;
     padding: 100px;
@@ -6039,6 +5898,100 @@ a:hover svg {
 @media print, screen and (min-width: 48em) {
   .scroll-down .icon-arr {
     display: none;
+  }
+}
+
+.home-services__grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.home-services__grid-item {
+  width: 100%;
+  height: 335px;
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #fff;
+}
+
+@media print, screen and (min-width: 48em) {
+  .home-services__grid-item {
+    margin-bottom: 30px;
+    height: 400px;
+    padding: 30px;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .home-services__grid-item {
+    width: 57.032%;
+    margin-bottom: 40px;
+    padding: 40px;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .home-services__grid-item:nth-child(2), .home-services__grid-item:nth-child(3) {
+    width: 39.844%;
+  }
+}
+
+.home-services__grid-item-img {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.home-services__grid-item .icon {
+  font-size: 3.8125rem;
+}
+
+.home-services__grid-item p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media print, screen and (min-width: 48em) {
+  .home-services__grid-item p {
+    max-width: 90%;
+  }
+}
+
+.home-services__grid-item h3 {
+  font-family: proxima_nova_altbold;
+  margin-top: 20px;
+  font-size: 1.375rem;
+  margin-bottom: 10px;
+}
+
+@media print, screen and (min-width: 48em) {
+  .home-services__grid-item h3 {
+    font-size: 1.5rem;
   }
 }
 

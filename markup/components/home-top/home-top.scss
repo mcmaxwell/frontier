@@ -7,7 +7,7 @@
 }
 
 .home-top__contain {
-  height: calc(100% - #{$header-height-small} - #{$header-height-small});
+  height: calc(100% - #{$header-height-small} - 80px});
   width: calc(100% - #{$margin-2} - #{$margin-2});
   min-height: 350px;
   margin: 0 $margin-2 0;
@@ -27,7 +27,7 @@
   }
 
   @include breakpoint(large) {
-    height: calc(100% - #{$header-height} - #{$header-height});
+    height: calc(100% - 120px - 120px);
     width: calc(100% - 5rem);
     margin: 0 2.5rem;
     padding: 100px;

@@ -1,7 +1,16 @@
 
 function toggleMenu () {
+  if(!$('.toggle-menu').hasClass('active')) {
+    $('.header .main-nav .menu').animate({
+      opacity: 1
+    }, 300)
+  } else {
+    $('.header .main-nav .menu').animate({
+      opacity: 0
+    }, 300)
+  }
   $('.toggle-menu').toggleClass('active')
-  $('.header .main-nav').toggleClass('active')
+  //$('.header .main-nav').toggleClass('active')
   $('.header').toggleClass('active')
 }
 
@@ -10,7 +19,7 @@ function sctollToEl (el) {
     let top = el ? $(el).offset().top - 120 : $(location.hash).offset().top - 120
     if (top) {
       $('body,html').animate({scrollTop: top}, 500)
-      if (el && $(window).width() < 1024) {
+      if (el && $(window).width() < 1180) {
         toggleMenu()
       }
     }

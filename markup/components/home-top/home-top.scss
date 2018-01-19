@@ -69,6 +69,7 @@
   text-align: center;
   margin: $margin-2 0;
   transition: all $default-time;
+  cursor: pointer;
   @include breakpoint(medium) {
     margin: $margin-4 0;
   }

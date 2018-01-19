@@ -43,6 +43,34 @@ $global-flexbox: true;
 // @include foundation-float-classes;
 @include foundation-flex-classes;
 
+.icon-font {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'frontier' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arr:before {
+  content: "\e901";
+  font-size: 17px;
+}
+.icon-linkedin {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 18px;
+}
+.icon-linkedin:before {
+  content: "\e919";
+}
+
 
 .icon {
   &:before {
@@ -56,17 +84,17 @@ $global-flexbox: true;
 //     content: $icon-drift;
 //   }
 // }
-.icon-arr {
-  width: 21px;
-  height: 17px;
-  stroke-width: 2px;
-  stroke: $black;
-  fill: none;
-  stroke-linecap:round;
-  stroke-linejoin:round;
-  transition: all $default-time;
-  margin-top: 3px;
-}
+// .icon-arr {
+//   width: 21px;
+//   height: 17px;
+//   stroke-width: 2px;
+//   stroke: $black;
+//   fill: none;
+//   stroke-linecap:round;
+//   stroke-linejoin:round;
+//   transition: all $default-time;
+//   margin-top: 3px;
+// }
 // .icon-enlarge {
 //   &:before {
 //     content: $icon-enlarge;

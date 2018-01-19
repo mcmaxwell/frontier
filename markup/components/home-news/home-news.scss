@@ -61,30 +61,25 @@
     padding: $margin-4;
   }
 
-  svg path,
-  svg polyline {
+  .icon-arr {
+    font-size: 17px;
+    transform: rotate(180deg);
+    margin-top: 2px;
+    color: $black;
     transition: all $default-time;
-    stroke: $black;
-  }
-  svg {
-    transition: all $default-time;
-    stroke: $black;
   }
 
   &:hover {
+    .icon-arr {
+      color: $black;
+      @include breakpoint(large) {
+        color: #fff;
+      }
+    }
     span {
       color: $black;
       @include breakpoint(large) {
         color: #fff;
-        border-color: #fff;
-      }
-    }
-    svg path,
-    svg polyline {
-      transition: all $default-time;
-      stroke: $black;
-      @include breakpoint(large) {
-        stroke: #fff;
         border-color: #fff;
       }
     }

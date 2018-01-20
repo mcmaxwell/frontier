@@ -14,12 +14,12 @@ header: {
         tetx: 'Forretningskonsept'
       },
       {
-        link: '#referanser',
-        tetx: 'Referanser'
-      },
-      {
         link: '#contact',
         tetx: 'Kontakter'
+      },
+      {
+        link: '#referanser',
+        tetx: 'Referanser'
       }
     ],
     langUrl: '/en/',
@@ -41,12 +41,12 @@ header: {
         tetx: 'Forretningskonsept'
       },
       {
-        link: '#referanser',
-        tetx: 'Referanser'
-      },
-      {
         link: '#contact',
         tetx: 'Kontakter'
+      },
+      {
+        link: '#referanser',
+        tetx: 'Referanser'
       }
     ],
     langUrl: '/',

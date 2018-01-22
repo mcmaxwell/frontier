@@ -329,6 +329,10 @@ h1, h2, h3, h4 {
   &.loader {
     background: url(%=static=%general/loading_spinner.gif) center center no-repeat;
   }
+
+  &.hide {
+    display: none;
+  }
 }
 
 .back-button {

@@ -46,6 +46,11 @@ $(document).ready(function () {
           $('.load-more').removeClass('loader')
           $('.news-grid').append(data)
         }, 300)
-    });
+      })
+      .fail(function (xhr, ajaxOptions, thrownError){
+        if(xhr.status==404) {
+          $('.load-more').hide()
+        }
+      })
   })
 })

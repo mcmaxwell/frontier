@@ -4081,6 +4081,10 @@ h1, h2, h3, h4 {
   color: #fff;
 }
 
+.load-more.loader {
+  background: url(../img/general/loading_spinner.gif) center center no-repeat;
+}
+
 .back-button {
   margin: 20px 0;
   display: inline-block;

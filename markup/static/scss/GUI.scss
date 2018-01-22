@@ -325,6 +325,10 @@ h1, h2, h3, h4 {
     border-color: $brand-secondary-color;
     color: #fff;
   }
+
+  &.loader {
+    background: url(%=static=%general/loading_spinner.gif) center center no-repeat;
+  }
 }
 
 .back-button {

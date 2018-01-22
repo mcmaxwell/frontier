@@ -51,12 +51,12 @@
     width: 100%;
     height: 100vh;
     flex-direction: column;
-    //transform: translate(0, -100%);
+    // transform: translate(0, -100%);
     background-color: #fff;
     display: flex;
     z-index: 300;
-
-    //transition: transform $default-time 1s, opacity $default-time;
+    pointer-events: none;
+    // transition: transform $default-time 1s, opacity 0;
     padding: calc(140px + 3px) 83px 98px;
     @include breakpoint(medium) {
       padding: calc(#{$header-height-medium} + 23px) 126px 98px;
@@ -71,6 +71,7 @@
       transform: translate(0);
       transition: all 0s;
       height: auto;
+      pointer-events: auto;
     }
 
     a {
@@ -247,5 +248,8 @@
     // @include breakpoint(custom) {
     //   position: static;
     // }
+    .menu {
+      pointer-events: auto;
+    }
   }
 }

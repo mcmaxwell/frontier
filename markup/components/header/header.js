@@ -10,7 +10,6 @@ function toggleMenu () {
     }, 300)
   }
   $('.toggle-menu').toggleClass('active')
-  //$('.header .main-nav').toggleClass('active')
   $('.header').toggleClass('active')
 }
 
@@ -37,15 +36,8 @@ $('.toggle-menu').click(function () {
   return false
 })
 
-// $('.header')
-//   .clone(true, true)
-//   .addClass('header-clone')
-//   .appendTo('body')
-//   .on('click', '.menu a', function () {
-//     sctollToEl($(this).attr('href'))
-//   })
-
-if (location.pathname !== '/') {
+if (location.pathname !== '/' && location.pathname !== '/en/') {
+  console.log(0);
   for (let i = 0; i < $('#menu a').length; i++) {
     $('#menu a').eq(i).attr('href', './' + $('#menu a').eq(i).attr('href'))
   }

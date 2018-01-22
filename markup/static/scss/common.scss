@@ -55,7 +55,7 @@ a:hover {
       margin-right: $margin-3;
       margin-bottom: $margin-3;
 
-      &:nth-child(2n + 1) {
+      &:nth-child(2n) {
         margin-right: 0;
       }
     }
@@ -66,13 +66,10 @@ a:hover {
       margin-bottom: $margin-4;
       min-height: 400px;
       margin-right: 3.126%;
-
-      &:nth-child(2n + 1) {
+      &:nth-child(2n) {
         margin-right: 3.126%;
       }
-
-      &:nth-child(2),
-      &:nth-child(3n + 2) {
+      &:nth-child(3n) {
         margin-right: 0;
       }
     }
@@ -185,12 +182,30 @@ a:hover {
         flex-direction: row;
         min-width: 100%;
         max-width: 100%;
+
+        & ~ .news-item {
+          margin-right: $margin-3;
+        }
+
+        & ~ .news-item:nth-child(2n + 1) {
+          margin-right: 0;
+        }
       }
 
       @include breakpoint(large) {
         flex-direction: row;
         min-width: 65.626%;
         max-width: 65.626%;
+
+        & ~ .news-item,
+        & ~ .news-item:nth-child(2n + 1) {
+          margin-right: 3.126%;
+        }
+
+        & ~ .news-item:nth-child(2),
+        & ~ .news-item:nth-child(3n + 5) {
+          margin-right: 0;
+        }
       }
     }
 

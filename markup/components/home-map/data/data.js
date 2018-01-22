@@ -21,6 +21,11 @@ homeMap: {
         class: 'spot4',
         homeMapItemList: ['Koblings skap innvendig/utvendig', 'Kabel', 'Skap med bryter før trafo', 'Trafo', 'Koblingsutstyr', 'Kabelstige', 'Kinafinger - Bøyebegrenser'],
       },
+      {
+        title: 'Hotspot #5 Headline',
+        class: 'spot5',
+        homeMapItemList: ['Koblings skap innvendig/utvendig', 'Kabel', 'Skap med bryter før trafo', 'Trafo', 'Koblingsutstyr', 'Kabelstige', 'Kinafinger - Bøyebegrenser'],
+      }
     ]
   }
 }

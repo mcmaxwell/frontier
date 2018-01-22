@@ -39,7 +39,7 @@ $('.toggle-menu').click(function () {
 if (location.pathname !== '/' && location.pathname !== '/en/') {
   console.log(0);
   for (let i = 0; i < $('#menu a').length; i++) {
-    $('#menu a').eq(i).attr('href', './' + $('#menu a').eq(i).attr('href'))
+    $('#menu a').eq(i).attr('href', '/' + $('#menu a').eq(i).attr('href'))
   }
 } else {
   sctollToEl()

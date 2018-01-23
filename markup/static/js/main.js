@@ -30,27 +30,27 @@ $(document).ready(function () {
   $(window).on('scroll', function () {
     showElements()
   })
-
-  $('.load-more').click(function () {
-    $.ajax({
-      url: "",
-      method: "POST",
-      data: data,
-      dataType: "html"
-    })
-      .beforeSend(function () {
-        $('.load-more').addClass('loader')
-      })
-      .done(function( data ) {
-        setTimeout(function (data) {
-          $('.load-more').removeClass('loader')
-          $('.news-grid').append(data)
-        }, 300)
-      })
-      .fail(function (xhr, ajaxOptions, thrownError){
-        if(xhr.status==404) {
-          $('.load-more').hide()
-        }
-      })
-  })
+  //
+  // $('.load-more').click(function () {
+  //   $.ajax({
+  //     url: "",
+  //     method: "POST",
+  //     data: data,
+  //     dataType: "html"
+  //   })
+  //     .beforeSend(function () {
+  //       $('.load-more').addClass('loader')
+  //     })
+  //     .done(function( data ) {
+  //       setTimeout(function (data) {
+  //         $('.load-more').removeClass('loader')
+  //         $('.news-grid').append(data)
+  //       }, 300)
+  //     })
+  //     .fail(function (xhr, ajaxOptions, thrownError){
+  //       if(xhr.status==404) {
+  //         $('.load-more').hide()
+  //       }
+  //     })
+  // })
 })

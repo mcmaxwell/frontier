@@ -212,6 +212,7 @@ a:hover {
     &__content {
       padding: 15px 18px;
       height: 300px;
+      width: 100%;
       @include breakpoint(medium) {
         padding: 21px 30px;
       }

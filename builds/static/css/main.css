@@ -5735,7 +5735,7 @@ a:hover svg {
   transition: all 0.3s;
 }
 
-@media print, screen and (min-width: 48em) {
+@media print, screen and (min-width: 64em) {
   .home-partner__list a:hover {
     -webkit-filter: grayscale(0);
             filter: grayscale(0);

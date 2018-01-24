@@ -37,7 +37,7 @@
       opacity: .5;
       transition: all $default-time;
       &:hover {
-        @include breakpoint(medium) {
+        @include breakpoint(large) {
           filter: grayscale(0);
           opacity: 1;
         }

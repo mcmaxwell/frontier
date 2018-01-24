@@ -77,33 +77,7 @@ $global-flexbox: true;
     display: inline-block;
   }
 }
-//
-// .icon-drift {
-//   &:before {
-//     content: $icon-drift;
-//   }
-// }
-// .icon-arr {
-//   width: 21px;
-//   height: 17px;
-//   stroke-width: 2px;
-//   stroke: $black;
-//   fill: none;
-//   stroke-linecap:round;
-//   stroke-linejoin:round;
-//   transition: all $default-time;
-//   margin-top: 3px;
-// }
-// .icon-enlarge {
-//   &:before {
-//     content: $icon-enlarge;
-//   }
-// }
-// .icon-reduce {
-//   &:before {
-//     content: $icon-reduce;
-//   }
-// }
+
 .icon-lower-cost {
   &:before {
     width: 52px;
@@ -167,16 +141,7 @@ $global-flexbox: true;
     background: url(%=static=%assets/our-customers/net.svg) center center/cover no-repeat;
   }
 }
-// .icon-wealth {
-//   &:before {
-//     content: $icon-wealth;
-//   }
-// }
-// .icon-baloon {
-//   &:before {
-//     content: $icon-baloon;
-//   }
-// }
+
 .icon-box {
   width: 68px;
   height: 73px;
@@ -204,36 +169,6 @@ $global-flexbox: true;
     transition: all $default-time;
   }
 }
-// .icon-prosjektledelse {
-//   &:before {
-//     content: $icon-prosjektledelse;
-//   }
-// }
-// .icon-overvakning {
-//   &:before {
-//     content: $icon-overvakning;
-//   }
-// }
-// .icon-tilleggstjenester {
-//   &:before {
-//     content: $icon-tilleggstjenester;
-//   }
-// }
-// .icon-consulring {
-//   &:before {
-//     content: $icon-consulring;
-//   }
-// }
-// .icon-underline {
-//   &:before {
-//     content: $icon-underline;
-//   }
-// }
-// .icon-scroll-Down {
-//   &:before {
-//     content: $icon-scroll-Down;
-//   }
-// }
 
 .icon-twitter {
   &:before {
@@ -281,6 +216,10 @@ h1, h2, h3, h4 {
   line-height: 1.3;
   @include breakpoint(medium) {
     margin-bottom: 63px;
+  }
+  p {
+    line-height: 1.3;
+    margin: 0;
   }
 
   &::before {

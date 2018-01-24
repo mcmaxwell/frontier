@@ -125,12 +125,12 @@
       span {
         &::after {
           transform: rotate(45deg);
-          top: 4.5px;
+          top: 8px;
         }
 
         &::before {
           transform: rotate(-45deg);
-          bottom: 4.5px;
+          top: 8px;
         }
       }
     }
@@ -149,7 +149,7 @@
         position: absolute;
         top: 0;
         border-radius: 4px;
-        transition: transform $default-time;
+        transition: all $default-time;
       }
 
       &::before {

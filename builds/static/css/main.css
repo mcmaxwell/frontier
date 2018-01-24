@@ -4754,13 +4754,13 @@ a:hover svg {
 .header .toggle-menu.active span::after {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  top: 4.5px;
+  top: 8px;
 }
 
 .header .toggle-menu.active span::before {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  bottom: 4.5px;
+  top: 8px;
 }
 
 .header .toggle-menu span {
@@ -4777,10 +4777,8 @@ a:hover svg {
   position: absolute;
   top: 0;
   border-radius: 4px;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .header .toggle-menu span::before {
@@ -5765,8 +5763,10 @@ a:hover svg {
   opacity: .5;
 }
 
-.home-references .home-partner__list a:hover {
-  opacity: 1;
+@media print, screen and (min-width: 64em) {
+  .home-references .home-partner__list a:hover {
+    opacity: 1;
+  }
 }
 
 .home-services__grid {

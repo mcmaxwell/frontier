@@ -6348,6 +6348,8 @@ a:hover svg {
   line-height: 1;
   position: absolute;
   left: 0;
+  width: 52px;
+  text-align: center;
 }
 
 .share-page {

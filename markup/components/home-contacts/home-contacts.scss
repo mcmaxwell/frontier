@@ -90,6 +90,10 @@
       margin-top: 12px;
     }
 
+    .linkidin {
+      border: 0;
+    }
+
     img {
       margin-bottom: $margin-2;
       @include breakpoint(medium) {

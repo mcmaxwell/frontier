@@ -18,7 +18,7 @@
   justify-content: space-between;
   align-items: center;
   padding: $margin-2 0 $margin-2 $margin-2;
-  z-index: 100;
+  z-index: 300;
   top: 0;
   background-color: #fff;
   transition: all $default-time;
@@ -201,7 +201,7 @@
   transform: translate3d(0,-100%,0);
   visibility: hidden;
   transition: transform .3s ease,visibility 0s .3s linear;
-  z-index: 100;
+  z-index: 300;
 
   &.show {
     transform: translate3d(0,0,0);
@@ -212,51 +212,19 @@
       min-height: 120px;
       max-height: 120px;
     }
-    // padding: $margin-2 0 $margin-2 $margin-2;
-    //
-    // @include breakpoint(medium) {
-    //   padding: $margin-4 $margin-2 $margin-4 $margin-4;
-    // }
-    //
-    // @include breakpoint(large) {
-    //   padding: 21px 2.5rem;
-    // }
   }
   &.top {
-    // position: absolute;
-    // height: 0;
-    // overflow: hidden;
     visibility: visible;
     transform: translate3d(0,0,0);
-    // transition-property: none;
-    // transition-duration: 0s;
-    // z-index: 0;
-    // opacity: 0;
-  //  @extend .header;
     transition: all $default-time;
-    // @include breakpoint(large) {
-    //   min-height: 10px;
-    //   max-height: 160px;
-    // }
   }
-
-  // &.active:not(.top) {
-  //   transform: translate3d(0,0,0);
-  //   height: auto;
-  //   position: fixed;
-  //   visibility: visible;
-  //   opacity: 1;
-  //   z-index: 400;
-  // }
 
   &.active {
     position: fixed;
     z-index: 400;
     visibility: visible;
     transform: translate3d(0,0,0);
-    // @include breakpoint(custom) {
-    //   position: static;
-    // }
+
     .menu {
       pointer-events: auto;
     }

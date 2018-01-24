@@ -25,11 +25,11 @@ function sctollToEl (el) {
   }
 }
 
-if (!$('.fake-header').length) {
-  $('<div class="fake-header"></div>').css('height', $('.header').outerHeight()).insertBefore('.header')
-} else {
-  $('.fake-header').remove()
-}
+// if (!$('.fake-header').length) {
+//   $('<div class="fake-header"></div>').css('height', $('.header').outerHeight()).insertBefore('.header')
+// } else {
+//   $('.fake-header').remove()
+// }
 
 $('.toggle-menu').click(function () {
   toggleMenu()

@@ -1,8 +1,17 @@
-// .fake-header {
-//   @include breakpoint(large) {
-//     display: none;
-//   }
-// }
+.fake-header {
+  min-height: 100px;
+  max-height: 100px;
+
+  @include breakpoint(medium) {
+    min-height: 120px;
+    max-height: 120px;
+  }
+
+  @include breakpoint(large) {
+    min-height: 120px;
+    max-height: 120px;
+  }
+}
 .header {
   width: 100%;
   display: flex;

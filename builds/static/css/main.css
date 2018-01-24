@@ -5165,6 +5165,10 @@ a:hover svg {
   margin-bottom: 0;
 }
 
+.scheme__item-list ul {
+  margin: 0;
+}
+
 .scheme__icon {
   margin-bottom: 20px;
 }

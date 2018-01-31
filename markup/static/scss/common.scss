@@ -40,6 +40,7 @@ a:hover {
 
   .news-item {
     width: 100%;
+    min-width: 100%;
     min-height: 335px;
     position: relative;
     border: 2px solid $line-color;
@@ -319,4 +320,9 @@ a:hover {
 .show {
   opacity: 1;
   transform: translate(0);
+}
+
+.slick-track,
+.slick-list {
+  width: 100%;
 }

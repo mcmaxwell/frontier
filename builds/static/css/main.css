@@ -4184,6 +4184,7 @@ a:hover svg {
 
 .news-grid .news-item, .news-grid .all-news {
   width: 100%;
+  min-width: 100%;
   min-height: 335px;
   position: relative;
   border: 2px solid rgba(29, 29, 29, 0.2);
@@ -4512,6 +4513,11 @@ a:hover svg {
   opacity: 1;
   -webkit-transform: translate(0);
           transform: translate(0);
+}
+
+.slick-track,
+.slick-list {
+  width: 100%;
 }
 
 .footer {

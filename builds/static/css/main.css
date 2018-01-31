@@ -4982,8 +4982,8 @@ a:hover svg {
   text-align: center;
   position: relative;
   background-color: #fff;
-  min-width: 278px;
-  max-width: 278px;
+  min-width: 280px;
+  max-width: 280px;
 }
 
 @media print, screen and (min-width: 48em) {
@@ -4996,8 +4996,8 @@ a:hover svg {
 
 @media print, screen and (min-width: 64em) {
   .home-concept__list-item {
-    min-width: 290px;
-    width: 290px;
+    min-width: 292px;
+    width: 292px;
     margin-right: 0;
   }
 }
@@ -5769,10 +5769,6 @@ a:hover svg {
   }
 }
 
-.home-references .section-description {
-  max-width: 600px;
-}
-
 .home-references .home-partner__list a {
   opacity: .5;
 }
@@ -5796,7 +5792,7 @@ a:hover svg {
 
 .home-services__grid-item {
   width: 100%;
-  height: 335px;
+  min-height: 335px;
   position: relative;
   margin-bottom: 20px;
   overflow: hidden;

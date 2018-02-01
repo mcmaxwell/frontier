@@ -14,6 +14,7 @@ function toggleMenu () {
 }
 
 function sctollToEl (el) {
+
   if (el || location.hash) {
     let top = el ? $(el).offset().top - 120 : $(location.hash).offset().top - 120
     if (top) {
@@ -37,7 +38,6 @@ $('.toggle-menu').click(function () {
 })
 
 if (location.pathname !== '/' && location.pathname !== '/en/') {
-  console.log(0);
   for (let i = 0; i < $('#menu a').length; i++) {
     $('#menu a').eq(i).attr('href', '/' + $('#menu a').eq(i).attr('href'))
   }
@@ -47,6 +47,7 @@ if (location.pathname !== '/' && location.pathname !== '/en/') {
 
 $('#menu').on('click', 'a', function () {
   sctollToEl($(this).attr('href'))
+  return false
 })
 
 if ($(window).scrollTop() < $('.header').outerHeight()) {

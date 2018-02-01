@@ -96,14 +96,14 @@
       max-width: 280px;
 
       @include breakpoint(medium) {
-        padding: 45px 22px $margin-2;
+        padding: 45px 20px $margin-2;
         min-width: 290px;
         height: 290px;
       }
 
       @include breakpoint(large) {
-        min-width: 292px;
-        width: 292px;
+        min-width: 290px;
+        width: 290px;
         margin-right: 0;
       }
 

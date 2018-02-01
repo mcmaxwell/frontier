@@ -4994,7 +4994,7 @@ a:hover svg {
 
 @media print, screen and (min-width: 48em) {
   .home-concept__list-item {
-    padding: 45px 22px 20px;
+    padding: 45px 20px 20px;
     min-width: 290px;
     height: 290px;
   }
@@ -5002,8 +5002,8 @@ a:hover svg {
 
 @media print, screen and (min-width: 64em) {
   .home-concept__list-item {
-    min-width: 292px;
-    width: 292px;
+    min-width: 290px;
+    width: 290px;
     margin-right: 0;
   }
 }

@@ -5726,30 +5726,25 @@ a:hover svg {
   }
 }
 
-.home-partner__list li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-@media print, screen and (min-width: 64em) {
-  .home-partner__list li {
-    width: 310px;
-  }
-}
-
 .home-partner__list a {
   margin: 2px 62px 0;
   display: block;
   -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: .5;
+  margin: 2px 2px 30px;
+  height: 90px;
+  width: 304px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  filter: grayscale(100%);
   opacity: .5;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -5761,6 +5756,10 @@ a:hover svg {
             filter: grayscale(0);
     opacity: 1;
   }
+}
+
+.home-partner__list a img {
+  max-height: 100%;
 }
 
 @media print, screen and (min-width: 48em) {

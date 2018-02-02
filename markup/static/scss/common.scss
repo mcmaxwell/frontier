@@ -148,7 +148,6 @@ a:hover {
       font-size: rem-calc(22);
       max-height: 6rem;
       line-height: 1.36;
-
       overflow: hidden;
       position: relative;
       @include breakpoint(medium) {
@@ -160,10 +159,9 @@ a:hover {
 
     &__img {
       display: none;
-
+      background-position: center center;
+      background-size: cover;
       @include breakpoint(medium) {
-        background-position: center center;
-        background-size: cover;
         min-width: 50%;
         height: auto;
         display: block;

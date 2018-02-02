@@ -26,6 +26,14 @@
     }
   }
 
+  .news-item__img {
+    height: 200px;
+    display: block;
+    @include breakpoint(medium) {
+      height: auto;
+    }
+  }
+
   .news-grid .news-item__date {
     margin: 0 0 $margin-1;
   }
@@ -49,6 +57,12 @@
   position: relative;
   overflow: visible;
   margin: 8px $margin-2 8px;
+
+  @media (max-width: 1023px) {
+    min-height: 0!important;
+    padding: 0!important;
+    border: 0!important;
+  }
 
   @include breakpoint(medium) {
     border: 1px solid $line-color;

@@ -2054,7 +2054,6 @@ a {
   line-height: inherit;
   color: #192A67;
   text-decoration: none;
-  cursor: pointer;
 }
 
 a:hover, a:focus {

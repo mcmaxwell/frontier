@@ -4077,6 +4077,7 @@ h1, h2, h3, h4 {
   transition: all 0.3s;
   color: #1D1D1D;
   text-align: center;
+  cursor: pointer;
 }
 
 .load-more:hover {
@@ -5193,7 +5194,7 @@ a:hover svg {
   }
 }
 
-@media (max-width: 1290px) {
+@media (max-width: 1290px) and (min-width: 768px) {
   .home-contacts .row,
   .home-contacts .columns {
     max-width: 100%;

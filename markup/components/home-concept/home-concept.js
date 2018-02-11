@@ -5,6 +5,7 @@ const settings = {
   infinite: false,
   variableWidth: true,
   slidesToShow: 4,
+  speed: 100,
   responsive: [
   {
     breakpoint: 1360,

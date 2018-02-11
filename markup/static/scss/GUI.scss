@@ -258,6 +258,7 @@ h1, h2, h3, h4 {
   transition: all $default-time;
   color: $black;
   text-align: center;
+  cursor: pointer;
 
   &:hover {
     background: $brand-secondary-color;

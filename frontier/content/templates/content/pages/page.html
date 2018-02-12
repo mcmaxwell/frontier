@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load feincms_tags %}
+
+
+
+{% block content %}
+
+  <div class="fake-header"></div>
+  {% include "includes/header.html" %}
+
+  <!--<div class="fake_padding"></div>-->
+	<main class="page__wrapper">
+	    {% for content in feincms_page.content.main %}
+	      {% feincms_render_content content request %}
+	    {% endfor %}
+	</main>
+
+  {% include "includes/footer.html" %}
+
+{% endblock content %}

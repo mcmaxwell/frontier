@@ -1,0 +1,77 @@
+{% load i18n %}
+{% load l10n %}
+{% load applicationcontent_tags %}
+{% load feincms_tags %}
+{% load staticfiles %}
+{% load feincms_page_tags %}
+{% load applicationcontent_tags %}
+
+
+<section class="news">
+   {% for info in info %}
+    <div class="news-top" style="background-image: url({{info.get_news_page_top_image}})">
+        <h1>{{info.news_top_title}}</h1>
+    </div>
+    {% endfor %}
+    <div class="row align-center">
+        <div class="columns small-12">
+            <a href="/" class="back-button">
+                <i class="icon-arr icon-font"></i>
+                <span>{% trans "Tilbake" %}</span>
+            </a>
+            <div class="news-grid">
+                 {% for news in news %}
+                 {% if forloop.first %}
+                {% if news.text %}<a href="{{news.get_absolute_url}}"{% else %}<div {% endif %} class="news-item  {% if news.image %}news-item__img-contain{% endif %} ">
+                {% if news.image %}
+                    <div class="news-item__img" style="background-image:url({{news.get_image}})"></div>
+                {% endif %}
+                    <div class="news-item__content">
+                        <span class="news-item__date">{{news.publication_date|date:"M d, Y"}}</span>
+                        <p class="news-item__title">{{news.get_title}}</p>
+                        <p class="news-item__description">{{news.get_text_preview}}</p>
+                        {% if news.text %}
+                        <span class="news-item__read-more">{% trans "Les mer" %}</span>
+                        {% endif %}
+                    </div>
+                {% if news.text %}</a>{% else %}</div>{% endif %}
+                {% else %}
+                {% if news.text %}<a href="{{news.get_absolute_url}}"{% else %}<div {% endif %}  class="news-item ">
+                    <div class="news-item__content">
+                        <span class="news-item__date">{{news.publication_date|date:"M d, Y"}}</span>
+                        <p class="news-item__title">{{news.get_title}}</p>
+                        <p class="news-item__description">{{news.get_text_preview}}</p>
+                        {% if news.text %}
+                        <span class="news-item__read-more">{% trans "Les mer" %}</span>
+                        {% endif %}
+                    </div>
+                {% if news.text %}</a>{% else %}</div>{% endif %}
+                {% endif %}
+                {% endfor %}
+            </div>
+            {% if more_status %}
+            <a  class="load-more">{% trans "Mer" %}</a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<script src="{% static "js/vendor.min.js" %}"></script>
+<script>
+    $('.load-more').click(function () {
+    $.ajax({
+      url: "{% app_reverse "news_list" "news.urls" %}updater/result/",
+      method: "GET",
+      dataType: "html"
+    })
+      .done(function(data) {
+          $('.news-grid').html(data)
+          $('.load-more').remove();
+      })
+      .fail(function (xhr, ajaxOptions, thrownError){
+        if(xhr.status==404) {
+          $('.load-more').hide()
+        }
+      })
+  })
+</script>

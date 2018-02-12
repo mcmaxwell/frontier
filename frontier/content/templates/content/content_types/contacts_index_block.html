@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<section class="home-contacts hideme" id="contact">
+    <div class="row align-center">
+        <div class="columns small-12 large-10">
+            <h2 class="decor-title icon-underline">{{ctx.title}}</h2>
+            <div class="section-description">{{ctx.sub_title|safe}}</div>
+            <div class="home-contacts__list">
+                {% for contact in contacts %}
+                <div class="home-contacts__item">
+                    <img src="{{contact.get_image}}" alt="{{contact.name}}" srcset="{{contact.get_image_x2}} 2x,{{contact.get_image_x3}} 3x">
+                    <div class="home-contacts__item-info">
+                        <span class="home-contacts__item-name">{{contact.name}}</span>
+                        <div class="home-contacts__item-position">{{contact.position}}</div>
+                        <a href="tel:{{contact.phone_number}}" class="home-contacts__item-tel">{{contact.phone_number}}</a>
+                        <a href="mailto:{{contact.email}}" class="home-contacts__item-email">{{contact.email}}</a>
+                        <a href="{{contact.in_link}}" class="linkidin"><i class="icon-font icon-linkedin"></i></a>
+                    </div>
+                </div>
+              {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,78 @@
+{% load i18n %}
+{% load staticfiles %}
+{% load applicationcontent_tags %}
+{% load feincms_page_tags %}
+{% feincms_nav feincms_page as menu_pages %}
+
+
+
+<header class="header top">
+    <a href="{% if feincms_page.language == 'no' %}/{% else %}/en/{% endif %}" class="logo">
+        {% for info in info %}
+        <img src="{{info.logo_header.url}}" alt="frontier">
+        {% endfor %}
+    </a>
+    <nav class="main-nav">
+    {% if feincms_page.language == 'no' %}
+      {% for menulinks in links %}
+        <ul class="menu" id="menu">
+          {% if menulinks.news_block_title_no %}
+            <li><a href="#news">{{menulinks.news_block_title_no}}</a>
+            </li>
+            {% endif %}
+            {% if menulinks.services_block_title_no %}
+            <li><a href="#services">{{menulinks.services_block_title_no}}</a>
+            </li>
+            {% endif %}
+            {% if menulinks.concept_block_title_no %}
+            <li><a href="#concept">{{menulinks.concept_block_title_no}}</a>
+            </li>
+            {% endif %}
+            {% if menulinks.contacts_block_title_no %}
+            <li><a href="#contact">{{menulinks.contacts_block_title_no}}</a>
+            </li>
+            {% endif %}
+            {% if menulinks.references_block_title_no %}
+            <li><a href="#referanser">{{menulinks.references_block_title_no}}</a>
+            </li>
+            {% endif %}
+        </ul>
+        {% endfor %}
+        {% endif  %}
+        {% if feincms_page.language == 'en' %}
+        {% for menulinks in links %}
+            <ul class="menu" id="menu">
+              {% if menulinks.news_block_title_en %}
+                <li><a href="#news">{{menulinks.news_block_title_en}}</a>
+                </li>
+                {% endif %}
+                {% if menulinks.services_block_title_en %}
+                <li><a href="#services">{{menulinks.services_block_title_en}}</a>
+                </li>
+                {% endif %}
+                {% if menulinks.concept_block_title_en %}
+                <li><a href="#concept">{{menulinks.concept_block_title_en}}</a>
+                </li>
+                {% endif %}
+                {% if menulinks.contacts_block_title_en %}
+                <li><a href="#contact">{{menulinks.contacts_block_title_en}}</a>
+                </li>
+                {% endif %}
+                {% if menulinks.references_block_title_en %}
+                <li><a href="#referanser">{{menulinks.references_block_title_en}}</a>
+                </li>
+                {% endif %}
+            </ul>
+            {% endfor %}
+        {% endif %}
+
+        {% if feincms_page.language == 'no' %}
+        {% feincms_translatedpage for feincms_page as feincms_transpage language=en %}
+         <a href="/en/" class="header__lang">Eng <span>Eng</span></a>
+      {% else %}
+        {% feincms_translatedpage for feincms_page as feincms_transpage language=no %}
+        <a href="/" class="header__lang">Nor <span>Nor</span></a>
+      {% endif %}
+        <a href="#" class="toggle-menu"><span></span></a>
+    </nav>
+</header>

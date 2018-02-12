@@ -1,0 +1,19 @@
+{% load staticfiles %}
+
+<section class="home-partner hideme">
+                <div class="row align-center">
+                    <div class="columns small-12">
+                        <h2 class="decor-title icon-underline">{{CT.title}}</h2>
+                        <div class="section-description">{{CT.sub_title|safe}}</div>
+                        <ul class="home-partner__list">
+                            {% for parthnerlogo in CT.logo.all %}
+                            <li>
+                                <a {% if parthnerlogo.link %}href="{{parthnerlogo.link}}"{% endif %} target="_blank">
+                                    <img src="{{parthnerlogo.get_image}}" srcset="{{parthnerlogo.get_image_x2}} 2x, {{parthnerlogo.get_image_x3}} 3x">
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </section>

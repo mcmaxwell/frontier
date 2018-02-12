@@ -1,0 +1,460 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-30 10:42+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: content/content_types.py:53 content/content_types.py:54
+msgid "NewsIndexBlock"
+msgstr ""
+
+#: content/content_types.py:61 content/content_types.py:141
+#: content/content_types.py:280 content/content_types.py:306
+#: content/content_types.py:355 content/content_types.py:381 news/models.py:25
+msgid "title"
+msgstr ""
+
+#: content/content_types.py:64 content/content_types.py:144
+#: content/content_types.py:283 content/content_types.py:309
+#: content/content_types.py:358 content/content_types.py:384
+msgid "sub_title"
+msgstr ""
+
+#: content/content_types.py:72
+msgid "service_title_one"
+msgstr ""
+
+#: content/content_types.py:75
+msgid "service_text_one"
+msgstr ""
+
+#: content/content_types.py:83
+msgid "service_title_two"
+msgstr ""
+
+#: content/content_types.py:86
+msgid "service_text_two"
+msgstr ""
+
+#: content/content_types.py:94 content/content_types.py:97
+msgid "service_title_three"
+msgstr ""
+
+#: content/content_types.py:105 content/content_types.py:108
+msgid "service_title_four"
+msgstr ""
+
+#: content/content_types.py:133
+msgid "ServicesIndexBlock"
+msgstr ""
+
+#: content/content_types.py:134
+msgid "ServicesIndexBlocks"
+msgstr ""
+
+#: content/content_types.py:150
+msgid "title_one"
+msgstr ""
+
+#: content/content_types.py:152
+msgid "sub_title_one"
+msgstr ""
+
+#: content/content_types.py:154
+msgid "title_two"
+msgstr ""
+
+#: content/content_types.py:156
+msgid "sub_title_two"
+msgstr ""
+
+#: content/content_types.py:158
+msgid "title_three"
+msgstr ""
+
+#: content/content_types.py:160
+msgid "sub_title_three"
+msgstr ""
+
+#: content/content_types.py:162
+msgid "title_four"
+msgstr ""
+
+#: content/content_types.py:164
+msgid "sub_title_four"
+msgstr ""
+
+#: content/content_types.py:168
+msgid "first_sheme_title"
+msgstr ""
+
+#: content/content_types.py:171
+msgid "first_sheme_list"
+msgstr ""
+
+#: content/content_types.py:178
+msgid "second_sheme_title"
+msgstr ""
+
+#: content/content_types.py:181
+msgid "second_sheme_list"
+msgstr ""
+
+#: content/content_types.py:197 content/content_types.py:198
+msgid "ConceptIndexBlock"
+msgstr ""
+
+#: content/content_types.py:205
+msgid "houtspot_headline_one"
+msgstr ""
+
+#: content/content_types.py:208
+msgid "hotspot_one_text"
+msgstr ""
+
+#: content/content_types.py:215
+msgid "houtspot_headline_two"
+msgstr ""
+
+#: content/content_types.py:218
+msgid "hotspot_two_text"
+msgstr ""
+
+#: content/content_types.py:225
+msgid "houtspot_headline_three"
+msgstr ""
+
+#: content/content_types.py:228
+msgid "hotspot_three_text"
+msgstr ""
+
+#: content/content_types.py:235
+msgid "houtspot_headline_four"
+msgstr ""
+
+#: content/content_types.py:238
+msgid "hotspot_four_text"
+msgstr ""
+
+#: content/content_types.py:245
+msgid "houtspot_headline_five"
+msgstr ""
+
+#: content/content_types.py:248
+msgid "hotspot_five_text"
+msgstr ""
+
+#: content/content_types.py:267 content/content_types.py:268
+msgid "IndexMapBlock"
+msgstr ""
+
+#: content/content_types.py:291 content/content_types.py:364
+msgid "Logo"
+msgstr ""
+
+#: content/content_types.py:298 content/content_types.py:299
+msgid "ParthnersBlock"
+msgstr ""
+
+#: content/content_types.py:317
+msgid "network_text"
+msgstr ""
+
+#: content/content_types.py:319
+msgid "money_text"
+msgstr ""
+
+#: content/content_types.py:321
+msgid "cost_text"
+msgstr ""
+
+#: content/content_types.py:324
+msgid "analitics_text"
+msgstr ""
+
+#: content/content_types.py:326
+msgid "speed_text"
+msgstr ""
+
+#: content/content_types.py:328
+msgid "cube_text"
+msgstr ""
+
+#: content/content_types.py:331
+msgid "standart_text"
+msgstr ""
+
+#: content/content_types.py:333
+msgid "clock_text"
+msgstr ""
+
+#: content/content_types.py:335
+msgid "responce_text"
+msgstr ""
+
+#: content/content_types.py:347 content/content_types.py:348
+msgid "CustomersBlock"
+msgstr ""
+
+#: content/content_types.py:373 content/content_types.py:374
+msgid "ReferencesBlock"
+msgstr ""
+
+#: content/content_types.py:400 content/content_types.py:401
+msgid "ContactsBlock"
+msgstr ""
+
+#: content/models.py:20
+msgid "Page"
+msgstr ""
+
+#: content/models.py:23 content/models.py:31
+msgid "Main content area"
+msgstr ""
+
+#: content/models.py:28
+msgid "Index Page"
+msgstr ""
+
+#: content/templates/content/content_types/news_index_block.html:9
+msgid "Nyheter"
+msgstr "News"
+
+#: content/templates/content/content_types/news_index_block.html:21
+#: content/templates/content/content_types/news_index_block.html:30
+#: news/templates/news/news_index_dynamic.html:14
+#: news/templates/news/news_index_dynamic.html:23
+#: news/templates/news/news_list.html:33
+msgid "Les mer"
+msgstr "Read more"
+
+#: content/templates/content/content_types/news_index_block.html:37
+msgid "Les alle nyheter"
+msgstr "Read all news"
+
+#: content/templates/content/pages/index_page.html:33
+msgid "Rull Ned"
+msgstr "Scroll Down"
+
+#: frontier/settings.py:132
+msgid "Norwegian"
+msgstr ""
+
+#: frontier/settings.py:133
+msgid "English"
+msgstr ""
+
+#: info/models.py:16
+msgid "adress"
+msgstr ""
+
+#: info/models.py:17 info/models.py:54
+msgid "email"
+msgstr ""
+
+#: info/models.py:18
+msgid "phone_footer"
+msgstr ""
+
+#: info/models.py:21
+msgid "index_top_title"
+msgstr ""
+
+#: info/models.py:22
+msgid "index_top_subtitle"
+msgstr ""
+
+#: info/models.py:25
+msgid "copyright_text"
+msgstr ""
+
+#: info/models.py:26
+msgid "news_top_title"
+msgstr ""
+
+#: info/models.py:40 info/models.py:41
+msgid "Info"
+msgstr ""
+
+#: info/models.py:52
+msgid "position"
+msgstr ""
+
+#: info/models.py:53
+msgid "phone_number"
+msgstr ""
+
+#: info/models.py:55
+msgid "in_link"
+msgstr ""
+
+#: info/models.py:56
+msgid "in_profile_link"
+msgstr ""
+
+#: info/models.py:71
+msgid "Contact"
+msgstr ""
+
+#: info/models.py:72
+msgid "Contacts"
+msgstr ""
+
+#: info/models.py:81
+msgid "link"
+msgstr ""
+
+#: info/models.py:98 info/models.py:99
+msgid "ParthnerLogo"
+msgstr ""
+
+#: info/models.py:128 info/models.py:129
+msgid "MenuLinks"
+msgstr ""
+
+#: news/admin.py:25 news/models.py:72 news/models.py:73
+msgid "News"
+msgstr ""
+
+#: news/models.py:31
+msgid "text_preview"
+msgstr ""
+
+#: news/models.py:36
+msgid "text"
+msgstr ""
+
+#: news/models.py:45
+msgid "publication_date"
+msgstr ""
+
+#: news/templates/news/news_detail.html:12
+msgid "Tilbake til alle nyheter"
+msgstr "Read all news"
+
+#: news/templates/news/news_list.html:20
+msgid "Tilbake"
+msgstr "Back to home"
+
+#: news/templates/news/news_list.html:42
+msgid " Les mer"
+msgstr "Read more"
+
+#: news/templates/news/news_list.html:48
+msgid "Mer"
+msgstr "More"
+
+#~ msgid "Konseptutvikling"
+#~ msgstr "Concept Development"
+
+#~ msgid "Prosjektering"
+#~ msgstr "Desighn"
+
+#~ msgid "Avtale inngåelse"
+#~ msgstr "Contract signed"
+
+#~ msgid "Installasjon"
+#~ msgstr "Installation"
+
+#~ msgid "Prosjektledelse Installasjon"
+#~ msgstr "Project Installation"
+
+#~ msgid "Drift"
+#~ msgstr "Operating"
+
+#~ msgid "Daglig drift,"
+#~ msgstr "Daily operations,"
+
+#~ msgid "Service og Beredskap 24/7"
+#~ msgstr "Service and Emergency 24/7"
+
+#~ msgid "Vår leveranse"
+#~ msgstr "Our delivery"
+
+#~ msgid "Tilknytning fra land"
+#~ msgstr "Affiliation of land"
+
+#~ msgid "Sjøkabel med installasjon"
+#~ msgstr "Submarine cable installation"
+
+#~ msgid "Transformatorer, kontrollstasjoner o.a."
+#~ msgstr "Transformers, control stations, etc."
+
+#~ msgid "Sentralbord/Beredskap - 24/7"
+#~ msgstr "Switchboard / Emergency - 24/7"
+
+#~ msgid "Drift og Service"
+#~ msgstr "Operation and Service"
+
+#~ msgid "Kundens merverdi"
+#~ msgstr "Customer added value"
+
+#~ msgid "Langsiktig kontrakt (finansiert/OPEX &amp; driftes)"
+#~ msgstr "Long-term contract"
+
+#~ msgid "Et kontaktpunkt"
+#~ msgstr "A point of contact"
+
+#~ msgid "Standarisert dokumentasjon"
+#~ msgstr "Standardized documentation"
+
+#~ msgid "Kort responstid"
+#~ msgstr "Short response time"
+
+#~ msgid "Ett kontaktpunkt for kunden"
+#~ msgstr "Single point of contact for the customer"
+
+#~ msgid "Forutsigbare priser"
+#~ msgstr "Predictable prices"
+
+#~ msgid "Standardisert dokumentasjon"
+#~ msgstr "standardized documentation"
+
+#~ msgid "Attraktiv utleier med høyt servicenivå, OPEX istedenfor CAPEX"
+#~ msgstr "Attractive landlord with high service, OPEX instead of CAPEX"
+
+#~ msgid "Høy leveransepresisjon sammen med våre samarbeidspartnere"
+#~ msgstr "High delivery precision together with our partners"
+
+#~ msgid "24/7 beredskap gjennom kundesenter og SLA avtaler"
+#~ msgstr "24/7 emergency response through Customer Service and SLA agreements"
+
+#~ msgid "Lavere driftskostnader"
+#~ msgstr "Lower operating costs"
+
+#~ msgid "Standardiserte løsninger"
+#~ msgstr "Standardized solutions"
+
+#~ msgid "Tilleggstjenester"
+#~ msgstr "Additional Services"
+
+#~ msgid "Overvåkning, drift og vedlikehold"
+#~ msgstr "Monitoring, operation and maintenance"
+
+#~ msgid "Prosjektledelse"
+#~ msgstr "Project"
+
+#~ msgid "Tjenester"
+#~ msgstr "Services"
+
+#~ msgid "Forretningskonsept"
+#~ msgstr "Business Concept"
+
+#~ msgid "Referanser"
+#~ msgstr "References"
+
+#~ msgid "Kontakter"
+#~ msgstr "Contacts"

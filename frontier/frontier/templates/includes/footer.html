@@ -1,0 +1,28 @@
+{% load staticfiles %}
+{% load feincms_page_tags %}
+{% feincms_nav feincms_page as menu_pages %}
+
+
+<footer class="footer">
+    <div class="row align-center">
+        <div class="columns small-12 large-10">
+          {% for info in info %}
+            <div class="footer__list">
+                <a href="/" class="logo">
+                    <img src="{{info.logo_footer.url}}" alt="frontier">
+                </a>
+                <div class="footer__contacts">
+                    <p>{{info.adress_footer}}</p>
+                    <p><a href="tel:{{info.phone_footer}}">{{info.phone_footer}}</a>
+                    </p>
+                    <p><a href="mailto:{{info.email_footer}}">{{info.email_footer}}</a>
+                    </p>
+                </div>
+                <div class="footer__copyright">
+                    <p>{{info.copyright_text}} © 2018</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</footer>

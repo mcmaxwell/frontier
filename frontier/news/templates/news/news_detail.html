@@ -1,0 +1,55 @@
+{% load i18n %}
+{% load l10n %}
+{% load staticfiles %}
+{% load applicationcontent_tags %}
+
+
+<section class="news-item-page">
+                <div class="row align-center">
+                    <div class="columns small-12">
+                        <a href="{% app_reverse "news_list" "news.urls" %}" class="back-button">
+                            <i class="icon-arr icon-font"></i>
+                            <span>{% trans "Tilbake til alle nyheter" %}</span>
+                        </a>
+                        <div class="news-item-page__container">
+                            <span class="news-item-page__date">{{object.publication_date|date:"M d, Y"}}</span>
+                            <h1>{{object.title}}</h1>
+                            <div class="news-item-page__content">
+                                 {{object.text|safe}}
+                            </div>
+                        </div>
+                        <div class="share-page">
+                            <ul>
+                                <li class="icon icon-facebook">
+                                    <a class="telegram-share" href="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href), '_blank', 'toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400')">telegram</a>
+                                </li>
+                                <li class="icon icon-twitter">
+                                    <a class="twitter-share-button" href="https://twitter.com/intent/tweet">
+                              Tweet</a>
+                                    <script>
+                                        window.twttr = (function(d, s, id) {
+                                                                        var js, fjs = d.getElementsByTagName(s)[0],
+                                                                          t = window.twttr || {};
+                                                                        if (d.getElementById(id)) return t;
+                                                                        js = d.createElement(s);
+                                                                        js.id = id;
+                                                                        js.src = "https://platform.twitter.com/widgets.js";
+                                                                        fjs.parentNode.insertBefore(js, fjs);
+                                                        
+                                                                        t._e = [];
+                                                                        t.ready = function(f) {
+                                                                          t._e.push(f);
+                                                                        };
+                                                        
+                                                                        return t;
+                                                                      }(document, "script", "twitter-wjs"));
+                                    </script>
+                                </li>
+                                <li class="icon icon-linkedin">
+                                    <a href="javascript:window.open('https://www.linkedin.com/shareArticle?mini=true&url='+encodeURIComponent(window.location.href), '_blank', 'toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400')" id="myLinkedInButton">linkedin</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>

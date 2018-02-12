@@ -1,0 +1,23 @@
+{% load i18n %}
+{% load staticfiles %}
+
+
+<section class="our-customers hideme" style="background-image: url({{CT.get_background_image}})">
+    <div class="row align-center">
+        <div class="columns small-12">
+            <h2 class="decor-title icon-underline white">{{CT.title}}</h2>
+            <div class="section-description">{{CT.sub_title|safe}}</div>
+            <ul class="our-customers__list">
+                <li><i class="icon icon-man-net"></i> {{CT.network_text}}</li>
+                <li><i class="icon icon-analitics"></i> {{CT.analitics_text}}</li>
+                <li><i class="icon icon-standart"></i> {{CT.standart_text}}</li>
+                <li><i class="icon icon-money-box"></i> {{CT.money_text}}</li>
+                <li><i class="icon icon-speed"></i> {{CT.speed_text}}</li>
+                <li><i class="icon icon-7"></i> {{CT.clock_text}}</li>
+                <li><i class="icon icon-lower-cost"></i>{{CT.cost_text}}</li>
+                <li><i class="icon icon-cube"></i>{{CT.cube_text}}</li>
+                <li><i class="icon icon-short-response"></i> {{CT.responce_text}}</li>
+            </ul>
+        </div>
+    </div>
+    </section>
